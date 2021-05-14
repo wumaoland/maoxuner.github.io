@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ssl on 二次元の技术宅</title>
+    <link>https://www.maoxuner.cn/tags/ssl/</link>
+    <description>Recent content in ssl on 二次元の技术宅</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sat, 15 Feb 2020 15:34:31 +0800</lastBuildDate><atom:link href="https://www.maoxuner.cn/tags/ssl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>创建自签名证书</title>
+      <link>https://www.maoxuner.cn/post/2020/02/self-signed-certificate/</link>
+      <pubDate>Sat, 15 Feb 2020 15:34:31 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2020/02/self-signed-certificate/</guid>
+      <description>自建内网服务时会用到ssl，就需要自签名（通用）证书了。 一个证书主要有两个文件：秘钥文件（公钥、私钥）、证书文件。私钥签发证书，公钥验证证书。可以给自己签名生成自签名证书，也可以给别人签名，生成通用证</description>
+    </item>
+    
+    <item>
+      <title>使用Let&#39;sEncrypt证书</title>
+      <link>https://www.maoxuner.cn/post/2017/12/letsencrypt/</link>
+      <pubDate>Fri, 29 Dec 2017 13:12:37 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2017/12/letsencrypt/</guid>
+      <description>Apache服务器配置使用https（ssl）。需求：vps管理权限。 创建虚拟主机 给各个域名创建虚拟主机，80端口。保证http可正常访问。 安装证书自动设置工具certbot 需要配置backports</description>
+    </item>
+    
+  </channel>
+</rss>

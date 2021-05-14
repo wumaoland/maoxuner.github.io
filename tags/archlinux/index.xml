@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>archlinux on 二次元の技术宅</title>
+    <link>https://www.maoxuner.cn/tags/archlinux/</link>
+    <description>Recent content in archlinux on 二次元の技术宅</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Thu, 20 Feb 2020 14:03:53 +0800</lastBuildDate><atom:link href="https://www.maoxuner.cn/tags/archlinux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ArchLinux将屏幕扩展到平板上</title>
+      <link>https://www.maoxuner.cn/post/2020/02/archlinux-multihead/</link>
+      <pubDate>Thu, 20 Feb 2020 14:03:53 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2020/02/archlinux-multihead/</guid>
+      <description>在有扩展显示器之前，有个奇思妙想：将桌面内容扩展到安卓平板上。Windows和MacOS似乎有现成的解决方案，而Linux则需要折腾一番。我的思路是：在Linux上创建一个虚拟桌面，然后通过VNC连接</description>
+    </item>
+    
+    <item>
+      <title>日常使用ArchLinux</title>
+      <link>https://www.maoxuner.cn/post/2018/03/archlinux-as-usual/</link>
+      <pubDate>Fri, 23 Mar 2018 14:14:29 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2018/03/archlinux-as-usual/</guid>
+      <description>简单来说，受够了windows，买不起osx，就只能折腾linux。折腾了好几个发行版，这次换了archlinux了。理由很简单：软件版本新、滚动发行、yaourt yay一切。 折腾了一阵子MacOS，</description>
+    </item>
+    
+    <item>
+      <title>折腾ArchLinux</title>
+      <link>https://www.maoxuner.cn/post/2018/03/try-archlinux/</link>
+      <pubDate>Tue, 06 Mar 2018 09:25:21 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2018/03/try-archlinux/</guid>
+      <description>日常使用deepin一年多，开箱即用，而且中国特色化做得很好。然而，在用的过程中总觉得缺点啥。于是我又开始了新一轮的尝试。 ArchLinux，简洁、海量包、滚动发行。不过，最让我印象深刻的是它全面的w</description>
+    </item>
+    
+  </channel>
+</rss>

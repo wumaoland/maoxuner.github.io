@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on 二次元の技术宅</title>
+    <link>https://www.maoxuner.cn/tags/linux/</link>
+    <description>Recent content in linux on 二次元の技术宅</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sun, 15 Mar 2020 23:17:50 +0800</lastBuildDate><atom:link href="https://www.maoxuner.cn/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>因MTU导致的容器网络问题</title>
+      <link>https://www.maoxuner.cn/post/2020/03/host-container-mtu/</link>
+      <pubDate>Sun, 15 Mar 2020 23:17:50 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2020/03/host-container-mtu/</guid>
+      <description>将CI/CD服务前移到k8s后，当drone的插件drone-docker构建镜像时，总卡在更新软件包的步骤。是网络连接的问题，为了解决这个问题，耗费了我整个周末。 # apk update fetch http://dl-cdn.alpinelinux.org/alpine/v3.11/main/x86_64/APKINDEX.tar.gz Drone-Runner in K8S 在k8s环境中，dr</description>
+    </item>
+    
+    <item>
+      <title>ArchLinux将屏幕扩展到平板上</title>
+      <link>https://www.maoxuner.cn/post/2020/02/archlinux-multihead/</link>
+      <pubDate>Thu, 20 Feb 2020 14:03:53 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2020/02/archlinux-multihead/</guid>
+      <description>在有扩展显示器之前，有个奇思妙想：将桌面内容扩展到安卓平板上。Windows和MacOS似乎有现成的解决方案，而Linux则需要折腾一番。我的思路是：在Linux上创建一个虚拟桌面，然后通过VNC连接</description>
+    </item>
+    
+    <item>
+      <title>Linux文件权限笔记</title>
+      <link>https://www.maoxuner.cn/post/2020/02/linux-permission/</link>
+      <pubDate>Thu, 20 Feb 2020 13:29:02 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2020/02/linux-permission/</guid>
+      <description>常规文件权限：文件权限继承——设置粘滞位权限 ACL：指定owner以外的用户权限 参考文章 How do I set up a folder so that anything created in it inherits permissions? How to make new file permission inherit from the parent directory? How to set umask for a specific folder</description>
+    </item>
+    
+    <item>
+      <title>树莓派3B&#43;无显示器安装系统</title>
+      <link>https://www.maoxuner.cn/post/2020/02/rpi3-initialization/</link>
+      <pubDate>Thu, 20 Feb 2020 12:34:21 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2020/02/rpi3-initialization/</guid>
+      <description>用上VPS后，发现树莓派真是太鸡肋了，主要是配置太低了。可能更适合组集群的土豪玩法。 无显示器安装（重点就是配置网络、开启ssh服务），参考Setting up a Raspberry Pi headless 在启动分区放入wpa_supplica</description>
+    </item>
+    
+    <item>
+      <title>KVM笔记</title>
+      <link>https://www.maoxuner.cn/post/2020/02/kvm/</link>
+      <pubDate>Sun, 16 Feb 2020 21:29:07 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2020/02/kvm/</guid>
+      <description>如果常用软件有很好的解决方案，我宁愿使用linux系统。各种工具很方便，系统完全在自己的掌控之内。KVM入门后就再也看不上其他虚拟机。 使用笔记 嵌套虚拟化，如果使用默认的桥接网络。需要修改DHCP网段（</description>
+    </item>
+    
+    <item>
+      <title>禁止SSH验证主机秘钥</title>
+      <link>https://www.maoxuner.cn/post/2020/02/disable-ssh-host-key-checking/</link>
+      <pubDate>Sun, 16 Feb 2020 18:34:10 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2020/02/disable-ssh-host-key-checking/</guid>
+      <description>对于家里以及公司内网的服务器，可能内网IP是相同的，这就会造成经常性的主机秘钥验证不通过的问题。可以禁用这些主机的秘钥验证。 主机秘钥冲突时的错误提示大概如下 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ @ WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! @ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY! Someone could be</description>
+    </item>
+    
+    <item>
+      <title>AlpineLinux使用gclibc</title>
+      <link>https://www.maoxuner.cn/post/2020/02/alpinelinux-uclibc-to-gclibc/</link>
+      <pubDate>Sun, 16 Feb 2020 16:05:23 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2020/02/alpinelinux-uclibc-to-gclibc/</guid>
+      <description>AlpineLinux默认使用uclibc版本的busybox，其动态链接库与gclibc有些区别，会导致某些程序没有办法正常运行。可以将busybox版本切换为gclibc。 uclibc与gclib</description>
+    </item>
+    
+    <item>
+      <title>使用Gurb2制作Linux与Windows以及Legacy与UEFI双模式启动盘</title>
+      <link>https://www.maoxuner.cn/post/2020/02/grub2-bootable-device/</link>
+      <pubDate>Sat, 15 Feb 2020 14:02:35 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2020/02/grub2-bootable-device/</guid>
+      <description>经常要给Windows或者Linux系统装机，每次都要制作启动盘，显得有点麻烦。Grub4dos似乎只能用于Legacy模式的启动，因此使用万能的Grub2才是最终解。挖坑待填 尚未搞清楚Windows</description>
+    </item>
+    
+    <item>
+      <title>日常使用ArchLinux</title>
+      <link>https://www.maoxuner.cn/post/2018/03/archlinux-as-usual/</link>
+      <pubDate>Fri, 23 Mar 2018 14:14:29 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2018/03/archlinux-as-usual/</guid>
+      <description>简单来说，受够了windows，买不起osx，就只能折腾linux。折腾了好几个发行版，这次换了archlinux了。理由很简单：软件版本新、滚动发行、yaourt yay一切。 折腾了一阵子MacOS，</description>
+    </item>
+    
+    <item>
+      <title>使用grub2制作bios和uefi双启动u盘</title>
+      <link>https://www.maoxuner.cn/post/2018/03/usb-grub2-bios-uefi/</link>
+      <pubDate>Fri, 23 Mar 2018 12:33:33 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2018/03/usb-grub2-bios-uefi/</guid>
+      <description>应对复杂的装机环境，bios/uefi，windows/linux。 假设已有一台装好grub(2.02)的linux系统。U盘的设备路径/dev/sdb。 U盘分区 使用mbr分区表 只有mbr分区表才能同</description>
+    </item>
+    
+    <item>
+      <title>折腾ArchLinux</title>
+      <link>https://www.maoxuner.cn/post/2018/03/try-archlinux/</link>
+      <pubDate>Tue, 06 Mar 2018 09:25:21 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2018/03/try-archlinux/</guid>
+      <description>日常使用deepin一年多，开箱即用，而且中国特色化做得很好。然而，在用的过程中总觉得缺点啥。于是我又开始了新一轮的尝试。 ArchLinux，简洁、海量包、滚动发行。不过，最让我印象深刻的是它全面的w</description>
+    </item>
+    
+    <item>
+      <title>为vps添加swap</title>
+      <link>https://www.maoxuner.cn/post/2018/01/kvm-vps-swap-file/</link>
+      <pubDate>Wed, 03 Jan 2018 01:08:17 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2018/01/kvm-vps-swap-file/</guid>
+      <description>适用于kvm架构的vps。openvz不支持。 用了搬瓦工的vps，使用composer创建项目时遇到内存不足的问题。查看kiwi控制台，发现物理内存（512M）还有剩余，swap（128M）用光了。可</description>
+    </item>
+    
+    <item>
+      <title>香蕉派bananian的flash插件方案Iceweasel&#43;Freshplayerplugin&#43;PepperFlashPlayer</title>
+      <link>https://www.maoxuner.cn/post/2015/11/flash-on-bpi/</link>
+      <pubDate>Fri, 27 Nov 2015 22:11:20 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2015/11/flash-on-bpi/</guid>
+      <description>&lt;p&gt;香蕉派/BPI刷了bananian系统，也就是debian arm了，我是把它作为服务器用的，所以一直没有在意浏览器以及flash视频播放的问题。当然，我也早就发现了flash插件的问题。就拖沓着，一直没解决，直到我在debian的维基上看到了“Use Pepper Flash with Iceweasel using Freshplayerplugin”这句话，我才有了新的思路。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>香蕉派BPIbananian1508编译小度Wifi mt7601u驱动</title>
+      <link>https://www.maoxuner.cn/post/2015/11/bpi-bananian-xiaoduwifi/</link>
+      <pubDate>Wed, 11 Nov 2015 22:45:20 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2015/11/bpi-bananian-xiaoduwifi/</guid>
+      <description>&lt;p&gt;零零碎碎的时间，折腾了好久，看了不知道多少帖子，教程，终于在香蕉派成功编译并加载了小度Wifi的驱动。其实也就是360Wifi，小米Wifi，腾讯Wifi等的驱动。因为它们基本都是mt7601u的芯片。好了，废话不多说，进入主题。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux挂载Raw格式的img文件</title>
+      <link>https://www.maoxuner.cn/post/2015/02/mount-raw-img/</link>
+      <pubDate>Tue, 24 Feb 2015 16:37:20 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2015/02/mount-raw-img/</guid>
+      <description>&lt;p&gt;在折腾树莓派/香蕉派的时候，想直接复制img镜像中的文件。烧录到SD又太麻烦，就想找找有没有能直接挂载img的方式。这一找，果然还真有。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>树莓派断网检测自动重连</title>
+      <link>https://www.maoxuner.cn/post/2015/02/rpi-check-network/</link>
+      <pubDate>Tue, 03 Feb 2015 21:06:20 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2015/02/rpi-check-network/</guid>
+      <description>&lt;p&gt;想必，大多数人都是跟我一样玩树莓派的，把树莓派作为一台服务器，接入路由器下的局域网。没有显示器，也没有用TTL。树莓派的控制可以用SSH。然而，要是路由器死机重启，树莓派就失去控制了。另外，树莓派运行多天后好像也有断网的情况。遇到这种情况，就只能暴力的拔电源了。有木有一种和平一点的方式呢。自然，这是有的。搜罗了整个互联网，总算是找了两个挺不错的解决方案。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>树莓派安装ArchLinuxARM系统</title>
+      <link>https://www.maoxuner.cn/post/2015/02/rpi-archlinuxarm/</link>
+      <pubDate>Tue, 03 Feb 2015 20:12:20 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2015/02/rpi-archlinuxarm/</guid>
+      <description>&lt;p&gt;本文适用于树莓派1B+。其它板子未经过测试，可参考&lt;a href=&#34;https://archlinuxarm.org/platforms&#34; target=&#34;_blank&#34;&gt;ArchlinuxARM官方文档&lt;/a&gt;。
+首先，需要一个linux环境，系统的安装需要用linux环境复制文件，把sd或tf连接到装有linux环境的电脑上。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>实体机已有windows安装ubuntu系统 双系统</title>
+      <link>https://www.maoxuner.cn/post/2015/02/windows-with-ubuntu/</link>
+      <pubDate>Tue, 03 Feb 2015 20:10:20 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2015/02/windows-with-ubuntu/</guid>
+      <description>&lt;p&gt;首先说一下，双系统并不会影响两个系统各自的速度。两个系统都是独立的，分别位于硬盘的不同位置，独立运行。也就是说，当一个系统在运行时，另一个系统只是储存在硬盘上的文件，这自然不会对系统的速度有影响。&lt;/p&gt;
+&lt;p&gt;另外，安装双系统是有好处的。需要看这篇文章的人即使不是linux的新手，那至少也是ubuntu的新手。那我建议，你还是装双系统的好。因为，linux系的软件什么的支持还不是很好，若不是高手的话，遇到问题往往无从下手。安装双系统的话，即使linux系统不能很快适应或者完美配置，那还能切回windows系统进行日常操作。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+
+<head>
+    
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="HandheldFriendly" content="True" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="generator" content="Hugo 0.83.1" />
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.maoxuner.cn/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.maoxuner.cn/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.maoxuner.cn/favicon-16x16.png" />
+<link rel="manifest" href="https://www.maoxuner.cn/site.webmanifest" />
+<link rel="mask-icon" href="https://www.maoxuner.cn/safari-pinned-tab.svg" color="#5bbad5" />
+<meta name="msapplication-TileColor" content="#da532c" />
+<meta name="theme-color" content="#ffffff" />
+
+
+
+<title>FbinstTool制作U盘隐藏启动分区 ud隐藏分区 U盘多维护系统 引导ISO镜像 - 二次元の技术宅</title>
+
+
+<meta name="author" content="maoxuner" />
+
+
+<meta name="description" content="二次元爱好者的技术博客。专于php、linux" />
+
+
+<meta name="keywords" content="usb" />
+
+
+<meta property="og:title" content="FbinstTool制作U盘隐藏启动分区 ud隐藏分区 U盘多维护系统 引导ISO镜像" />
+<meta name="twitter:title" content="FbinstTool制作U盘隐藏启动分区 ud隐藏分区 U盘多维护系统 引导ISO镜像" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.maoxuner.cn/post/2015/02/fbinsttool-ud/" /><meta property="og:description" content="本文年代久远，可能已经不适用。仅供参考！
+创建UD隐藏引导分区的好处是，可以随意修改U盘课件存储的文件，而不会影响U盘上安装的启动分区。制作UD隐藏分区，我推荐FbinstTool这个软件，小而精悍。" />
+<meta name="twitter:description" content="本文年代久远，可能已经不适用。仅供参考！
+创建UD隐藏引导分区的好处是，可以随意修改U盘课件存储的文件，而不会影响U盘上安装的启动分区。制作UD隐藏分区，我推荐FbinstTool这个软件，小而精悍。" /><meta property="og:image" content="https://www.maoxuner.cn/img/og.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.maoxuner.cn/img/og.png" /><meta property="article:published_time" content="2015-02-03T20:52:20+08:00" /><meta property="article:modified_time" content="2015-02-03T20:52:20+08:00" />
+
+
+<style>
+    @media (prefers-color-scheme: dark) {
+        body[data-theme='auto'] img {
+            filter: brightness(60%);
+        }
+    }
+
+    body[data-theme='dark'] img {
+        filter: brightness(60%);
+    }
+</style>
+
+
+
+<link rel="stylesheet" href="https://www.maoxuner.cn/assets/css/fuji.min.css" />
+
+
+
+
+
+</head>
+
+<body data-theme="auto">
+    <script data-cfasync="false">
+  
+  var fujiThemeData = localStorage.getItem('fuji_data-theme');
+  
+  if (!fujiThemeData) {
+    localStorage.setItem('fuji_data-theme', 'auto');
+  } else {
+    
+    if (fujiThemeData !== 'auto') {
+      document.body.setAttribute('data-theme', fujiThemeData === 'dark' ? 'dark' : 'light');
+    }
+  }
+</script>
+    <header>
+    <div class="container-lg clearfix">
+        <div class="col-12 header">
+            <a class="title-main" href="https://www.maoxuner.cn/">二次元の技术宅</a>
+            
+            <span class="title-sub">念念不忘，必有回响。</span>
+            
+        </div>
+    </div>
+</header>
+
+    <main>
+        <div class="container-lg clearfix">
+            
+            <div class="col-12 col-md-9 float-left content">
+                
+<article>
+    
+    <h2 class="post-item post-title">
+        <a href="https://www.maoxuner.cn/post/2015/02/fbinsttool-ud/">FbinstTool制作U盘隐藏启动分区 ud隐藏分区 U盘多维护系统 引导ISO镜像</a>
+    </h2>
+    <div class="post-item post-meta">
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2015-02-03</span>
+
+<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;1278 字</span>
+
+<span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/usb">usb</a>&nbsp;</span>
+
+    </div>
+    
+    <div class="post-content markdown-body">
+        <p><strong>本文年代久远，可能已经不适用。仅供参考！</strong></p>
+<p>创建UD隐藏引导分区的好处是，可以随意修改U盘课件存储的文件，而不会影响U盘上安装的启动分区。制作UD隐藏分区，我推荐<code>FbinstTool</code>这个软件，小而精悍。</p>
+<h1 id="制作教程">制作教程</h1>
+<p>插上你的U盘（TF卡也行啊）记得要备份原来U盘上的数据哦，下面的操作要格式化磁盘的
+打开<code>FbinstTool.exe</code>，这时候U盘上还没有ud隐藏分区。</p>
+<p><img class="img-zoomable" src="../f1.jpg" alt="" />
+</p>
+<p>打开菜单“启动设置”然后选择“格式化”然后按照下图的提示设置。</p>
+<p><img class="img-zoomable" src="../f2.jpg" alt="" />
+</p>
+<p>然后点“格式化”，然后依次点“是 是 确定”
+接着在桌面创建<code>ISO</code>文件夹，把<code>wowpc.iso TangoPE.iso Win7PE.iso</code>三个文件放到这个文件夹（启动镜像也可以换成自己喜欢的，但是注意要使用英文文件名，不能有特殊字符和空格！）
+然后在下图“（ud）”处右击，选择导入文件夹，然后导入桌面的<code>ISO</code>文件夹，直到提示成功</p>
+<p><img class="img-zoomable" src="../f3.jpg" alt="" />
+</p>
+<p>接着，单击下图标记的“ISO”文件夹，会发现“wowpc.iso”存放区域是主数据区
+在右边窗口右击“wowc.iso”，然后选择“移到扩展数据区”，完成后，存放区域也会变为扩展数据区为什么要移动呢？具体的自己测试吧，諾小豬没有移动的时候，变色龙引导就用不了了。</p>
+<p><img class="img-zoomable" src="../f4.jpg" alt="" />
+</p>
+<p>至此，点击菜单栏中的“工具”，然后“更新grldr”，接着是“(ud)/grldr”这样就进入了下面的窗口
+接下来的过程需要连接互联网，先点“获取版本”，然后下面出现这些日期，接着点“更新”</p>
+<p><img class="img-zoomable" src="../f5.jpg" alt="" />
+</p>
+<p>更新完毕就会出现成功窗口，点击“确定”即可</p>
+<p><img class="img-zoomable" src="../f6.jpg" alt="" />
+</p>
+<p>下面编辑grub引导菜单，先复制下文的代码（注意只要选择代码部分，前面的行号不需要选择）</p>
+<pre><code>pxe detect
+configfile
+default 2
+timeout 5
+
+title TangoPE
+map (ud)/ISO/TangoPE.iso (0xff)
+map --hook
+chainloader (0xff)
+
+title Win7 PE
+map (ud)/ISO/Win7PE.iso (0xff)
+map --hook
+chainloader (0xff)
+
+title Win8_PE_x86_x64_v19.911_SP2
+root (hd0,0)
+map /Boot/ISO/Win8_PE_x86_x64_v19.911_SP2.iso (0xff)
+map --hook
+chainloader (0xff)
+
+title /Boot/Boot.iso
+map (hd0,0)/Boot/Boot.iso (0xff)
+map --hook
+chainloader (0xff)
+
+title Chameleon
+root (ud)
+map /ISO/wowpc.iso (0xff)
+map --hook
+chainloader (0xff)
+
+title Advanced
+configfile (hd0,0)/boot/menu.lst
+commandline
+</code></pre>
+<p>如下图，单击“Grldr菜单”按钮，在下文代码框处右击鼠标，然后选择“全选”，接着在选择后的文本上右击弹出菜单，选择“粘贴”，最后按住键盘组合键“ctrl+s”保存编辑的Grldr菜单</p>
+<p><img class="img-zoomable" src="../f7.jpg" alt="" />
+</p>
+<p>至此，你的（ud）隐藏分区的PE维护系统就做好了，如果操作过程中没有出现任何错误，那么就可以正常使用了。
+这时，你可以单击“Qemu测试”菜单，进入Qemu虚拟机测试引导是否成功。由于这个虚拟机尚不完善，只能用来测试引导是否成功。
+下面是我的演示</p>
+<p><img class="img-zoomable" src="../f8.png" alt="" />
+
+<img class="img-zoomable" src="../f9.jpg" alt="" />
+
+<img class="img-zoomable" src="../f10.jpg" alt="" />
+</p>
+<p>为了方便拓展引导其他系统，所以设置了以下两个选项</p>
+<pre><code>/Boot/Boot.iso
+Advanced
+</code></pre>
+<h1 id="使用方法">使用方法</h1>
+<p>懒人法</p>
+<p>在U盘储存分区下（非（ud）分区）创建<code>/Boot</code>文件夹，把需要引导的ISO镜像文件改名为<code>Boot.iso</code>并复制到<code>/Boot</code>，引导时选择<code>/Boot/Boot.iso</code></p>
+<p>手动法</p>
+<p>在U盘储存分区下（非（ud）分区）创建<code>/Boot</code>文件夹，复制<code>menu.lst</code>文件到<code>/Boot</code>（注意：本文提供的<code>menu.lst</code>文件仅供参考，可能要根据实际情况稍作修改），创建<code>/Boot/ISO</code>文件夹，并把ISO镜像复制到该文件夹（推荐，其实只要在U盘储存分区即可）比如我引导的Win8PE就在这个文件夹下面，在<code>menu.lst</code>文件中添加相应的引导项，引导时选择“Advanced”，再选择相应的启动项</p>
+<p>当然啦，有了强大的Grub，自然还能添加其他引导项啦。在此不赘述了。</p>
+<h1 id="文件下载">文件下载</h1>
+<ul>
+<li><a href="https://mega.nz/#!y0UgXSYZ!Ts9VEnvEy-5mfnJCV7tQveWNRCLH6Ebt9E2IGtvNQjE" target="_blank">FbinstTool_1.607.2014.826.zip</a></li>
+</ul>
+    </div>
+</article>
+
+
+<div class="license markdown-body">
+    <blockquote>
+        <p>除特殊注明部分，本站内容采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+               target="_blank">CC BY-NC-SA 4.0</a> 进行许可。</p>
+    </blockquote>
+</div>
+
+
+<div class="post-comment" data-comment="disqus">
+    <span class="post-comment-notloaded">
+        <i class="iconfont icon-chatbox-ellipses-sharp"></i>&nbsp;查看评论
+    </span>
+    <div id="disqus_thread" style="display: none;"></div>
+    <script>
+        function loadComment() {
+            var commentArea = document.querySelector('.post-comment');
+            var disqus_config = function () {
+                this.page.url = 'https:\/\/www.maoxuner.cn\/post\/2015\/02\/fbinsttool-ud\/';
+                this.page.identifier = 'FbinstTool制作U盘隐藏启动分区';
+            };
+            var s = document.createElement('script');
+            s.src = 'https://' + 'maoxuner' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            document.querySelector('#disqus_thread').removeAttribute('style');
+            (document.body || document.head).appendChild(s);
+            document.querySelector('span.post-comment-notloaded').setAttribute('style', 'display: none;');
+        }
+    </script>
+</div>
+
+
+            </div>
+            <aside class="col-12 col-md-3 float-left sidebar">
+    
+    <div class="sidebar-item sidebar-pages">
+        <h3>页面</h3>
+        <ul>
+            
+            <li>
+                <a href="/archives/">归档</a>
+            </li>
+            
+            <li>
+                <a href="/links/">友链</a>
+            </li>
+            
+            <li>
+                <a href="/about/">关于</a>
+            </li>
+            
+            <li>
+                <a href="/search/">搜索</a>
+            </li>
+            
+            <li>
+                <a href="/index.xml">RSS</a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-links">
+        <h3>链接</h3>
+        <ul>
+            
+            <li>
+                <a href="https://git.fat4.cn/maoxuner" target="_blank"><span>Gitea</span></a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-tags">
+        <h3>标签</h3>
+        <div>
+            
+            <span>
+                <a href="/tags/acg/">acg</a>
+            </span>
+            
+            <span>
+                <a href="/tags/android/">android</a>
+            </span>
+            
+            <span>
+                <a href="/tags/apache/">apache</a>
+            </span>
+            
+            <span>
+                <a href="/tags/archlinux/">archlinux</a>
+            </span>
+            
+            <span>
+                <a href="/tags/bpi/">bpi</a>
+            </span>
+            
+            <span>
+                <a href="/tags/c/">c</a>
+            </span>
+            
+            <span>
+                <a href="/tags/chat/">chat</a>
+            </span>
+            
+            <span>
+                <a href="/tags/chromium/">chromium</a>
+            </span>
+            
+            <span>
+                <a href="/tags/cloud/">cloud</a>
+            </span>
+            
+            <span>
+                <a href="/tags/codeigniter/">codeigniter</a>
+            </span>
+            
+            <span>
+                <a href="/tags/composer/">composer</a>
+            </span>
+            
+            <span>
+                <a href="/tags/containerd/">containerd</a>
+            </span>
+            
+            <span>
+                <a href="/tags/css/">css</a>
+            </span>
+            
+            <span>
+                <a href="/tags/deployer/">deployer</a>
+            </span>
+            
+            <span>
+                <a href="/tags/docker/">docker</a>
+            </span>
+            
+            <span>
+                <a href="/tags/drone/">drone</a>
+            </span>
+            
+            <span>
+                <a href="/tags/flash/">flash</a>
+            </span>
+            
+            <span>
+                <a href="/tags/fortran/">fortran</a>
+            </span>
+            
+            <span>
+                <a href="/tags/git/">git</a>
+            </span>
+            
+            <span>
+                <a href="/tags/go/">go</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hexo/">hexo</a>
+            </span>
+            
+            <span>
+                <a href="/tags/html/">html</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hugo/">hugo</a>
+            </span>
+            
+            <span>
+                <a href="/tags/ingress/">ingress</a>
+            </span>
+            
+            <span>
+                <a href="/tags/javascript/">javascript</a>
+            </span>
+            
+            <span>
+                <a href="/tags/jenkins/">jenkins</a>
+            </span>
+            
+            <span>
+                <a href="/tags/jquery/">jquery</a>
+            </span>
+            
+            <span>
+                <a href="/tags/k3s/">k3s</a>
+            </span>
+            
+            <span>
+                <a href="/tags/k8s/">k8s</a>
+            </span>
+            
+            <span>
+                <a href="/tags/kvm/">kvm</a>
+            </span>
+            
+            <span>
+                <a href="/tags/laravel/">laravel</a>
+            </span>
+            
+            <span>
+                <a href="/tags/linux/">linux</a>
+            </span>
+            
+            <span>
+                <a href="/tags/mariadb/">mariadb</a>
+            </span>
+            
+            <span>
+                <a href="/tags/movie/">movie</a>
+            </span>
+            
+            <span>
+                <a href="/tags/music/">music</a>
+            </span>
+            
+            <span>
+                <a href="/tags/mysql/">mysql</a>
+            </span>
+            
+            <span>
+                <a href="/tags/nginx/">nginx</a>
+            </span>
+            
+            <span>
+                <a href="/tags/nodejs/">nodejs</a>
+            </span>
+            
+            <span>
+                <a href="/tags/php/">php</a>
+            </span>
+            
+            <span>
+                <a href="/tags/python/">python</a>
+            </span>
+            
+            <span>
+                <a href="/tags/rpi/">rpi</a>
+            </span>
+            
+            <span>
+                <a href="/tags/shell/">shell</a>
+            </span>
+            
+            <span>
+                <a href="/tags/ssl/">ssl</a>
+            </span>
+            
+            <span>
+                <a href="/tags/traefik/">traefik</a>
+            </span>
+            
+            <span>
+                <a href="/tags/typecho/">typecho</a>
+            </span>
+            
+            <span>
+                <a href="/tags/usb/">usb</a>
+            </span>
+            
+            <span>
+                <a href="/tags/vps/">vps</a>
+            </span>
+            
+            <span>
+                <a href="/tags/windows/">windows</a>
+            </span>
+            
+            <span>
+                <a href="/tags/yii2/">yii2</a>
+            </span>
+            
+        </div>
+    </div>
+    <div class="sidebar-item sidebar-toc">
+        <h3>目录</h3><nav id="TableOfContents"></nav></div>
+</aside>
+        </div>
+        <div class="btn">
+    <div class="btn-menu" id="btn-menu">
+        <i class="iconfont icon-grid-sharp"></i>
+    </div>
+    <div class="btn-toggle-mode">
+        <i class="iconfont icon-contrast-sharp"></i>
+    </div>
+    <div class="btn-scroll-top">
+        <i class="iconfont icon-chevron-up-circle-sharp"></i>
+    </div>
+</div>
+<aside class="sidebar-mobile" style="display: none;">
+  <div class="sidebar-wrapper">
+    
+    <div class="sidebar-item sidebar-pages">
+        <h3>页面</h3>
+        <ul>
+            
+            <li>
+                <a href="/archives/">归档</a>
+            </li>
+            
+            <li>
+                <a href="/links/">友链</a>
+            </li>
+            
+            <li>
+                <a href="/about/">关于</a>
+            </li>
+            
+            <li>
+                <a href="/search/">搜索</a>
+            </li>
+            
+            <li>
+                <a href="/index.xml">RSS</a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-links">
+        <h3>链接</h3>
+        <ul>
+            
+            <li>
+                <a href="https://git.fat4.cn/maoxuner" target="_blank"><span>Gitea</span></a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-tags">
+        <h3>标签</h3>
+        <div>
+            
+            <span>
+                <a href="/tags/acg/">acg</a>
+            </span>
+            
+            <span>
+                <a href="/tags/android/">android</a>
+            </span>
+            
+            <span>
+                <a href="/tags/apache/">apache</a>
+            </span>
+            
+            <span>
+                <a href="/tags/archlinux/">archlinux</a>
+            </span>
+            
+            <span>
+                <a href="/tags/bpi/">bpi</a>
+            </span>
+            
+            <span>
+                <a href="/tags/c/">c</a>
+            </span>
+            
+            <span>
+                <a href="/tags/chat/">chat</a>
+            </span>
+            
+            <span>
+                <a href="/tags/chromium/">chromium</a>
+            </span>
+            
+            <span>
+                <a href="/tags/cloud/">cloud</a>
+            </span>
+            
+            <span>
+                <a href="/tags/codeigniter/">codeigniter</a>
+            </span>
+            
+            <span>
+                <a href="/tags/composer/">composer</a>
+            </span>
+            
+            <span>
+                <a href="/tags/containerd/">containerd</a>
+            </span>
+            
+            <span>
+                <a href="/tags/css/">css</a>
+            </span>
+            
+            <span>
+                <a href="/tags/deployer/">deployer</a>
+            </span>
+            
+            <span>
+                <a href="/tags/docker/">docker</a>
+            </span>
+            
+            <span>
+                <a href="/tags/drone/">drone</a>
+            </span>
+            
+            <span>
+                <a href="/tags/flash/">flash</a>
+            </span>
+            
+            <span>
+                <a href="/tags/fortran/">fortran</a>
+            </span>
+            
+            <span>
+                <a href="/tags/git/">git</a>
+            </span>
+            
+            <span>
+                <a href="/tags/go/">go</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hexo/">hexo</a>
+            </span>
+            
+            <span>
+                <a href="/tags/html/">html</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hugo/">hugo</a>
+            </span>
+            
+            <span>
+                <a href="/tags/ingress/">ingress</a>
+            </span>
+            
+            <span>
+                <a href="/tags/javascript/">javascript</a>
+            </span>
+            
+            <span>
+                <a href="/tags/jenkins/">jenkins</a>
+            </span>
+            
+            <span>
+                <a href="/tags/jquery/">jquery</a>
+            </span>
+            
+            <span>
+                <a href="/tags/k3s/">k3s</a>
+            </span>
+            
+            <span>
+                <a href="/tags/k8s/">k8s</a>
+            </span>
+            
+            <span>
+                <a href="/tags/kvm/">kvm</a>
+            </span>
+            
+            <span>
+                <a href="/tags/laravel/">laravel</a>
+            </span>
+            
+            <span>
+                <a href="/tags/linux/">linux</a>
+            </span>
+            
+            <span>
+                <a href="/tags/mariadb/">mariadb</a>
+            </span>
+            
+            <span>
+                <a href="/tags/movie/">movie</a>
+            </span>
+            
+            <span>
+                <a href="/tags/music/">music</a>
+            </span>
+            
+            <span>
+                <a href="/tags/mysql/">mysql</a>
+            </span>
+            
+            <span>
+                <a href="/tags/nginx/">nginx</a>
+            </span>
+            
+            <span>
+                <a href="/tags/nodejs/">nodejs</a>
+            </span>
+            
+            <span>
+                <a href="/tags/php/">php</a>
+            </span>
+            
+            <span>
+                <a href="/tags/python/">python</a>
+            </span>
+            
+            <span>
+                <a href="/tags/rpi/">rpi</a>
+            </span>
+            
+            <span>
+                <a href="/tags/shell/">shell</a>
+            </span>
+            
+            <span>
+                <a href="/tags/ssl/">ssl</a>
+            </span>
+            
+            <span>
+                <a href="/tags/traefik/">traefik</a>
+            </span>
+            
+            <span>
+                <a href="/tags/typecho/">typecho</a>
+            </span>
+            
+            <span>
+                <a href="/tags/usb/">usb</a>
+            </span>
+            
+            <span>
+                <a href="/tags/vps/">vps</a>
+            </span>
+            
+            <span>
+                <a href="/tags/windows/">windows</a>
+            </span>
+            
+            <span>
+                <a href="/tags/yii2/">yii2</a>
+            </span>
+            
+        </div>
+    </div>
+    
+    
+    
+    <div class="sidebar-item sidebar-toc">
+        <h3>目录</h3>
+        <nav id="TableOfContents"></nav>
+    </div>
+    
+    
+  </div>
+</aside>
+    </main>
+
+    <footer>
+    <div class="container-lg clearfix">
+        <div class="col-12 footer">
+            
+            <span>&copy; 2014-2021
+                <a href="https://www.maoxuner.cn/">maoxuner</a>
+                 | <a href="https://git.fat4.cn/maoxuner/blog">Source code</a> 
+                | 基于 <a href="https://github.com/dsrkafuu/hugo-theme-fuji/"
+                   target="_blank">Fuji-v2</a> &amp; <a href="https://gohugo.io/"
+                                                    target="_blank">Hugo</a> 构建
+            </span>
+        </div>
+    </div>
+</footer>
+
+    
+<script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.0/lazysizes.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-core.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
+
+<script defer src="/assets/js/fuji.min.js"></script>
+
+
+</body>
+
+</html>

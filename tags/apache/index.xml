@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>apache on 二次元の技术宅</title>
+    <link>https://www.maoxuner.cn/tags/apache/</link>
+    <description>Recent content in apache on 二次元の技术宅</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sat, 15 Feb 2020 13:35:47 +0800</lastBuildDate><atom:link href="https://www.maoxuner.cn/tags/apache/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Apache服务器通过Rewrite规则绑定域名目录</title>
+      <link>https://www.maoxuner.cn/post/2020/02/apache-vhost-domain-subdirectory-bindings/</link>
+      <pubDate>Sat, 15 Feb 2020 13:35:47 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2020/02/apache-vhost-domain-subdirectory-bindings/</guid>
+      <description>Apache服务器通过Rewrite规则绑定域名目录 使用虚拟主机时，由于不能自定义VirtualHost，因此只能通过重写规则来绑定域名和目录。前提是服务器允许使用.htaccess并启用了重写规则。</description>
+    </item>
+    
+    <item>
+      <title>使用Let&#39;sEncrypt证书</title>
+      <link>https://www.maoxuner.cn/post/2017/12/letsencrypt/</link>
+      <pubDate>Fri, 29 Dec 2017 13:12:37 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2017/12/letsencrypt/</guid>
+      <description>Apache服务器配置使用https（ssl）。需求：vps管理权限。 创建虚拟主机 给各个域名创建虚拟主机，80端口。保证http可正常访问。 安装证书自动设置工具certbot 需要配置backports</description>
+    </item>
+    
+    <item>
+      <title>Apache运行时的系统环境变量设置</title>
+      <link>https://www.maoxuner.cn/post/2017/04/apache-system-environment-variables/</link>
+      <pubDate>Wed, 26 Apr 2017 15:00:59 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2017/04/apache-system-environment-variables/</guid>
+      <description>最近在研究git的webhook，想以此实现代码的自动部署。其核心内容就是一个php函数shell_exec()。我找到了一个厉害的php部署工具，叫做Deployer。尽管如此，还是遇到了一个很大的</description>
+    </item>
+    
+    <item>
+      <title>LNMPA专题</title>
+      <link>https://www.maoxuner.cn/post/2017/04/lnmpa/</link>
+      <pubDate>Thu, 06 Apr 2017 21:45:55 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2017/04/lnmpa/</guid>
+      <description>主要针对 Apache2+PHP7.0+MariaDB 安装 sudo apt-get install apache2 mariadb-server php7.0 php7.0-mysql libapache2-mod-php7.0 sudo apt-get install php7.0-curl php7.0-mbstring php7.0-xml php7.0-bz2 php7.0-zip 组件名称 作用 php7.0-curl curl操作 php7.0-mbstring 字符操作？ php7.0-xml dom操作 php7.0-bz2 bzip2解压 php7.0-zip zip解压 常见问题 综合问题 Apache2 忽略路径大小写 解决方法 启用模块speling sudo a2enmod speling 在配置文</description>
+    </item>
+    
+  </channel>
+</rss>

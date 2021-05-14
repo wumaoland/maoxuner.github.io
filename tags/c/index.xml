@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>c on 二次元の技术宅</title>
+    <link>https://www.maoxuner.cn/tags/c/</link>
+    <description>Recent content in c on 二次元の技术宅</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sat, 28 Jun 2014 01:02:30 +0800</lastBuildDate><atom:link href="https://www.maoxuner.cn/tags/c/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello, World!</title>
+      <link>https://www.maoxuner.cn/post/2014/06/hello-world/</link>
+      <pubDate>Sat, 28 Jun 2014 01:02:30 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2014/06/hello-world/</guid>
+      <description>Hello, World! N种语言的Hello, World! Shell #!/bin/sh echo &amp;quot;Hello, World!&amp;quot; Fortran program main implicit none print *,&amp;quot;Hello, World!&amp;quot; end program main C #include &amp;lt;stdio.h&amp;gt; int main() { printf(&amp;quot;Hello, World&amp;quot;); return 0; } Python print(&amp;quot;Hello, World!&amp;quot;) JavaScript console.log(&amp;quot;Hello, World!&amp;quot;); PHP echo &#39;Hello, World!&#39;; Go package main import &amp;quot;fmt&amp;quot; func main(){ fmt.Print(&amp;quot;Hello, World!&amp;quot;); } setTimeout(function(){ console.log(&#34;I Love Young!&#34;); alert(&#34;Hello, World!&#34;); }, 5000);</description>
+    </item>
+    
+  </channel>
+</rss>

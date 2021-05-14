@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vps on 二次元の技术宅</title>
+    <link>https://www.maoxuner.cn/tags/vps/</link>
+    <description>Recent content in vps on 二次元の技术宅</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 03 Jan 2018 01:08:17 +0800</lastBuildDate><atom:link href="https://www.maoxuner.cn/tags/vps/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>为vps添加swap</title>
+      <link>https://www.maoxuner.cn/post/2018/01/kvm-vps-swap-file/</link>
+      <pubDate>Wed, 03 Jan 2018 01:08:17 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2018/01/kvm-vps-swap-file/</guid>
+      <description>适用于kvm架构的vps。openvz不支持。 用了搬瓦工的vps，使用composer创建项目时遇到内存不足的问题。查看kiwi控制台，发现物理内存（512M）还有剩余，swap（128M）用光了。可</description>
+    </item>
+    
+  </channel>
+</rss>

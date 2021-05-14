@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+
+<head>
+    
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="HandheldFriendly" content="True" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="generator" content="Hugo 0.83.1" />
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.maoxuner.cn/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.maoxuner.cn/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.maoxuner.cn/favicon-16x16.png" />
+<link rel="manifest" href="https://www.maoxuner.cn/site.webmanifest" />
+<link rel="mask-icon" href="https://www.maoxuner.cn/safari-pinned-tab.svg" color="#5bbad5" />
+<meta name="msapplication-TileColor" content="#da532c" />
+<meta name="theme-color" content="#ffffff" />
+
+
+
+<title>二次元の技术宅 - 念念不忘，必有回响。</title>
+
+
+<meta name="author" content="maoxuner" />
+
+
+<meta name="description" content="二次元爱好者的技术博客。专于php、linux" />
+
+
+<link rel="alternate" type="application/rss+xml" href="https://www.maoxuner.cn/index.xml" title="二次元の技术宅" />
+
+<meta property="og:title" content="二次元の技术宅" />
+<meta name="twitter:title" content="二次元の技术宅" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.maoxuner.cn/" /><meta property="og:image" content="https://www.maoxuner.cn/img/og.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.maoxuner.cn/img/og.png" /><meta property="og:updated_time" content="2020-03-22T23:57:59+08:00" />
+
+
+<style>
+    @media (prefers-color-scheme: dark) {
+        body[data-theme='auto'] img {
+            filter: brightness(60%);
+        }
+    }
+
+    body[data-theme='dark'] img {
+        filter: brightness(60%);
+    }
+</style>
+
+
+
+<link rel="stylesheet" href="https://www.maoxuner.cn/assets/css/fuji.min.css" />
+
+
+
+
+
+</head>
+
+<body data-theme="auto">
+    <script data-cfasync="false">
+  
+  var fujiThemeData = localStorage.getItem('fuji_data-theme');
+  
+  if (!fujiThemeData) {
+    localStorage.setItem('fuji_data-theme', 'auto');
+  } else {
+    
+    if (fujiThemeData !== 'auto') {
+      document.body.setAttribute('data-theme', fujiThemeData === 'dark' ? 'dark' : 'light');
+    }
+  }
+</script>
+    <header>
+    <div class="container-lg clearfix">
+        <div class="col-12 header">
+            <a class="title-main" href="https://www.maoxuner.cn/">二次元の技术宅</a>
+            
+            <span class="title-sub">念念不忘，必有回响。</span>
+            
+        </div>
+    </div>
+</header>
+
+    <main>
+        <div class="container-lg clearfix">
+            
+            <div class="col-12 col-md-9 float-left content">
+                
+
+
+
+<div class="post">
+    <h2 class="post-item post-title">
+        <a href="https://www.maoxuner.cn/post/2017/05/php-deployer/">使用php部署工具deployer实现自动部署</a>
+    </h2>
+    <div class="post-item post-meta">
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2017-05-04</span>
+
+<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;618 字</span>
+
+<span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/php">php</a>&nbsp;<a href="/tags/deployer">deployer</a>&nbsp;<a href="/tags/git">git</a>&nbsp;</span>
+
+    </div>
+    <div class="post-item post-summary markdown-body">
+        利用git webhook请求php脚本，触发deployer自动部署实现的核心流程：PC/Client(git push) =&gt; GitHub/Git Repository(webhook/http request) =&gt; Server/WebHost(php hook/shell_exec) =&gt; Server/WeHost(deploy commands) 设置部署公钥 部署脚本执行的用户www-data,把www-data的
+    </div>
+</div>
+
+<div class="post">
+    <h2 class="post-item post-title">
+        <a href="https://www.maoxuner.cn/post/2017/04/ubuntu%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BD%BF%E7%94%A8flash%E6%8F%92%E4%BB%B6/">ubuntu谷歌浏览器使用flash插件</a>
+    </h2>
+    <div class="post-item post-meta">
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2017-04-30</span>
+
+<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;506 字</span>
+
+<span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/chromium">chromium</a>&nbsp;<a href="/tags/flash">flash</a>&nbsp;</span>
+
+    </div>
+    <div class="post-item post-summary markdown-body">
+        Ubuntu/Debian上默认没有安装flash插件，需要手动安装并调用插件。flash早晚会成为历史的尘埃，建议不要再折腾了 安装并配置flash插件 安装flash插件 参考文件readme.txt中
+    </div>
+</div>
+
+<div class="post">
+    <h2 class="post-item post-title">
+        <a href="https://www.maoxuner.cn/post/2017/04/laravel-learning/">折腾laravel总结</a>
+    </h2>
+    <div class="post-item post-meta">
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2017-04-27</span>
+
+<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;249 字</span>
+
+<span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/php">php</a>&nbsp;<a href="/tags/laravel">laravel</a>&nbsp;</span>
+
+    </div>
+    <div class="post-item post-summary markdown-body">
+        学习laravel遇到的一些坑，备忘。 项目 版本 system debian8 apache 2.4.10 php 5.6.30-0 mariadb 10.0.30 laravel 5.4.19 坑 不能使用.env文件的配置项 已配置好.env中的数据库，然而执行数据库迁移命令时，依然采用默认数据库配置。 在项目根目录执行命令，生成
+    </div>
+</div>
+
+<div class="post">
+    <h2 class="post-item post-title">
+        <a href="https://www.maoxuner.cn/post/2017/04/apache-system-environment-variables/">Apache运行时的系统环境变量设置</a>
+    </h2>
+    <div class="post-item post-meta">
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2017-04-26</span>
+
+<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;795 字</span>
+
+<span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/apache">apache</a>&nbsp;</span>
+
+    </div>
+    <div class="post-item post-summary markdown-body">
+        最近在研究git的webhook，想以此实现代码的自动部署。其核心内容就是一个php函数shell_exec()。我找到了一个厉害的php部署工具，叫做Deployer。尽管如此，还是遇到了一个很大的
+    </div>
+</div>
+
+<div class="post">
+    <h2 class="post-item post-title">
+        <a href="https://www.maoxuner.cn/post/2017/04/programer-novel/">程序员修真小说</a>
+    </h2>
+    <div class="post-item post-meta">
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2017-04-08</span>
+
+<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;5873 字</span>
+
+<span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;无标签</span>
+
+    </div>
+    <div class="post-item post-summary markdown-body">
+        知乎上的一篇文字，51CTO整理的。觉得蛮有意思，就转过来了。 终有一天我手中的编译器将成为我灵魂的一部分，这世界在我的眼中将被代码重构，我将看到山川无尽银河无垠都汇成二进制的数字河流，过往英雄都在我脑
+    </div>
+</div>
+
+<div class="post">
+    <h2 class="post-item post-title">
+        <a href="https://www.maoxuner.cn/post/2017/04/lnmpa/">LNMPA专题</a>
+    </h2>
+    <div class="post-item post-meta">
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2017-04-06</span>
+
+<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;637 字</span>
+
+<span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/apache">apache</a>&nbsp;<a href="/tags/nginx">nginx</a>&nbsp;<a href="/tags/php">php</a>&nbsp;<a href="/tags/mysql">mysql</a>&nbsp;<a href="/tags/mariadb">mariadb</a>&nbsp;</span>
+
+    </div>
+    <div class="post-item post-summary markdown-body">
+        主要针对 Apache2+PHP7.0+MariaDB 安装 sudo apt-get install apache2 mariadb-server php7.0 php7.0-mysql libapache2-mod-php7.0 sudo apt-get install php7.0-curl php7.0-mbstring php7.0-xml php7.0-bz2 php7.0-zip 组件名称 作用 php7.0-curl curl操作 php7.0-mbstring 字符操作？ php7.0-xml dom操作 php7.0-bz2 bzip2解压 php7.0-zip zip解压 常见问题 综合问题 Apache2 忽略路径大小写 解决方法 启用模块speling sudo a2enmod speling 在配置文
+    </div>
+</div>
+
+<div class="post">
+    <h2 class="post-item post-title">
+        <a href="https://www.maoxuner.cn/post/2017/04/funny-comments/">有趣的注释</a>
+    </h2>
+    <div class="post-item post-meta">
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2017-04-04</span>
+
+<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;2153 字</span>
+
+<span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;无标签</span>
+
+    </div>
+    <div class="post-item post-summary markdown-body">
+        搜集了几个有趣（逗比）的注释，写出这些注释的程序猿一定是大神（二逼）。 神兽护体 ━━━━━━神兽出没━━━━━━ ┏┓ ┏┓ ┏━━┛┻━━━━━┛┻━━┓ ┃ ┃ ┃ ━ ┃ ┃ ┳┛ ┗┳ ┃ ┃ ┃ ┃ ┻ ┃ ┃ ┃ ┗━━┓ ┏━━┛
+    </div>
+</div>
+
+<div class="post">
+    <h2 class="post-item post-title">
+        <a href="https://www.maoxuner.cn/post/2017/03/php-abstract-interface/">php抽象类和接口</a>
+    </h2>
+    <div class="post-item post-meta">
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2017-03-31</span>
+
+<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;416 字</span>
+
+<span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/php">php</a>&nbsp;</span>
+
+    </div>
+    <div class="post-item post-summary markdown-body">
+        在写一个通用的通知类时，遇到了问题，特此查看一下抽象类跟接口的异同点。 示例 interface a { function run(); } interface b { const HELLO = &quot;b: Hello, World!\n&quot;; static function hello(); } interface c extends a,b { public function info($str); } abstract class d implements c { public $hello = &quot;d: hello, world!\n&quot;; public function run(){ echo &quot;d: run()\n&quot;; self::hello(); } static function hello(){ echo &quot;d: hello()\n&quot;; echo self::HELLO; } abstract function info($str); } abstract class
+    </div>
+</div>
+
+<div class="post">
+    <h2 class="post-item post-title">
+        <a href="https://www.maoxuner.cn/post/2017/03/yii2-mail/">yii2使用邮件组件</a>
+    </h2>
+    <div class="post-item post-meta">
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2017-03-31</span>
+
+<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;338 字</span>
+
+<span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/yii2">yii2</a>&nbsp;<a href="/tags/php">php</a>&nbsp;</span>
+
+    </div>
+    <div class="post-item post-summary markdown-body">
+        Yii2使用SwiftMailer（作为组件） 把SwiftMailer添加到yii的组件中去（配置文件中的components）。然后就按照SwiftMailer各种方法就能使用了。 组件配置 部分配置内
+    </div>
+</div>
+
+<div class="post">
+    <h2 class="post-item post-title">
+        <a href="https://www.maoxuner.cn/post/2017/03/ci3-composer/">CodeIgniter3利用composer实现命名空间类的自动加载</a>
+    </h2>
+    <div class="post-item post-meta">
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2017-03-24</span>
+
+<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;1621 字</span>
+
+<span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/php">php</a>&nbsp;<a href="/tags/codeigniter">codeigniter</a>&nbsp;<a href="/tags/composer">composer</a>&nbsp;</span>
+
+    </div>
+    <div class="post-item post-summary markdown-body">
+        CodeIgniter3中是没有使用命名空间的，但是不代表它就不能使用命名空间。根本上讲，命名空间是php的一项功能，从php5.3.0开始就支持了这一功能。CodeIgniter只是没有实现根据命名
+    </div>
+</div>
+<div class="pagination"><div class="pag-first">
+    <a href="/"><i class="iconfont icon-caret-back-circle-sharp"></i></a>
+  </div><div class="pag-previous">
+    <a href="/page/4/"><i class="iconfont icon-chevron-back-circle-sharp"></i></a>
+  </div><div class="pag-item">
+    <a href="/page/3/">3</a>
+  </div><div class="pag-item">
+    <a href="/page/4/">4</a>
+  </div><div class="pag-item pag-current">
+    <a href="/page/5/">5</a>
+  </div><div class="pag-item">
+    <a href="/page/6/">6</a>
+  </div><div class="pag-item">
+    <a href="/page/7/">7</a>
+  </div><div class="pag-next">
+    <a href="/page/6/"><i class="iconfont icon-chevron-forward-circle-sharp"></i></a>
+  </div><div class="pag-last">
+    <a href="/page/9/"><i class="iconfont icon-caret-forward-circle-sharp"></i></a>
+  </div></div>
+            </div>
+            <aside class="col-12 col-md-3 float-left sidebar">
+    
+    <div class="sidebar-item sidebar-pages">
+        <h3>页面</h3>
+        <ul>
+            
+            <li>
+                <a href="/archives/">归档</a>
+            </li>
+            
+            <li>
+                <a href="/links/">友链</a>
+            </li>
+            
+            <li>
+                <a href="/about/">关于</a>
+            </li>
+            
+            <li>
+                <a href="/search/">搜索</a>
+            </li>
+            
+            <li>
+                <a href="/index.xml">RSS</a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-links">
+        <h3>链接</h3>
+        <ul>
+            
+            <li>
+                <a href="https://git.fat4.cn/maoxuner" target="_blank"><span>Gitea</span></a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-tags">
+        <h3>标签</h3>
+        <div>
+            
+            <span>
+                <a href="/tags/acg/">acg</a>
+            </span>
+            
+            <span>
+                <a href="/tags/android/">android</a>
+            </span>
+            
+            <span>
+                <a href="/tags/apache/">apache</a>
+            </span>
+            
+            <span>
+                <a href="/tags/archlinux/">archlinux</a>
+            </span>
+            
+            <span>
+                <a href="/tags/bpi/">bpi</a>
+            </span>
+            
+            <span>
+                <a href="/tags/c/">c</a>
+            </span>
+            
+            <span>
+                <a href="/tags/chat/">chat</a>
+            </span>
+            
+            <span>
+                <a href="/tags/chromium/">chromium</a>
+            </span>
+            
+            <span>
+                <a href="/tags/cloud/">cloud</a>
+            </span>
+            
+            <span>
+                <a href="/tags/codeigniter/">codeigniter</a>
+            </span>
+            
+            <span>
+                <a href="/tags/composer/">composer</a>
+            </span>
+            
+            <span>
+                <a href="/tags/containerd/">containerd</a>
+            </span>
+            
+            <span>
+                <a href="/tags/css/">css</a>
+            </span>
+            
+            <span>
+                <a href="/tags/deployer/">deployer</a>
+            </span>
+            
+            <span>
+                <a href="/tags/docker/">docker</a>
+            </span>
+            
+            <span>
+                <a href="/tags/drone/">drone</a>
+            </span>
+            
+            <span>
+                <a href="/tags/flash/">flash</a>
+            </span>
+            
+            <span>
+                <a href="/tags/fortran/">fortran</a>
+            </span>
+            
+            <span>
+                <a href="/tags/git/">git</a>
+            </span>
+            
+            <span>
+                <a href="/tags/go/">go</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hexo/">hexo</a>
+            </span>
+            
+            <span>
+                <a href="/tags/html/">html</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hugo/">hugo</a>
+            </span>
+            
+            <span>
+                <a href="/tags/ingress/">ingress</a>
+            </span>
+            
+            <span>
+                <a href="/tags/javascript/">javascript</a>
+            </span>
+            
+            <span>
+                <a href="/tags/jenkins/">jenkins</a>
+            </span>
+            
+            <span>
+                <a href="/tags/jquery/">jquery</a>
+            </span>
+            
+            <span>
+                <a href="/tags/k3s/">k3s</a>
+            </span>
+            
+            <span>
+                <a href="/tags/k8s/">k8s</a>
+            </span>
+            
+            <span>
+                <a href="/tags/kvm/">kvm</a>
+            </span>
+            
+            <span>
+                <a href="/tags/laravel/">laravel</a>
+            </span>
+            
+            <span>
+                <a href="/tags/linux/">linux</a>
+            </span>
+            
+            <span>
+                <a href="/tags/mariadb/">mariadb</a>
+            </span>
+            
+            <span>
+                <a href="/tags/movie/">movie</a>
+            </span>
+            
+            <span>
+                <a href="/tags/music/">music</a>
+            </span>
+            
+            <span>
+                <a href="/tags/mysql/">mysql</a>
+            </span>
+            
+            <span>
+                <a href="/tags/nginx/">nginx</a>
+            </span>
+            
+            <span>
+                <a href="/tags/nodejs/">nodejs</a>
+            </span>
+            
+            <span>
+                <a href="/tags/php/">php</a>
+            </span>
+            
+            <span>
+                <a href="/tags/python/">python</a>
+            </span>
+            
+            <span>
+                <a href="/tags/rpi/">rpi</a>
+            </span>
+            
+            <span>
+                <a href="/tags/shell/">shell</a>
+            </span>
+            
+            <span>
+                <a href="/tags/ssl/">ssl</a>
+            </span>
+            
+            <span>
+                <a href="/tags/traefik/">traefik</a>
+            </span>
+            
+            <span>
+                <a href="/tags/typecho/">typecho</a>
+            </span>
+            
+            <span>
+                <a href="/tags/usb/">usb</a>
+            </span>
+            
+            <span>
+                <a href="/tags/vps/">vps</a>
+            </span>
+            
+            <span>
+                <a href="/tags/windows/">windows</a>
+            </span>
+            
+            <span>
+                <a href="/tags/yii2/">yii2</a>
+            </span>
+            
+        </div>
+    </div>
+    
+    
+    
+</aside>
+        </div>
+        <div class="btn">
+    <div class="btn-menu" id="btn-menu">
+        <i class="iconfont icon-grid-sharp"></i>
+    </div>
+    <div class="btn-toggle-mode">
+        <i class="iconfont icon-contrast-sharp"></i>
+    </div>
+    <div class="btn-scroll-top">
+        <i class="iconfont icon-chevron-up-circle-sharp"></i>
+    </div>
+</div>
+<aside class="sidebar-mobile" style="display: none;">
+  <div class="sidebar-wrapper">
+    
+    <div class="sidebar-item sidebar-pages">
+        <h3>页面</h3>
+        <ul>
+            
+            <li>
+                <a href="/archives/">归档</a>
+            </li>
+            
+            <li>
+                <a href="/links/">友链</a>
+            </li>
+            
+            <li>
+                <a href="/about/">关于</a>
+            </li>
+            
+            <li>
+                <a href="/search/">搜索</a>
+            </li>
+            
+            <li>
+                <a href="/index.xml">RSS</a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-links">
+        <h3>链接</h3>
+        <ul>
+            
+            <li>
+                <a href="https://git.fat4.cn/maoxuner" target="_blank"><span>Gitea</span></a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-tags">
+        <h3>标签</h3>
+        <div>
+            
+            <span>
+                <a href="/tags/acg/">acg</a>
+            </span>
+            
+            <span>
+                <a href="/tags/android/">android</a>
+            </span>
+            
+            <span>
+                <a href="/tags/apache/">apache</a>
+            </span>
+            
+            <span>
+                <a href="/tags/archlinux/">archlinux</a>
+            </span>
+            
+            <span>
+                <a href="/tags/bpi/">bpi</a>
+            </span>
+            
+            <span>
+                <a href="/tags/c/">c</a>
+            </span>
+            
+            <span>
+                <a href="/tags/chat/">chat</a>
+            </span>
+            
+            <span>
+                <a href="/tags/chromium/">chromium</a>
+            </span>
+            
+            <span>
+                <a href="/tags/cloud/">cloud</a>
+            </span>
+            
+            <span>
+                <a href="/tags/codeigniter/">codeigniter</a>
+            </span>
+            
+            <span>
+                <a href="/tags/composer/">composer</a>
+            </span>
+            
+            <span>
+                <a href="/tags/containerd/">containerd</a>
+            </span>
+            
+            <span>
+                <a href="/tags/css/">css</a>
+            </span>
+            
+            <span>
+                <a href="/tags/deployer/">deployer</a>
+            </span>
+            
+            <span>
+                <a href="/tags/docker/">docker</a>
+            </span>
+            
+            <span>
+                <a href="/tags/drone/">drone</a>
+            </span>
+            
+            <span>
+                <a href="/tags/flash/">flash</a>
+            </span>
+            
+            <span>
+                <a href="/tags/fortran/">fortran</a>
+            </span>
+            
+            <span>
+                <a href="/tags/git/">git</a>
+            </span>
+            
+            <span>
+                <a href="/tags/go/">go</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hexo/">hexo</a>
+            </span>
+            
+            <span>
+                <a href="/tags/html/">html</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hugo/">hugo</a>
+            </span>
+            
+            <span>
+                <a href="/tags/ingress/">ingress</a>
+            </span>
+            
+            <span>
+                <a href="/tags/javascript/">javascript</a>
+            </span>
+            
+            <span>
+                <a href="/tags/jenkins/">jenkins</a>
+            </span>
+            
+            <span>
+                <a href="/tags/jquery/">jquery</a>
+            </span>
+            
+            <span>
+                <a href="/tags/k3s/">k3s</a>
+            </span>
+            
+            <span>
+                <a href="/tags/k8s/">k8s</a>
+            </span>
+            
+            <span>
+                <a href="/tags/kvm/">kvm</a>
+            </span>
+            
+            <span>
+                <a href="/tags/laravel/">laravel</a>
+            </span>
+            
+            <span>
+                <a href="/tags/linux/">linux</a>
+            </span>
+            
+            <span>
+                <a href="/tags/mariadb/">mariadb</a>
+            </span>
+            
+            <span>
+                <a href="/tags/movie/">movie</a>
+            </span>
+            
+            <span>
+                <a href="/tags/music/">music</a>
+            </span>
+            
+            <span>
+                <a href="/tags/mysql/">mysql</a>
+            </span>
+            
+            <span>
+                <a href="/tags/nginx/">nginx</a>
+            </span>
+            
+            <span>
+                <a href="/tags/nodejs/">nodejs</a>
+            </span>
+            
+            <span>
+                <a href="/tags/php/">php</a>
+            </span>
+            
+            <span>
+                <a href="/tags/python/">python</a>
+            </span>
+            
+            <span>
+                <a href="/tags/rpi/">rpi</a>
+            </span>
+            
+            <span>
+                <a href="/tags/shell/">shell</a>
+            </span>
+            
+            <span>
+                <a href="/tags/ssl/">ssl</a>
+            </span>
+            
+            <span>
+                <a href="/tags/traefik/">traefik</a>
+            </span>
+            
+            <span>
+                <a href="/tags/typecho/">typecho</a>
+            </span>
+            
+            <span>
+                <a href="/tags/usb/">usb</a>
+            </span>
+            
+            <span>
+                <a href="/tags/vps/">vps</a>
+            </span>
+            
+            <span>
+                <a href="/tags/windows/">windows</a>
+            </span>
+            
+            <span>
+                <a href="/tags/yii2/">yii2</a>
+            </span>
+            
+        </div>
+    </div>
+    
+    
+  </div>
+</aside>
+    </main>
+
+    <footer>
+    <div class="container-lg clearfix">
+        <div class="col-12 footer">
+            
+            <span>&copy; 2014-2021
+                <a href="https://www.maoxuner.cn/">maoxuner</a>
+                 | <a href="https://git.fat4.cn/maoxuner/blog">Source code</a> 
+                | 基于 <a href="https://github.com/dsrkafuu/hugo-theme-fuji/"
+                   target="_blank">Fuji-v2</a> &amp; <a href="https://gohugo.io/"
+                                                    target="_blank">Hugo</a> 构建
+            </span>
+        </div>
+    </div>
+</footer>
+
+    
+<script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.0/lazysizes.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-core.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
+
+<script defer src="/assets/js/fuji.min.js"></script>
+
+
+</body>
+
+</html>

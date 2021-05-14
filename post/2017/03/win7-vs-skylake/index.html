@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+
+<head>
+    
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="HandheldFriendly" content="True" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="generator" content="Hugo 0.83.1" />
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.maoxuner.cn/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.maoxuner.cn/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.maoxuner.cn/favicon-16x16.png" />
+<link rel="manifest" href="https://www.maoxuner.cn/site.webmanifest" />
+<link rel="mask-icon" href="https://www.maoxuner.cn/safari-pinned-tab.svg" color="#5bbad5" />
+<meta name="msapplication-TileColor" content="#da532c" />
+<meta name="theme-color" content="#ffffff" />
+
+
+
+<title>原版win7安装后不识别usb导致键鼠没有反应的问题 - 二次元の技术宅</title>
+
+
+<meta name="author" content="maoxuner" />
+
+
+<meta name="description" content="二次元爱好者的技术博客。专于php、linux" />
+
+
+<meta name="keywords" content="windows, usb" />
+
+
+<meta property="og:title" content="原版win7安装后不识别usb导致键鼠没有反应的问题" />
+<meta name="twitter:title" content="原版win7安装后不识别usb导致键鼠没有反应的问题" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.maoxuner.cn/post/2017/03/win7-vs-skylake/" /><meta property="og:description" content="昨天给一台新电脑，联想H3060安装win7系统。安装完成后，在语言设置界面usb键盘鼠标都失去反应了，更换其他usb口也不能识别。这直接原因就是没有usb驱动。此时，电脑已经算作是完全失控的状态。此" />
+<meta name="twitter:description" content="昨天给一台新电脑，联想H3060安装win7系统。安装完成后，在语言设置界面usb键盘鼠标都失去反应了，更换其他usb口也不能识别。这直接原因就是没有usb驱动。此时，电脑已经算作是完全失控的状态。此" /><meta property="og:image" content="https://www.maoxuner.cn/img/og.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.maoxuner.cn/img/og.png" /><meta property="article:published_time" content="2017-03-14T13:36:37+08:00" /><meta property="article:modified_time" content="2017-03-14T13:36:37+08:00" />
+
+
+<style>
+    @media (prefers-color-scheme: dark) {
+        body[data-theme='auto'] img {
+            filter: brightness(60%);
+        }
+    }
+
+    body[data-theme='dark'] img {
+        filter: brightness(60%);
+    }
+</style>
+
+
+
+<link rel="stylesheet" href="https://www.maoxuner.cn/assets/css/fuji.min.css" />
+
+
+
+
+
+</head>
+
+<body data-theme="auto">
+    <script data-cfasync="false">
+  
+  var fujiThemeData = localStorage.getItem('fuji_data-theme');
+  
+  if (!fujiThemeData) {
+    localStorage.setItem('fuji_data-theme', 'auto');
+  } else {
+    
+    if (fujiThemeData !== 'auto') {
+      document.body.setAttribute('data-theme', fujiThemeData === 'dark' ? 'dark' : 'light');
+    }
+  }
+</script>
+    <header>
+    <div class="container-lg clearfix">
+        <div class="col-12 header">
+            <a class="title-main" href="https://www.maoxuner.cn/">二次元の技术宅</a>
+            
+            <span class="title-sub">念念不忘，必有回响。</span>
+            
+        </div>
+    </div>
+</header>
+
+    <main>
+        <div class="container-lg clearfix">
+            
+            <div class="col-12 col-md-9 float-left content">
+                
+<article>
+    
+    <h2 class="post-item post-title">
+        <a href="https://www.maoxuner.cn/post/2017/03/win7-vs-skylake/">原版win7安装后不识别usb导致键鼠没有反应的问题</a>
+    </h2>
+    <div class="post-item post-meta">
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2017-03-14</span>
+
+<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;1120 字</span>
+
+<span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/windows">windows</a>&nbsp;<a href="/tags/usb">usb</a>&nbsp;</span>
+
+    </div>
+    
+    <div class="post-content markdown-body">
+        <p>昨天给一台新电脑，联想H3060安装win7系统。安装完成后，在语言设置界面usb键盘鼠标都失去反应了，更换其他usb口也不能识别。这直接原因就是没有usb驱动。此时，电脑已经算作是完全失控的状态。此时，只有三个解决方案：</p>
+<ul>
+<li>使用<code>PS/2</code>接口的键盘鼠标</li>
+<li>重新安装额外添加了usb驱动的系统</li>
+<li>在<code>BIOS</code>中开启<code>USB Virtual KBC Support</code></li>
+</ul>
+<!-- more -->
+<h1 id="根本原因">根本原因</h1>
+<p>经过一番研究，总算找到了根本原因。装机的这台电脑，CPU为<code>i5-6400</code>，是<code>Skylake</code>架构，2015年9月推出。英特尔Skylake这代芯片组（100系列）把<code>EHCI</code>主控替换成了<code>XHCI</code>主控。win8和win10自带XHCI主控的驱动，而较老的win7（最后一个中文系统镜像2011年释出）就没有这个驱动了。</p>
+<h1 id="解决方案">解决方案</h1>
+<h2 id="使用ps2接口的键盘鼠标">使用<code>PS/2</code>接口的键盘鼠标</h2>
+<p>这是个最简单，但是最不靠谱的解决方案。<code>PS/2</code>接口的键鼠已经很少了，即使有这样的键鼠，主机上也不一定有这个接口了。或许有些人都没有见过这个接口的，圆形的：鼠标常常是绿色的接口，键盘是紫色的接口。（这里从淘宝上盗了两张图来说明接口的样式）</p>
+<p>如果刚好符合这样的条件，那就可以装完USB驱动，再把键鼠换回来就好了。</p>
+<h2 id="安装添加了xhci驱动的系统">安装添加了XHCI驱动的系统</h2>
+<p>这是个最根本最直接的解决方案。但是这个太麻烦了点，添加驱动有难度，安装系统也有难度。可参考文末的链接。我这是刚好第三个解决方案可以使用。</p>
+<h2 id="开启usb-virtual-kbc-support">开启<code>USB Virtual KBC Support</code></h2>
+<p>本来已经打算使用上一个方案来解决问题了，无奈是远程教同事安装系统，难度太大了。百度了一下，看到这个页面<a href="https://zhidao.baidu.com/question/1694324691040923628.html" target="_blank">联想h3060装完win7系统usb认不到</a>，虽然没有解决我的问题，但至少有了点启发。
+在<code>BIOS &gt;&gt; Devices &gt;&gt; USB</code>配置项中找了找，似乎没发现啥相关设置。保险起见，把<code>USB Virtual KBC Support</code>配置项百度了一下，结果喜出望外。
+<code>USB Virtual KBC Support</code>全称大概是“支持USB虚拟PS2”，而且找到几篇关于这个配置项解决win7不能识别usb的文章。于是把<code>USB Virtual KBC Support</code>这一项设置成了<code>Enabled</code>，重启电脑，完美解决问题。</p>
+<p><strong>题外话</strong></p>
+<p><em>这个方法在我看来是最简单的解决方案了，然而局限性也很明显。<code>USB Virtual KBC Support</code>是BIOS中的一个选项，其他主板的BIOS中也许并没有这一项。据说，该选项存在于大多数商用台式机中。另，联想H3060进入BIOS的方法：开机按<code>F12</code>，然后选择<code>Enter Setup</code>。按照台式机的通常设置，恰当时间按<code>Del</code>键应该也能有效的。Good Luck!</em></p>
+<h1 id="参考文章">参考文章</h1>
+<ul>
+<li><a href="http://www.wobenben.com/html/news/201605/10804_1.html" target="_blank">解决Skylake平台装Win7无法识别USB接口的问题</a></li>
+<li><a href="http://www.111cn.net/sys/Windows7/116140.htm" target="_blank">Skylake平台电脑装Win7系统后usb接口无法使用的解决方法</a></li>
+</ul>
+<p>其他可参考文章</p>
+<ul>
+<li><a href="http://ideapad.it168.com/thread-5672495-1-1.html" target="_blank">Y700安装纯净版系统后不认USB设备的解决方法</a></li>
+<li><a href="http://www.dn580.cn/caozuoxitong/145.html" target="_blank">安装win7鼠标键盘不能用 失灵原因解析和解决方法</a></li>
+</ul>
+
+    </div>
+</article>
+
+
+<div class="license markdown-body">
+    <blockquote>
+        <p>除特殊注明部分，本站内容采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+               target="_blank">CC BY-NC-SA 4.0</a> 进行许可。</p>
+    </blockquote>
+</div>
+
+
+<div class="post-comment" data-comment="disqus">
+    <span class="post-comment-notloaded">
+        <i class="iconfont icon-chatbox-ellipses-sharp"></i>&nbsp;查看评论
+    </span>
+    <div id="disqus_thread" style="display: none;"></div>
+    <script>
+        function loadComment() {
+            var commentArea = document.querySelector('.post-comment');
+            var disqus_config = function () {
+                this.page.url = 'https:\/\/www.maoxuner.cn\/post\/2017\/03\/win7-vs-skylake\/';
+                this.page.identifier = '原版win7安装后不识别usb导致键鼠没有反应的问题';
+            };
+            var s = document.createElement('script');
+            s.src = 'https://' + 'maoxuner' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            document.querySelector('#disqus_thread').removeAttribute('style');
+            (document.body || document.head).appendChild(s);
+            document.querySelector('span.post-comment-notloaded').setAttribute('style', 'display: none;');
+        }
+    </script>
+</div>
+
+
+            </div>
+            <aside class="col-12 col-md-3 float-left sidebar">
+    
+    <div class="sidebar-item sidebar-pages">
+        <h3>页面</h3>
+        <ul>
+            
+            <li>
+                <a href="/archives/">归档</a>
+            </li>
+            
+            <li>
+                <a href="/links/">友链</a>
+            </li>
+            
+            <li>
+                <a href="/about/">关于</a>
+            </li>
+            
+            <li>
+                <a href="/search/">搜索</a>
+            </li>
+            
+            <li>
+                <a href="/index.xml">RSS</a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-links">
+        <h3>链接</h3>
+        <ul>
+            
+            <li>
+                <a href="https://git.fat4.cn/maoxuner" target="_blank"><span>Gitea</span></a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-tags">
+        <h3>标签</h3>
+        <div>
+            
+            <span>
+                <a href="/tags/acg/">acg</a>
+            </span>
+            
+            <span>
+                <a href="/tags/android/">android</a>
+            </span>
+            
+            <span>
+                <a href="/tags/apache/">apache</a>
+            </span>
+            
+            <span>
+                <a href="/tags/archlinux/">archlinux</a>
+            </span>
+            
+            <span>
+                <a href="/tags/bpi/">bpi</a>
+            </span>
+            
+            <span>
+                <a href="/tags/c/">c</a>
+            </span>
+            
+            <span>
+                <a href="/tags/chat/">chat</a>
+            </span>
+            
+            <span>
+                <a href="/tags/chromium/">chromium</a>
+            </span>
+            
+            <span>
+                <a href="/tags/cloud/">cloud</a>
+            </span>
+            
+            <span>
+                <a href="/tags/codeigniter/">codeigniter</a>
+            </span>
+            
+            <span>
+                <a href="/tags/composer/">composer</a>
+            </span>
+            
+            <span>
+                <a href="/tags/containerd/">containerd</a>
+            </span>
+            
+            <span>
+                <a href="/tags/css/">css</a>
+            </span>
+            
+            <span>
+                <a href="/tags/deployer/">deployer</a>
+            </span>
+            
+            <span>
+                <a href="/tags/docker/">docker</a>
+            </span>
+            
+            <span>
+                <a href="/tags/drone/">drone</a>
+            </span>
+            
+            <span>
+                <a href="/tags/flash/">flash</a>
+            </span>
+            
+            <span>
+                <a href="/tags/fortran/">fortran</a>
+            </span>
+            
+            <span>
+                <a href="/tags/git/">git</a>
+            </span>
+            
+            <span>
+                <a href="/tags/go/">go</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hexo/">hexo</a>
+            </span>
+            
+            <span>
+                <a href="/tags/html/">html</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hugo/">hugo</a>
+            </span>
+            
+            <span>
+                <a href="/tags/ingress/">ingress</a>
+            </span>
+            
+            <span>
+                <a href="/tags/javascript/">javascript</a>
+            </span>
+            
+            <span>
+                <a href="/tags/jenkins/">jenkins</a>
+            </span>
+            
+            <span>
+                <a href="/tags/jquery/">jquery</a>
+            </span>
+            
+            <span>
+                <a href="/tags/k3s/">k3s</a>
+            </span>
+            
+            <span>
+                <a href="/tags/k8s/">k8s</a>
+            </span>
+            
+            <span>
+                <a href="/tags/kvm/">kvm</a>
+            </span>
+            
+            <span>
+                <a href="/tags/laravel/">laravel</a>
+            </span>
+            
+            <span>
+                <a href="/tags/linux/">linux</a>
+            </span>
+            
+            <span>
+                <a href="/tags/mariadb/">mariadb</a>
+            </span>
+            
+            <span>
+                <a href="/tags/movie/">movie</a>
+            </span>
+            
+            <span>
+                <a href="/tags/music/">music</a>
+            </span>
+            
+            <span>
+                <a href="/tags/mysql/">mysql</a>
+            </span>
+            
+            <span>
+                <a href="/tags/nginx/">nginx</a>
+            </span>
+            
+            <span>
+                <a href="/tags/nodejs/">nodejs</a>
+            </span>
+            
+            <span>
+                <a href="/tags/php/">php</a>
+            </span>
+            
+            <span>
+                <a href="/tags/python/">python</a>
+            </span>
+            
+            <span>
+                <a href="/tags/rpi/">rpi</a>
+            </span>
+            
+            <span>
+                <a href="/tags/shell/">shell</a>
+            </span>
+            
+            <span>
+                <a href="/tags/ssl/">ssl</a>
+            </span>
+            
+            <span>
+                <a href="/tags/traefik/">traefik</a>
+            </span>
+            
+            <span>
+                <a href="/tags/typecho/">typecho</a>
+            </span>
+            
+            <span>
+                <a href="/tags/usb/">usb</a>
+            </span>
+            
+            <span>
+                <a href="/tags/vps/">vps</a>
+            </span>
+            
+            <span>
+                <a href="/tags/windows/">windows</a>
+            </span>
+            
+            <span>
+                <a href="/tags/yii2/">yii2</a>
+            </span>
+            
+        </div>
+    </div>
+    <div class="sidebar-item sidebar-toc">
+        <h3>目录</h3><nav id="TableOfContents">
+  <ul>
+    <li><a href="#使用ps2接口的键盘鼠标">使用<code>PS/2</code>接口的键盘鼠标</a></li>
+    <li><a href="#安装添加了xhci驱动的系统">安装添加了XHCI驱动的系统</a></li>
+    <li><a href="#开启usb-virtual-kbc-support">开启<code>USB Virtual KBC Support</code></a></li>
+  </ul>
+</nav></div>
+</aside>
+        </div>
+        <div class="btn">
+    <div class="btn-menu" id="btn-menu">
+        <i class="iconfont icon-grid-sharp"></i>
+    </div>
+    <div class="btn-toggle-mode">
+        <i class="iconfont icon-contrast-sharp"></i>
+    </div>
+    <div class="btn-scroll-top">
+        <i class="iconfont icon-chevron-up-circle-sharp"></i>
+    </div>
+</div>
+<aside class="sidebar-mobile" style="display: none;">
+  <div class="sidebar-wrapper">
+    
+    <div class="sidebar-item sidebar-pages">
+        <h3>页面</h3>
+        <ul>
+            
+            <li>
+                <a href="/archives/">归档</a>
+            </li>
+            
+            <li>
+                <a href="/links/">友链</a>
+            </li>
+            
+            <li>
+                <a href="/about/">关于</a>
+            </li>
+            
+            <li>
+                <a href="/search/">搜索</a>
+            </li>
+            
+            <li>
+                <a href="/index.xml">RSS</a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-links">
+        <h3>链接</h3>
+        <ul>
+            
+            <li>
+                <a href="https://git.fat4.cn/maoxuner" target="_blank"><span>Gitea</span></a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-tags">
+        <h3>标签</h3>
+        <div>
+            
+            <span>
+                <a href="/tags/acg/">acg</a>
+            </span>
+            
+            <span>
+                <a href="/tags/android/">android</a>
+            </span>
+            
+            <span>
+                <a href="/tags/apache/">apache</a>
+            </span>
+            
+            <span>
+                <a href="/tags/archlinux/">archlinux</a>
+            </span>
+            
+            <span>
+                <a href="/tags/bpi/">bpi</a>
+            </span>
+            
+            <span>
+                <a href="/tags/c/">c</a>
+            </span>
+            
+            <span>
+                <a href="/tags/chat/">chat</a>
+            </span>
+            
+            <span>
+                <a href="/tags/chromium/">chromium</a>
+            </span>
+            
+            <span>
+                <a href="/tags/cloud/">cloud</a>
+            </span>
+            
+            <span>
+                <a href="/tags/codeigniter/">codeigniter</a>
+            </span>
+            
+            <span>
+                <a href="/tags/composer/">composer</a>
+            </span>
+            
+            <span>
+                <a href="/tags/containerd/">containerd</a>
+            </span>
+            
+            <span>
+                <a href="/tags/css/">css</a>
+            </span>
+            
+            <span>
+                <a href="/tags/deployer/">deployer</a>
+            </span>
+            
+            <span>
+                <a href="/tags/docker/">docker</a>
+            </span>
+            
+            <span>
+                <a href="/tags/drone/">drone</a>
+            </span>
+            
+            <span>
+                <a href="/tags/flash/">flash</a>
+            </span>
+            
+            <span>
+                <a href="/tags/fortran/">fortran</a>
+            </span>
+            
+            <span>
+                <a href="/tags/git/">git</a>
+            </span>
+            
+            <span>
+                <a href="/tags/go/">go</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hexo/">hexo</a>
+            </span>
+            
+            <span>
+                <a href="/tags/html/">html</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hugo/">hugo</a>
+            </span>
+            
+            <span>
+                <a href="/tags/ingress/">ingress</a>
+            </span>
+            
+            <span>
+                <a href="/tags/javascript/">javascript</a>
+            </span>
+            
+            <span>
+                <a href="/tags/jenkins/">jenkins</a>
+            </span>
+            
+            <span>
+                <a href="/tags/jquery/">jquery</a>
+            </span>
+            
+            <span>
+                <a href="/tags/k3s/">k3s</a>
+            </span>
+            
+            <span>
+                <a href="/tags/k8s/">k8s</a>
+            </span>
+            
+            <span>
+                <a href="/tags/kvm/">kvm</a>
+            </span>
+            
+            <span>
+                <a href="/tags/laravel/">laravel</a>
+            </span>
+            
+            <span>
+                <a href="/tags/linux/">linux</a>
+            </span>
+            
+            <span>
+                <a href="/tags/mariadb/">mariadb</a>
+            </span>
+            
+            <span>
+                <a href="/tags/movie/">movie</a>
+            </span>
+            
+            <span>
+                <a href="/tags/music/">music</a>
+            </span>
+            
+            <span>
+                <a href="/tags/mysql/">mysql</a>
+            </span>
+            
+            <span>
+                <a href="/tags/nginx/">nginx</a>
+            </span>
+            
+            <span>
+                <a href="/tags/nodejs/">nodejs</a>
+            </span>
+            
+            <span>
+                <a href="/tags/php/">php</a>
+            </span>
+            
+            <span>
+                <a href="/tags/python/">python</a>
+            </span>
+            
+            <span>
+                <a href="/tags/rpi/">rpi</a>
+            </span>
+            
+            <span>
+                <a href="/tags/shell/">shell</a>
+            </span>
+            
+            <span>
+                <a href="/tags/ssl/">ssl</a>
+            </span>
+            
+            <span>
+                <a href="/tags/traefik/">traefik</a>
+            </span>
+            
+            <span>
+                <a href="/tags/typecho/">typecho</a>
+            </span>
+            
+            <span>
+                <a href="/tags/usb/">usb</a>
+            </span>
+            
+            <span>
+                <a href="/tags/vps/">vps</a>
+            </span>
+            
+            <span>
+                <a href="/tags/windows/">windows</a>
+            </span>
+            
+            <span>
+                <a href="/tags/yii2/">yii2</a>
+            </span>
+            
+        </div>
+    </div>
+    
+    
+    
+    <div class="sidebar-item sidebar-toc">
+        <h3>目录</h3>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#使用ps2接口的键盘鼠标">使用<code>PS/2</code>接口的键盘鼠标</a></li>
+    <li><a href="#安装添加了xhci驱动的系统">安装添加了XHCI驱动的系统</a></li>
+    <li><a href="#开启usb-virtual-kbc-support">开启<code>USB Virtual KBC Support</code></a></li>
+  </ul>
+</nav>
+    </div>
+    
+    
+  </div>
+</aside>
+    </main>
+
+    <footer>
+    <div class="container-lg clearfix">
+        <div class="col-12 footer">
+            
+            <span>&copy; 2014-2021
+                <a href="https://www.maoxuner.cn/">maoxuner</a>
+                 | <a href="https://git.fat4.cn/maoxuner/blog">Source code</a> 
+                | 基于 <a href="https://github.com/dsrkafuu/hugo-theme-fuji/"
+                   target="_blank">Fuji-v2</a> &amp; <a href="https://gohugo.io/"
+                                                    target="_blank">Hugo</a> 构建
+            </span>
+        </div>
+    </div>
+</footer>
+
+    
+<script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.0/lazysizes.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-core.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
+
+<script defer src="/assets/js/fuji.min.js"></script>
+
+
+</body>
+
+</html>

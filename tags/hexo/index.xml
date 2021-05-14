@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hexo on 二次元の技术宅</title>
+    <link>https://www.maoxuner.cn/tags/hexo/</link>
+    <description>Recent content in hexo on 二次元の技术宅</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sun, 16 Feb 2020 23:10:07 +0800</lastBuildDate><atom:link href="https://www.maoxuner.cn/tags/hexo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>消失的2019年</title>
+      <link>https://www.maoxuner.cn/post/2020/02/2019-404/</link>
+      <pubDate>Sun, 16 Feb 2020 23:10:07 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2020/02/2019-404/</guid>
+      <description>最近重新整理了博客，将Hexo搭建的旧站迁移到Hugo搭建的新站了。从14年开始建博客，除去几次迁站删掉了一些，每年都写过几篇文章。唯独2019年，一篇文章都没有。 老站上，我做了一个“心情”的功能。2</description>
+    </item>
+    
+    <item>
+      <title>仿Trapecho制作的Hexo主题HexOne</title>
+      <link>https://www.maoxuner.cn/post/2017/12/hexo-theme-hexone/</link>
+      <pubDate>Sun, 24 Dec 2017 22:29:42 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2017/12/hexo-theme-hexone/</guid>
+      <description>放弃使用Next主题后，一直在尝试自己制作一个主题。尤其是实现项目展示以及心情展示的功能。奋斗了两个月左右，这款主题HexOne终于诞生了！ HexOne 简约的Hexo主题HexOne（仿Trapecho） 安装 依</description>
+    </item>
+    
+    <item>
+      <title>Hexo渲染时排除部分文件或目录</title>
+      <link>https://www.maoxuner.cn/post/2017/03/hexo-skip-render/</link>
+      <pubDate>Fri, 10 Mar 2017 15:35:29 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2017/03/hexo-skip-render/</guid>
+      <description>搜索引擎确认网站所有权时往往会提供一个html文件来进行验证，要是这个文件被渲染了，验证自然就会失败了。或者，有时候会写一些简单的html示例页面，这也是不希望Hexo渲染的。因此有必要针对某个文件或</description>
+    </item>
+    
+    <item>
+      <title>安装nodejs并用hexo部署博客</title>
+      <link>https://www.maoxuner.cn/post/2017/03/install-hexo/</link>
+      <pubDate>Wed, 08 Mar 2017 20:53:13 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2017/03/install-hexo/</guid>
+      <description>最近写了好多js，对专门运行js的Node.js产生了兴趣。阿里的虚拟主机快要到期了，就打算把pages服务用起来，简简单单搭建个站点。早就想直接用markdown写写文章，然后用轻巧的工具生成页面了</description>
+    </item>
+    
+    <item>
+      <title>Next主题自定义CSS样式（字体）</title>
+      <link>https://www.maoxuner.cn/post/2017/03/hexo-next-custom-style/</link>
+      <pubDate>Wed, 08 Mar 2017 16:43:46 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2017/03/hexo-next-custom-style/</guid>
+      <description>设置字体是CSS样式中的一个小方面，实际上也就是自定义CSS样式了。CSS倒不难写，主要是得搞清楚在哪个文件里写才有效果。 这里讲的是Hexo的主题Next的CSS样式自定义，Next版本为5.1.0。</description>
+    </item>
+    
+  </channel>
+</rss>

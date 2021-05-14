@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>k8s on 二次元の技术宅</title>
+    <link>https://www.maoxuner.cn/tags/k8s/</link>
+    <description>Recent content in k8s on 二次元の技术宅</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sun, 15 Mar 2020 23:17:50 +0800</lastBuildDate><atom:link href="https://www.maoxuner.cn/tags/k8s/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>因MTU导致的容器网络问题</title>
+      <link>https://www.maoxuner.cn/post/2020/03/host-container-mtu/</link>
+      <pubDate>Sun, 15 Mar 2020 23:17:50 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2020/03/host-container-mtu/</guid>
+      <description>将CI/CD服务前移到k8s后，当drone的插件drone-docker构建镜像时，总卡在更新软件包的步骤。是网络连接的问题，为了解决这个问题，耗费了我整个周末。 # apk update fetch http://dl-cdn.alpinelinux.org/alpine/v3.11/main/x86_64/APKINDEX.tar.gz Drone-Runner in K8S 在k8s环境中，dr</description>
+    </item>
+    
+    <item>
+      <title>K8S Dashboard的Ingress配置</title>
+      <link>https://www.maoxuner.cn/post/2020/03/kubernetes-dashboard-ingress/</link>
+      <pubDate>Sat, 14 Mar 2020 11:21:40 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2020/03/kubernetes-dashboard-ingress/</guid>
+      <description>Kubernetes Dashboard的后端必须通过https访问，是自签名的ssl证书。使用Ingress连接时，会出现证书验证的问题，因此要配置Ingress忽略ssl验证。 Ingress Nginx Ingress Nginx是k8s官方社区开发的I</description>
+    </item>
+    
+    <item>
+      <title>K8S入坑指南</title>
+      <link>https://www.maoxuner.cn/post/2020/02/k8s/</link>
+      <pubDate>Wed, 19 Feb 2020 21:12:58 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2020/02/k8s/</guid>
+      <description>Docker是容器，但容器不是Docker。Docker是containerd的上层应用，Docker的流行带动了容器技术的应用。单机服务编排，docker + docker-compose的组合足以支撑</description>
+    </item>
+    
+  </channel>
+</rss>

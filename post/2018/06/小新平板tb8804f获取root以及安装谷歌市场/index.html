@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+
+<head>
+    
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="HandheldFriendly" content="True" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="generator" content="Hugo 0.83.1" />
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.maoxuner.cn/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.maoxuner.cn/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.maoxuner.cn/favicon-16x16.png" />
+<link rel="manifest" href="https://www.maoxuner.cn/site.webmanifest" />
+<link rel="mask-icon" href="https://www.maoxuner.cn/safari-pinned-tab.svg" color="#5bbad5" />
+<meta name="msapplication-TileColor" content="#da532c" />
+<meta name="theme-color" content="#ffffff" />
+
+
+
+<title>小新平板TB8804F获取root以及安装谷歌市场 - 二次元の技术宅</title>
+
+
+<meta name="author" content="maoxuner" />
+
+
+<meta name="description" content="二次元爱好者的技术博客。专于php、linux" />
+
+
+<meta name="keywords" content="android" />
+
+
+<meta property="og:title" content="小新平板TB8804F获取root以及安装谷歌市场" />
+<meta name="twitter:title" content="小新平板TB8804F获取root以及安装谷歌市场" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.maoxuner.cn/post/2018/06/%E5%B0%8F%E6%96%B0%E5%B9%B3%E6%9D%BFtb8804f%E8%8E%B7%E5%8F%96root%E4%BB%A5%E5%8F%8A%E5%AE%89%E8%A3%85%E8%B0%B7%E6%AD%8C%E5%B8%82%E5%9C%BA/" /><meta property="og:description" content="如果不root，买安卓设备作甚？ ——— 我说的，嗯 几经折腾，从酷比魔方Freer X9，到昂达X20，直到最终的联想小新平板TB8804F，我终于有了第一个平板。朋友说，达到了我对平板的底线（小新符合我对" />
+<meta name="twitter:description" content="如果不root，买安卓设备作甚？ ——— 我说的，嗯 几经折腾，从酷比魔方Freer X9，到昂达X20，直到最终的联想小新平板TB8804F，我终于有了第一个平板。朋友说，达到了我对平板的底线（小新符合我对" /><meta property="og:image" content="https://www.maoxuner.cn/img/og.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.maoxuner.cn/img/og.png" /><meta property="article:published_time" content="2018-06-12T10:47:24+08:00" /><meta property="article:modified_time" content="2018-06-12T10:47:24+08:00" />
+
+
+<style>
+    @media (prefers-color-scheme: dark) {
+        body[data-theme='auto'] img {
+            filter: brightness(60%);
+        }
+    }
+
+    body[data-theme='dark'] img {
+        filter: brightness(60%);
+    }
+</style>
+
+
+
+<link rel="stylesheet" href="https://www.maoxuner.cn/assets/css/fuji.min.css" />
+
+
+
+
+
+</head>
+
+<body data-theme="auto">
+    <script data-cfasync="false">
+  
+  var fujiThemeData = localStorage.getItem('fuji_data-theme');
+  
+  if (!fujiThemeData) {
+    localStorage.setItem('fuji_data-theme', 'auto');
+  } else {
+    
+    if (fujiThemeData !== 'auto') {
+      document.body.setAttribute('data-theme', fujiThemeData === 'dark' ? 'dark' : 'light');
+    }
+  }
+</script>
+    <header>
+    <div class="container-lg clearfix">
+        <div class="col-12 header">
+            <a class="title-main" href="https://www.maoxuner.cn/">二次元の技术宅</a>
+            
+            <span class="title-sub">念念不忘，必有回响。</span>
+            
+        </div>
+    </div>
+</header>
+
+    <main>
+        <div class="container-lg clearfix">
+            
+            <div class="col-12 col-md-9 float-left content">
+                
+<article>
+    
+    <h2 class="post-item post-title">
+        <a href="https://www.maoxuner.cn/post/2018/06/%E5%B0%8F%E6%96%B0%E5%B9%B3%E6%9D%BFtb8804f%E8%8E%B7%E5%8F%96root%E4%BB%A5%E5%8F%8A%E5%AE%89%E8%A3%85%E8%B0%B7%E6%AD%8C%E5%B8%82%E5%9C%BA/">小新平板TB8804F获取root以及安装谷歌市场</a>
+    </h2>
+    <div class="post-item post-meta">
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2018-06-12</span>
+
+<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;1141 字</span>
+
+<span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/android">android</a>&nbsp;</span>
+
+    </div>
+    
+    <div class="post-content markdown-body">
+        <blockquote>
+<p>如果不root，买安卓设备作甚？
+——— 我说的，嗯</p>
+</blockquote>
+<p>几经折腾，从酷比魔方Freer X9，到昂达X20，直到最终的联想小新平板TB8804F，我终于有了第一个平板。朋友说，达到了我对平板的底线（小新符合我对平板颜值、性能、搞机的最低条件）。</p>
+<p>酷比魔方Freer X9虽然性价比超级高、手感舒适、USB3.0，但是良品率、散热性堪忧，充电慢，系统老。我买到了坏点屏，在玩王者荣耀时，左上角发热特别严重。买来作为电子书倒是个不错的选择，游戏偶尔玩玩也凑合。
+昂达X20性价比也挺高、全网通、10寸屏。对我而言，通话对于平板而言完全是个鸡肋功能。超大屏带来的是超大的重量和耗电量，不够优雅。玩QQ飞车时，起点加速时会卡顿。游戏体验极差。</p>
+<p>好了言归正传，开始搞机。<strong>建议看完全文后，根据实际情况操作。</strong></p>
+<!-- more -->
+<h1 id="型号">型号</h1>
+<p>Lenovo TB-8804F</p>
+<h1 id="概念">概念</h1>
+<h2 id="开发者模式">开发者模式</h2>
+<p>连续点击关于平板电脑中的<code>版本号</code>，会进入开发者模式（设置里多出<code>开发者选项</code>）。打开USB调试，并永久授权。</p>
+<h2 id="fastbootbootloader">fastboot/bootloader</h2>
+<p>这里我也不太清楚，似乎fastboot/bootloader说的是一回事。</p>
+<p>进入fastboot模式：按住<code>音量上</code>开机，或者<code>adb reboot bootloader</code>
+进入recovery模式：按住<code>音量下</code>开机，或者<code>adb reboot recovery</code></p>
+<h2 id="oem锁">OEM锁</h2>
+<p>OEM锁限值了设备能否加载第三方镜像（比如recovery）。要刷recovery就要解锁OEM了。</p>
+<h1 id="解锁oem">解锁OEM</h1>
+<ol>
+<li>在开发者选项里启用<code>OEM解锁</code>
+这里只是从软件层面允许OEM解锁，实际上还没有解锁</li>
+<li>进入fastboot模式，执行命令<code>fastboot oem unlock-go</code>
+真正解锁OEM，<strong>会双清</strong></li>
+</ol>
+<h1 id="使用recoverytwrp-321">使用recovery（TWRP-3.2.1）</h1>
+<p><strong>必须先解锁OEM</strong>，然后在fastboot模式下进行recovery的一次性启动或者刷入操作</p>
+<blockquote>
+<p>60b14735c05c7330b952e5b9d07377cc  recovery-TWRP-3.2.1-0117-LENOVO_TB8804F-CN-wzsx150.img
+40d41a9077580c867acd5b78675d9035  misc.bin</p>
+</blockquote>
+<h2 id="直接启动recovery未测试">直接启动recovery（未测试）</h2>
+<p>刷入第三方recovery后会影响OTA。实际上可以不刷recovery，直接引导recovery镜像（一次性）。</p>
+<pre><code class="language-shell">fastboot boot recovery-TWRP-3.2.1-0117-LENOVO_TB8804F-CN-wzsx150.img
+</code></pre>
+<h2 id="刷recovery">刷recovery</h2>
+<pre><code class="language-shell">fastboot flash recovery recovery-TWRP-3.2.1-0117-LENOVO_TB8804F-CN-wzsx150.img
+fastboot flash misc misc.bin
+</code></pre>
+<p>然后就可以重启到recovery进行相关操作了</p>
+<ul>
+<li>建议立即全量备份整个系统，目前暂未找到线刷包</li>
+<li>刷了recovery后<strong>必须获取root权限，或者取消强制加密</strong>，否则会卡在启动画面。</li>
+</ul>
+<h1 id="安装谷歌服务">安装谷歌服务</h1>
+<p>目前国内的各种谷歌安装器都不能完美安装谷歌服务，即使安装上了，也会各种崩溃。解决办法是通过recovery把所需的所有文件刷入系统。</p>
+<blockquote>
+<p>7657c6abfb5b25fefbab3c659f7faee4  open_gapps-arm64-7.1-pico-20180610.zip</p>
+</blockquote>
+<p>用上述recovery把<code>open_gapps-arm64-7.1-pico-20180610.zip</code>刷入就可以了。</p>
+<p><em>使用谷歌服务的小伙伴一定会使用梯子吧，欢迎跟我讨论梯子的技术。注意，是讨论！如果不会搭梯子，勿扰。</em></p>
+<h1 id="参考文章">参考文章</h1>
+<ul>
+<li><a href="https://club.lenovo.com.cn/thread-4285931-1-1.html" target="_blank">[小新平板] 【LR.Team】小新平板TB-8804F专版TWRP-3.2.1-0117中英文修改优化版
+</a></li>
+<li><a href="https://forum.xda-developers.com/showpost.php?p=75700236&amp;postcount=4" target="_blank">[Need Help] Problem getting Google Apps on a Lenovo tablet from China!</a></li>
+<li><a href="https://forum.xda-developers.com/thinkpad-tablet/general/twrp-root-tab-4-plus-tb-x704l-f-tb-t3664407" target="_blank">TWRP and ROOT for Tab 4 8/10 (Plus) (TB-8704X/F/V,TB-X704L/F, TB-8504X/F, TB-X304L/F)</a></li>
+<li><a href="https://opengapps.org/" target="_blank">OpenGAPPS</a></li>
+</ul>
+
+    </div>
+</article>
+
+
+<div class="license markdown-body">
+    <blockquote>
+        <p>除特殊注明部分，本站内容采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+               target="_blank">CC BY-NC-SA 4.0</a> 进行许可。</p>
+    </blockquote>
+</div>
+
+
+<div class="post-comment" data-comment="disqus">
+    <span class="post-comment-notloaded">
+        <i class="iconfont icon-chatbox-ellipses-sharp"></i>&nbsp;查看评论
+    </span>
+    <div id="disqus_thread" style="display: none;"></div>
+    <script>
+        function loadComment() {
+            var commentArea = document.querySelector('.post-comment');
+            var disqus_config = function () {
+                this.page.url = 'https:\/\/www.maoxuner.cn\/post\/2018\/06\/%E5%B0%8F%E6%96%B0%E5%B9%B3%E6%9D%BFtb8804f%E8%8E%B7%E5%8F%96root%E4%BB%A5%E5%8F%8A%E5%AE%89%E8%A3%85%E8%B0%B7%E6%AD%8C%E5%B8%82%E5%9C%BA\/';
+                this.page.identifier = '小新平板TB8804F获取root以及安装谷歌市场';
+            };
+            var s = document.createElement('script');
+            s.src = 'https://' + 'maoxuner' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            document.querySelector('#disqus_thread').removeAttribute('style');
+            (document.body || document.head).appendChild(s);
+            document.querySelector('span.post-comment-notloaded').setAttribute('style', 'display: none;');
+        }
+    </script>
+</div>
+
+
+            </div>
+            <aside class="col-12 col-md-3 float-left sidebar">
+    
+    <div class="sidebar-item sidebar-pages">
+        <h3>页面</h3>
+        <ul>
+            
+            <li>
+                <a href="/archives/">归档</a>
+            </li>
+            
+            <li>
+                <a href="/links/">友链</a>
+            </li>
+            
+            <li>
+                <a href="/about/">关于</a>
+            </li>
+            
+            <li>
+                <a href="/search/">搜索</a>
+            </li>
+            
+            <li>
+                <a href="/index.xml">RSS</a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-links">
+        <h3>链接</h3>
+        <ul>
+            
+            <li>
+                <a href="https://git.fat4.cn/maoxuner" target="_blank"><span>Gitea</span></a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-tags">
+        <h3>标签</h3>
+        <div>
+            
+            <span>
+                <a href="/tags/acg/">acg</a>
+            </span>
+            
+            <span>
+                <a href="/tags/android/">android</a>
+            </span>
+            
+            <span>
+                <a href="/tags/apache/">apache</a>
+            </span>
+            
+            <span>
+                <a href="/tags/archlinux/">archlinux</a>
+            </span>
+            
+            <span>
+                <a href="/tags/bpi/">bpi</a>
+            </span>
+            
+            <span>
+                <a href="/tags/c/">c</a>
+            </span>
+            
+            <span>
+                <a href="/tags/chat/">chat</a>
+            </span>
+            
+            <span>
+                <a href="/tags/chromium/">chromium</a>
+            </span>
+            
+            <span>
+                <a href="/tags/cloud/">cloud</a>
+            </span>
+            
+            <span>
+                <a href="/tags/codeigniter/">codeigniter</a>
+            </span>
+            
+            <span>
+                <a href="/tags/composer/">composer</a>
+            </span>
+            
+            <span>
+                <a href="/tags/containerd/">containerd</a>
+            </span>
+            
+            <span>
+                <a href="/tags/css/">css</a>
+            </span>
+            
+            <span>
+                <a href="/tags/deployer/">deployer</a>
+            </span>
+            
+            <span>
+                <a href="/tags/docker/">docker</a>
+            </span>
+            
+            <span>
+                <a href="/tags/drone/">drone</a>
+            </span>
+            
+            <span>
+                <a href="/tags/flash/">flash</a>
+            </span>
+            
+            <span>
+                <a href="/tags/fortran/">fortran</a>
+            </span>
+            
+            <span>
+                <a href="/tags/git/">git</a>
+            </span>
+            
+            <span>
+                <a href="/tags/go/">go</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hexo/">hexo</a>
+            </span>
+            
+            <span>
+                <a href="/tags/html/">html</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hugo/">hugo</a>
+            </span>
+            
+            <span>
+                <a href="/tags/ingress/">ingress</a>
+            </span>
+            
+            <span>
+                <a href="/tags/javascript/">javascript</a>
+            </span>
+            
+            <span>
+                <a href="/tags/jenkins/">jenkins</a>
+            </span>
+            
+            <span>
+                <a href="/tags/jquery/">jquery</a>
+            </span>
+            
+            <span>
+                <a href="/tags/k3s/">k3s</a>
+            </span>
+            
+            <span>
+                <a href="/tags/k8s/">k8s</a>
+            </span>
+            
+            <span>
+                <a href="/tags/kvm/">kvm</a>
+            </span>
+            
+            <span>
+                <a href="/tags/laravel/">laravel</a>
+            </span>
+            
+            <span>
+                <a href="/tags/linux/">linux</a>
+            </span>
+            
+            <span>
+                <a href="/tags/mariadb/">mariadb</a>
+            </span>
+            
+            <span>
+                <a href="/tags/movie/">movie</a>
+            </span>
+            
+            <span>
+                <a href="/tags/music/">music</a>
+            </span>
+            
+            <span>
+                <a href="/tags/mysql/">mysql</a>
+            </span>
+            
+            <span>
+                <a href="/tags/nginx/">nginx</a>
+            </span>
+            
+            <span>
+                <a href="/tags/nodejs/">nodejs</a>
+            </span>
+            
+            <span>
+                <a href="/tags/php/">php</a>
+            </span>
+            
+            <span>
+                <a href="/tags/python/">python</a>
+            </span>
+            
+            <span>
+                <a href="/tags/rpi/">rpi</a>
+            </span>
+            
+            <span>
+                <a href="/tags/shell/">shell</a>
+            </span>
+            
+            <span>
+                <a href="/tags/ssl/">ssl</a>
+            </span>
+            
+            <span>
+                <a href="/tags/traefik/">traefik</a>
+            </span>
+            
+            <span>
+                <a href="/tags/typecho/">typecho</a>
+            </span>
+            
+            <span>
+                <a href="/tags/usb/">usb</a>
+            </span>
+            
+            <span>
+                <a href="/tags/vps/">vps</a>
+            </span>
+            
+            <span>
+                <a href="/tags/windows/">windows</a>
+            </span>
+            
+            <span>
+                <a href="/tags/yii2/">yii2</a>
+            </span>
+            
+        </div>
+    </div>
+    <div class="sidebar-item sidebar-toc">
+        <h3>目录</h3><nav id="TableOfContents">
+  <ul>
+    <li><a href="#开发者模式">开发者模式</a></li>
+    <li><a href="#fastbootbootloader">fastboot/bootloader</a></li>
+    <li><a href="#oem锁">OEM锁</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#直接启动recovery未测试">直接启动recovery（未测试）</a></li>
+    <li><a href="#刷recovery">刷recovery</a></li>
+  </ul>
+</nav></div>
+</aside>
+        </div>
+        <div class="btn">
+    <div class="btn-menu" id="btn-menu">
+        <i class="iconfont icon-grid-sharp"></i>
+    </div>
+    <div class="btn-toggle-mode">
+        <i class="iconfont icon-contrast-sharp"></i>
+    </div>
+    <div class="btn-scroll-top">
+        <i class="iconfont icon-chevron-up-circle-sharp"></i>
+    </div>
+</div>
+<aside class="sidebar-mobile" style="display: none;">
+  <div class="sidebar-wrapper">
+    
+    <div class="sidebar-item sidebar-pages">
+        <h3>页面</h3>
+        <ul>
+            
+            <li>
+                <a href="/archives/">归档</a>
+            </li>
+            
+            <li>
+                <a href="/links/">友链</a>
+            </li>
+            
+            <li>
+                <a href="/about/">关于</a>
+            </li>
+            
+            <li>
+                <a href="/search/">搜索</a>
+            </li>
+            
+            <li>
+                <a href="/index.xml">RSS</a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-links">
+        <h3>链接</h3>
+        <ul>
+            
+            <li>
+                <a href="https://git.fat4.cn/maoxuner" target="_blank"><span>Gitea</span></a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-tags">
+        <h3>标签</h3>
+        <div>
+            
+            <span>
+                <a href="/tags/acg/">acg</a>
+            </span>
+            
+            <span>
+                <a href="/tags/android/">android</a>
+            </span>
+            
+            <span>
+                <a href="/tags/apache/">apache</a>
+            </span>
+            
+            <span>
+                <a href="/tags/archlinux/">archlinux</a>
+            </span>
+            
+            <span>
+                <a href="/tags/bpi/">bpi</a>
+            </span>
+            
+            <span>
+                <a href="/tags/c/">c</a>
+            </span>
+            
+            <span>
+                <a href="/tags/chat/">chat</a>
+            </span>
+            
+            <span>
+                <a href="/tags/chromium/">chromium</a>
+            </span>
+            
+            <span>
+                <a href="/tags/cloud/">cloud</a>
+            </span>
+            
+            <span>
+                <a href="/tags/codeigniter/">codeigniter</a>
+            </span>
+            
+            <span>
+                <a href="/tags/composer/">composer</a>
+            </span>
+            
+            <span>
+                <a href="/tags/containerd/">containerd</a>
+            </span>
+            
+            <span>
+                <a href="/tags/css/">css</a>
+            </span>
+            
+            <span>
+                <a href="/tags/deployer/">deployer</a>
+            </span>
+            
+            <span>
+                <a href="/tags/docker/">docker</a>
+            </span>
+            
+            <span>
+                <a href="/tags/drone/">drone</a>
+            </span>
+            
+            <span>
+                <a href="/tags/flash/">flash</a>
+            </span>
+            
+            <span>
+                <a href="/tags/fortran/">fortran</a>
+            </span>
+            
+            <span>
+                <a href="/tags/git/">git</a>
+            </span>
+            
+            <span>
+                <a href="/tags/go/">go</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hexo/">hexo</a>
+            </span>
+            
+            <span>
+                <a href="/tags/html/">html</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hugo/">hugo</a>
+            </span>
+            
+            <span>
+                <a href="/tags/ingress/">ingress</a>
+            </span>
+            
+            <span>
+                <a href="/tags/javascript/">javascript</a>
+            </span>
+            
+            <span>
+                <a href="/tags/jenkins/">jenkins</a>
+            </span>
+            
+            <span>
+                <a href="/tags/jquery/">jquery</a>
+            </span>
+            
+            <span>
+                <a href="/tags/k3s/">k3s</a>
+            </span>
+            
+            <span>
+                <a href="/tags/k8s/">k8s</a>
+            </span>
+            
+            <span>
+                <a href="/tags/kvm/">kvm</a>
+            </span>
+            
+            <span>
+                <a href="/tags/laravel/">laravel</a>
+            </span>
+            
+            <span>
+                <a href="/tags/linux/">linux</a>
+            </span>
+            
+            <span>
+                <a href="/tags/mariadb/">mariadb</a>
+            </span>
+            
+            <span>
+                <a href="/tags/movie/">movie</a>
+            </span>
+            
+            <span>
+                <a href="/tags/music/">music</a>
+            </span>
+            
+            <span>
+                <a href="/tags/mysql/">mysql</a>
+            </span>
+            
+            <span>
+                <a href="/tags/nginx/">nginx</a>
+            </span>
+            
+            <span>
+                <a href="/tags/nodejs/">nodejs</a>
+            </span>
+            
+            <span>
+                <a href="/tags/php/">php</a>
+            </span>
+            
+            <span>
+                <a href="/tags/python/">python</a>
+            </span>
+            
+            <span>
+                <a href="/tags/rpi/">rpi</a>
+            </span>
+            
+            <span>
+                <a href="/tags/shell/">shell</a>
+            </span>
+            
+            <span>
+                <a href="/tags/ssl/">ssl</a>
+            </span>
+            
+            <span>
+                <a href="/tags/traefik/">traefik</a>
+            </span>
+            
+            <span>
+                <a href="/tags/typecho/">typecho</a>
+            </span>
+            
+            <span>
+                <a href="/tags/usb/">usb</a>
+            </span>
+            
+            <span>
+                <a href="/tags/vps/">vps</a>
+            </span>
+            
+            <span>
+                <a href="/tags/windows/">windows</a>
+            </span>
+            
+            <span>
+                <a href="/tags/yii2/">yii2</a>
+            </span>
+            
+        </div>
+    </div>
+    
+    
+    
+    <div class="sidebar-item sidebar-toc">
+        <h3>目录</h3>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#开发者模式">开发者模式</a></li>
+    <li><a href="#fastbootbootloader">fastboot/bootloader</a></li>
+    <li><a href="#oem锁">OEM锁</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#直接启动recovery未测试">直接启动recovery（未测试）</a></li>
+    <li><a href="#刷recovery">刷recovery</a></li>
+  </ul>
+</nav>
+    </div>
+    
+    
+  </div>
+</aside>
+    </main>
+
+    <footer>
+    <div class="container-lg clearfix">
+        <div class="col-12 footer">
+            
+            <span>&copy; 2014-2021
+                <a href="https://www.maoxuner.cn/">maoxuner</a>
+                 | <a href="https://git.fat4.cn/maoxuner/blog">Source code</a> 
+                | 基于 <a href="https://github.com/dsrkafuu/hugo-theme-fuji/"
+                   target="_blank">Fuji-v2</a> &amp; <a href="https://gohugo.io/"
+                                                    target="_blank">Hugo</a> 构建
+            </span>
+        </div>
+    </div>
+</footer>
+
+    
+<script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.0/lazysizes.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-core.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
+
+<script defer src="/assets/js/fuji.min.js"></script>
+
+
+</body>
+
+</html>

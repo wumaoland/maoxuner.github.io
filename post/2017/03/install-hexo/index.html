@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+
+<head>
+    
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="HandheldFriendly" content="True" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="generator" content="Hugo 0.83.1" />
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.maoxuner.cn/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.maoxuner.cn/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.maoxuner.cn/favicon-16x16.png" />
+<link rel="manifest" href="https://www.maoxuner.cn/site.webmanifest" />
+<link rel="mask-icon" href="https://www.maoxuner.cn/safari-pinned-tab.svg" color="#5bbad5" />
+<meta name="msapplication-TileColor" content="#da532c" />
+<meta name="theme-color" content="#ffffff" />
+
+
+
+<title>安装nodejs并用hexo部署博客 - 二次元の技术宅</title>
+
+
+<meta name="author" content="maoxuner" />
+
+
+<meta name="description" content="二次元爱好者的技术博客。专于php、linux" />
+
+
+<meta name="keywords" content="nodejs, hexo" />
+
+
+<meta property="og:title" content="安装nodejs并用hexo部署博客" />
+<meta name="twitter:title" content="安装nodejs并用hexo部署博客" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.maoxuner.cn/post/2017/03/install-hexo/" /><meta property="og:description" content="最近写了好多js，对专门运行js的Node.js产生了兴趣。阿里的虚拟主机快要到期了，就打算把pages服务用起来，简简单单搭建个站点。早就想直接用markdown写写文章，然后用轻巧的工具生成页面了" />
+<meta name="twitter:description" content="最近写了好多js，对专门运行js的Node.js产生了兴趣。阿里的虚拟主机快要到期了，就打算把pages服务用起来，简简单单搭建个站点。早就想直接用markdown写写文章，然后用轻巧的工具生成页面了" /><meta property="og:image" content="https://www.maoxuner.cn/img/og.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.maoxuner.cn/img/og.png" /><meta property="article:published_time" content="2017-03-08T20:53:13+08:00" /><meta property="article:modified_time" content="2017-03-08T20:53:13+08:00" />
+
+
+<style>
+    @media (prefers-color-scheme: dark) {
+        body[data-theme='auto'] img {
+            filter: brightness(60%);
+        }
+    }
+
+    body[data-theme='dark'] img {
+        filter: brightness(60%);
+    }
+</style>
+
+
+
+<link rel="stylesheet" href="https://www.maoxuner.cn/assets/css/fuji.min.css" />
+
+
+
+
+
+</head>
+
+<body data-theme="auto">
+    <script data-cfasync="false">
+  
+  var fujiThemeData = localStorage.getItem('fuji_data-theme');
+  
+  if (!fujiThemeData) {
+    localStorage.setItem('fuji_data-theme', 'auto');
+  } else {
+    
+    if (fujiThemeData !== 'auto') {
+      document.body.setAttribute('data-theme', fujiThemeData === 'dark' ? 'dark' : 'light');
+    }
+  }
+</script>
+    <header>
+    <div class="container-lg clearfix">
+        <div class="col-12 header">
+            <a class="title-main" href="https://www.maoxuner.cn/">二次元の技术宅</a>
+            
+            <span class="title-sub">念念不忘，必有回响。</span>
+            
+        </div>
+    </div>
+</header>
+
+    <main>
+        <div class="container-lg clearfix">
+            
+            <div class="col-12 col-md-9 float-left content">
+                
+<article>
+    
+    <h2 class="post-item post-title">
+        <a href="https://www.maoxuner.cn/post/2017/03/install-hexo/">安装nodejs并用hexo部署博客</a>
+    </h2>
+    <div class="post-item post-meta">
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2017-03-08</span>
+
+<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;3685 字</span>
+
+<span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/nodejs">nodejs</a>&nbsp;<a href="/tags/hexo">hexo</a>&nbsp;</span>
+
+    </div>
+    
+    <div class="post-content markdown-body">
+        <p>最近写了好多js，对专门运行js的Node.js产生了兴趣。阿里的虚拟主机快要到期了，就打算把pages服务用起来，简简单单搭建个站点。早就想直接用markdown写写文章，然后用轻巧的工具生成页面了。我用过一个叫做<a href="https://github.com/lizheming/PMBlog" target="_blank">PMBlog</a>的系统，不过这个需要服务器php的支持。后来看到Jekyll，觉得这个工具真的是为懒人而生的。然而Jekyll官方文档都注明，不建议在windows平台安装Jekyll。Jekyll的文档界面不够优美，对Ruby也没有很大的兴趣。Hexo跟Jekyll可以说是完全一样的工具，但它是基于Node.js的。另外，Hexo是宝岛台湾的程序员开发的，原生态支持中文。Node.js、Hexo，一个因为js而产生兴趣，一个因为是同胞的作品而倍感亲切。这自然是个挺好的选择。</p>
+<!-- more -->
+<p><strong>注意</strong></p>
+<p>首先说明一下，Node.js、Git、Hexo的使用都是命令行中的命令，本文介绍的配置方法也主要是命令。当然，Git有图形界面，但是我觉得命令行更高效一些。</p>
+<h1 id="安装nodejs">安装Node.js</h1>
+<h2 id="下载安装包">下载安装包</h2>
+<p><a href="https://nodejs.org" target="_blank">Node.js</a>官网本身是提供windows下的安装包的。但是我不喜欢安装程序给我创建快捷方式，添加乱七八糟的环境变量以及注册表信息。我喜欢让这一切都变得可控，因此我安装软件大多都是安装“绿色”版本的。</p>
+<p>从<a href="https://nodejs.org/zh-cn/download/" target="_blank">下载|Node.js</a>下载最新的zip包，并解压到相应的程序目录。建议路径中不要包含空格或者其他特殊字符，防止出现莫名其妙的错误。</p>
+<h2 id="配置环境变量">配置环境变量</h2>
+<p>假设解压后的文件路径为<code>D:\App\node</code>，也就是<code>node.exe</code>所在的目录。在用户环境变量<code>Path</code>中加入<code>D:\App\node</code>这个路径。<em>注意用英文<code>;</code>将该路径与原有的路径分隔开来。</em></p>
+<p>win10设置环境变量的方法，右键桌面上的<code>此电脑</code>，选择<code>属性</code>。在属性窗口中，点击左侧的<code>高级系统设置</code>。然后点击系统属性高级标签下侧的<code>环境变量</code>按钮。然后选中用户环境变量中的<code>Path</code>，点击<code>编辑</code>按钮。win7，win8设置方法类似。</p>
+<p>打开一个新的CMD窗口，执行<code>npm</code>命令，如果没有提示找不到命令，则说明Node.js已经安装成功了。</p>
+<h2 id="配置国内镜像">配置国内镜像</h2>
+<p>国内镜像推荐<a href="http://npm.taobao.org/" target="_blank">淘宝NPM镜像</a>，运行以下命令安装淘宝NPM镜像工具，并用该工具替代<code>npm</code>。</p>
+<pre><code class="language-bash">npm install -g cnpm --registry=https://registry.npm.taobao.org
+</code></pre>
+<p>然后执行<code>cnpm</code>命令，以确认cnpm是否已经安装好。</p>
+<p>以后使用到的<code>npm</code>命令，只要把<code>npm</code>替换成<code>cnpm</code>即可，命令的其他参数保持一致即可。</p>
+<h1 id="安装git">安装Git</h1>
+<p>本来没有计划写这一部分，但是后来看到Hexo有这个依赖，就在这里简单说明一下吧。实际上也不复杂，跟Node.js的安装差不多。</p>
+<h2 id="下载安装包-1">下载安装包</h2>
+<p>windows下安装<a href="https://git-for-windows.github.io/" target="_blank">Git SCM</a>，也就是<code>git for windows</code>，即可使用git的相关功能。同样的，官方也提供安装包，但我还是手动安装的。从<a href="https://github.com/git-for-windows/git/releases" target="_blank">Releases · git-for-windows/git</a>下载最新的绿色包，文件名以<code>PortableGit</code>开头的自解压文件。</p>
+<h2 id="配置环境变量-1">配置环境变量</h2>
+<p>假设解压后的文件路径为<code>D:\App\PortableGit</code>，也就是<code>git-bash.exe</code>所在的目录。在用户环境变量<code>Path</code>中加入<code>D:\App\PortableGit\usr\bin</code>这个路径。可能添加<code>D:\App\PortableGit\cmd</code>这个路径更妥当一些，但是前者可以一并使用git环境组件中的<code>ssh</code>等命令。而且，我在使用前者的时候，也尚未发现什么问题。</p>
+<h1 id="安装hexo">安装Hexo</h1>
+<p>Hexo的两大依赖Node.js以及Git安装好了，接下来就可以很方便的安装Hexo了。<a href="https://hexo.io/zh-cn/docs/" target="_blank">文档|Hexo</a>已经够详细了，而且全中文，用起来毫无压力。简单来说，执行以下命令即可安装了。</p>
+<pre><code class="language-bash">npm install -g hexo-cli
+</code></pre>
+<p>既然已经下载了淘宝NPM镜像的工具，把以上命令替换成这一句，使用国内的镜像安装Hexo。</p>
+<pre><code class="language-bash">cnpm install -g hexo-cli
+</code></pre>
+<p>然后执行<code>hexo</code>命令，以确认Hexo是否已经安装好。</p>
+<h1 id="使用hexo生成站点">使用Hexo生成站点</h1>
+<h2 id="hexo的建站原理">Hexo的建站原理</h2>
+<p>为了让大家更好的理解建站的一些操作，简单介绍一下Hexo建站的原理。
+整套系统分为三个部分：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">文章数据</td>
+<td style="text-align:left">文章内容，主要表现为后缀名为md的文件。位于source及其子目录中</td>
+</tr>
+<tr>
+<td style="text-align:center">建站配置</td>
+<td style="text-align:left">配合数据生成静态页面的规则，包括系统配置，模板，主题</td>
+</tr>
+<tr>
+<td style="text-align:center">静态文件</td>
+<td style="text-align:left">生成的静态网页</td>
+</tr>
+</tbody>
+</table>
+<p>如果把网站比作一道菜：文章数据就相当于食材，是构成这道菜的原料；建站配置相当于菜谱，规定了做成网站这道菜的做法。当然这个比喻不够恰当，建站的话，文章的数据是最最重要的，换个建站配置依然能建站。而菜肴的话，菜谱可能是最终要的，因为往往稀缺的并不是食材吧。</p>
+<p>既然根据文章数据以及建站配置就能生成静态文件了，因此我们只要管理好这两部分就行了，剩余的都交给Hexo处理。实际上Hexo的核心功能就是根据前两者来生成静态文件的。只不过，随着功能的完善，Hexo可以实现一键部署。以Git的pages为例，Hexo生成静态文件后，会自动给这些文件纳入一个git仓库，并它们提交到开启了pages服务的分支中去，从而完成站点的部署。</p>
+<h2 id="开启pages服务">开启pages服务</h2>
+<p>或许是<a href="https://github.com/" target="_blank">GitHub</a>上聚集了世界各地的开发者吧，因此很多人都在使用github的pages服务建站。但是我还是推荐使用国内的<a href="https://gitee.com/" target="_blank">码云</a>或者<a href="https://coding.net/" target="_blank">Coding</a>以获得更好的访问速度。我比较喜欢开源中国社区，因此对码云也分外有好感。但是码云的pages服务不支持绑定自己的域名（CNAME），而Coding是支持的。首先要创建一个项目，才能开启pages服务。开启pages服务后，都会给你提供一个以你的id开头的二级域名用来访问pages页面。以我的码云pages为例，该域名为<a href="http://maoxuner.gitee.io/" target="_blank">maoxuner.gitee.io</a>。如果想以根目录的形式访问你的网站，一般都是创建一个跟你的ID同名的项目。然后在项目中开启pages服务。开启pages服务的方法不详细介绍了，可参<a href="http://git.mydoc.io/?t=154714" target="_blank">码云pages</a>。码云项目的界面最近做了更新，与文档中略有不同。Pages的入口在项目主页，“服务”标签中的“Pages”。其他代码托管平台的开启方法大同小异。</p>
+<h2 id="创建站点">创建站点</h2>
+<p>找一个方便的目录，执行以下命令，生成博客的基本文件（测试文章数据以及基础的建站配置）。其中<code>blog</code>可以替换成任何你想要的目录名称，但是这个目录一定是个不存在的目录。</p>
+<pre><code class="language-bash">hexo init blog
+</code></pre>
+<p>然后切换到<code>blog</code>目录，执行以下命令即可生成静态文件。（已有演示用的文章数据以及默认的建站配置）</p>
+<pre><code class="language-bash">hexo generate
+</code></pre>
+<p>此时，<code>blog</code>目录中会多出一个<code>public</code>目录，其中就是网站的静态文件。可以选择手动把这些静态文件纳入git仓库并推送到开启pages服务的分支、或者发布到Web服务器。当然，更推荐使用Hexo来自动化部署。</p>
+<h2 id="自动化部署页面">自动化部署页面</h2>
+<p>Hexo自动git部署需要安装组件<code>hexo-deployer-git</code>，执行以下命令：</p>
+<pre><code class="language-bash">cnpm install hexo-deployer-git --save
+</code></pre>
+<p>然后修改系统配置文件<code>_config.yml</code>（不是<code>themes</code>子目录下的主题配置文件）。修改<code>deploy</code>这一项的值，按照以下格式配置。如果没有这一项，直接在文件末尾添加即可。*注意缩进，*yml中使用缩进表示从属关系，用<code>-</code>表示一个序列（可以同时部署到多个仓库）。<em>这里减号后有一个空格</em>。以我的项目为例，配置内容如下：</p>
+<pre><code class="language-yaml">deploy:
+- type: git
+  repo: git@gitee.com:maoxuner/maoxuner.git
+  branch: gitee-pages
+</code></pre>
+<p><code>type</code>值不用修改，因为这里使用的是git的pages服务，类型就是git。
+<code>repo</code>为仓库地址，为了方便部署（免输账号密码），使用的是ssh协议的仓库地址。这需要配置ssh秘钥，具体参考<a href="http://git.mydoc.io/?t=154712" target="_blank">生成并部署SSH key</a>。
+<code>branch</code>为开启pages服务的分支名称。一般的，码云为<code>gitee-pages</code>，Coding为<code>coding-pages</code>，GitHub为<code>gh-pages</code>。
+配置好部署信息后，即可用Hexo把静态页面部署到git上了。</p>
+<pre><code class="language-bash">hexo deploy
+</code></pre>
+<p>部署完成后，通过域名如<a href="http://maoxuner.gitee.io/" target="_blank">maoxuner.gitee.io</a>，应该就能访问到这些页面了。</p>
+<h2 id="管理文章数据以及建站配置">管理文章数据以及建站配置</h2>
+<p>既然上面已经说到，整个系统最重要的是文章数据以及建站配置，因此可以用git管理这些文件，并推送到网络上的仓库中去。网络仓库以我的仓库<code>git@git.gitee.com:maoxuner/maoxuner.git</code>为例。</p>
+<p>在<code>blog</code>目录中执行以下命令：</p>
+<pre><code class="language-bash">git init
+git add *
+git commit -m &quot;站点初始化&quot;
+git remote add origin git@git.gitee.com:maoxuner/maoxuner.git
+git push --set-upstream origin master
+</code></pre>
+<p>至此，已经能够把网站的文章数据、站点配置同步到仓库的<code>master</code>分支，把静态文件发布到<code>osc-pages</code>分支了。初步建站的过程已经完成了。</p>
+<h2 id="添加新的文章">添加新的文章</h2>
+<p>站点已经建成，剩下的就是添砖加瓦写文章了。执行以下命令：</p>
+<pre><code class="language-bash">hexo n 文章标题
+</code></pre>
+<p>以上命令即可在<code>source/_posts/</code>目录中生成一个文件名为<code>文章标题</code>，后缀名为<code>md</code>的文件。文件的头信息已经填好，剩下的就是用markdown语法写文章就好了。markdown语法参见<a href="http://www.appinn.com/markdown/" target="_blank">Markdown 语法说明 (简体中文版)</a></p>
+<p>然后执行以下命令即可生成新的页面，部署到git。</p>
+<pre><code class="language-bash">hexo g -d
+</code></pre>
+<p>同样的，把新添加的文件纳入git仓库，并推送到网上的仓库。</p>
+<pre><code class="language-bash">git add *
+git commit -m &quot;新的文章&quot;
+git push
+</code></pre>
+<p>至此，该系统已经能很好的运行了。更多的使用以及设置方法参考<a href="https://hexo.io/zh-cn/docs/" target="_blank">文档|Hexo</a>即可。</p>
+<h1 id="参考文章">参考文章</h1>
+<ul>
+<li><a href="http://npm.taobao.org/" target="_blank">淘宝NPM镜像</a></li>
+<li><a href="https://hexo.io/zh-cn/docs/" target="_blank">文档|Hexo</a></li>
+<li><a href="http://blog.ynxiu.com/2016/hexo-next-theme-optimize.html" target="_blank">Hexo+NexT主题配置备忘</a>（强烈推荐这篇文章，总结很全面）</li>
+</ul>
+
+    </div>
+</article>
+
+
+<div class="license markdown-body">
+    <blockquote>
+        <p>除特殊注明部分，本站内容采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+               target="_blank">CC BY-NC-SA 4.0</a> 进行许可。</p>
+    </blockquote>
+</div>
+
+
+<div class="post-comment" data-comment="disqus">
+    <span class="post-comment-notloaded">
+        <i class="iconfont icon-chatbox-ellipses-sharp"></i>&nbsp;查看评论
+    </span>
+    <div id="disqus_thread" style="display: none;"></div>
+    <script>
+        function loadComment() {
+            var commentArea = document.querySelector('.post-comment');
+            var disqus_config = function () {
+                this.page.url = 'https:\/\/www.maoxuner.cn\/post\/2017\/03\/install-hexo\/';
+                this.page.identifier = '安装nodejs并用hexo部署博客';
+            };
+            var s = document.createElement('script');
+            s.src = 'https://' + 'maoxuner' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            document.querySelector('#disqus_thread').removeAttribute('style');
+            (document.body || document.head).appendChild(s);
+            document.querySelector('span.post-comment-notloaded').setAttribute('style', 'display: none;');
+        }
+    </script>
+</div>
+
+
+            </div>
+            <aside class="col-12 col-md-3 float-left sidebar">
+    
+    <div class="sidebar-item sidebar-pages">
+        <h3>页面</h3>
+        <ul>
+            
+            <li>
+                <a href="/archives/">归档</a>
+            </li>
+            
+            <li>
+                <a href="/links/">友链</a>
+            </li>
+            
+            <li>
+                <a href="/about/">关于</a>
+            </li>
+            
+            <li>
+                <a href="/search/">搜索</a>
+            </li>
+            
+            <li>
+                <a href="/index.xml">RSS</a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-links">
+        <h3>链接</h3>
+        <ul>
+            
+            <li>
+                <a href="https://git.fat4.cn/maoxuner" target="_blank"><span>Gitea</span></a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-tags">
+        <h3>标签</h3>
+        <div>
+            
+            <span>
+                <a href="/tags/acg/">acg</a>
+            </span>
+            
+            <span>
+                <a href="/tags/android/">android</a>
+            </span>
+            
+            <span>
+                <a href="/tags/apache/">apache</a>
+            </span>
+            
+            <span>
+                <a href="/tags/archlinux/">archlinux</a>
+            </span>
+            
+            <span>
+                <a href="/tags/bpi/">bpi</a>
+            </span>
+            
+            <span>
+                <a href="/tags/c/">c</a>
+            </span>
+            
+            <span>
+                <a href="/tags/chat/">chat</a>
+            </span>
+            
+            <span>
+                <a href="/tags/chromium/">chromium</a>
+            </span>
+            
+            <span>
+                <a href="/tags/cloud/">cloud</a>
+            </span>
+            
+            <span>
+                <a href="/tags/codeigniter/">codeigniter</a>
+            </span>
+            
+            <span>
+                <a href="/tags/composer/">composer</a>
+            </span>
+            
+            <span>
+                <a href="/tags/containerd/">containerd</a>
+            </span>
+            
+            <span>
+                <a href="/tags/css/">css</a>
+            </span>
+            
+            <span>
+                <a href="/tags/deployer/">deployer</a>
+            </span>
+            
+            <span>
+                <a href="/tags/docker/">docker</a>
+            </span>
+            
+            <span>
+                <a href="/tags/drone/">drone</a>
+            </span>
+            
+            <span>
+                <a href="/tags/flash/">flash</a>
+            </span>
+            
+            <span>
+                <a href="/tags/fortran/">fortran</a>
+            </span>
+            
+            <span>
+                <a href="/tags/git/">git</a>
+            </span>
+            
+            <span>
+                <a href="/tags/go/">go</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hexo/">hexo</a>
+            </span>
+            
+            <span>
+                <a href="/tags/html/">html</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hugo/">hugo</a>
+            </span>
+            
+            <span>
+                <a href="/tags/ingress/">ingress</a>
+            </span>
+            
+            <span>
+                <a href="/tags/javascript/">javascript</a>
+            </span>
+            
+            <span>
+                <a href="/tags/jenkins/">jenkins</a>
+            </span>
+            
+            <span>
+                <a href="/tags/jquery/">jquery</a>
+            </span>
+            
+            <span>
+                <a href="/tags/k3s/">k3s</a>
+            </span>
+            
+            <span>
+                <a href="/tags/k8s/">k8s</a>
+            </span>
+            
+            <span>
+                <a href="/tags/kvm/">kvm</a>
+            </span>
+            
+            <span>
+                <a href="/tags/laravel/">laravel</a>
+            </span>
+            
+            <span>
+                <a href="/tags/linux/">linux</a>
+            </span>
+            
+            <span>
+                <a href="/tags/mariadb/">mariadb</a>
+            </span>
+            
+            <span>
+                <a href="/tags/movie/">movie</a>
+            </span>
+            
+            <span>
+                <a href="/tags/music/">music</a>
+            </span>
+            
+            <span>
+                <a href="/tags/mysql/">mysql</a>
+            </span>
+            
+            <span>
+                <a href="/tags/nginx/">nginx</a>
+            </span>
+            
+            <span>
+                <a href="/tags/nodejs/">nodejs</a>
+            </span>
+            
+            <span>
+                <a href="/tags/php/">php</a>
+            </span>
+            
+            <span>
+                <a href="/tags/python/">python</a>
+            </span>
+            
+            <span>
+                <a href="/tags/rpi/">rpi</a>
+            </span>
+            
+            <span>
+                <a href="/tags/shell/">shell</a>
+            </span>
+            
+            <span>
+                <a href="/tags/ssl/">ssl</a>
+            </span>
+            
+            <span>
+                <a href="/tags/traefik/">traefik</a>
+            </span>
+            
+            <span>
+                <a href="/tags/typecho/">typecho</a>
+            </span>
+            
+            <span>
+                <a href="/tags/usb/">usb</a>
+            </span>
+            
+            <span>
+                <a href="/tags/vps/">vps</a>
+            </span>
+            
+            <span>
+                <a href="/tags/windows/">windows</a>
+            </span>
+            
+            <span>
+                <a href="/tags/yii2/">yii2</a>
+            </span>
+            
+        </div>
+    </div>
+    <div class="sidebar-item sidebar-toc">
+        <h3>目录</h3><nav id="TableOfContents">
+  <ul>
+    <li><a href="#下载安装包">下载安装包</a></li>
+    <li><a href="#配置环境变量">配置环境变量</a></li>
+    <li><a href="#配置国内镜像">配置国内镜像</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#下载安装包-1">下载安装包</a></li>
+    <li><a href="#配置环境变量-1">配置环境变量</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#hexo的建站原理">Hexo的建站原理</a></li>
+    <li><a href="#开启pages服务">开启pages服务</a></li>
+    <li><a href="#创建站点">创建站点</a></li>
+    <li><a href="#自动化部署页面">自动化部署页面</a></li>
+    <li><a href="#管理文章数据以及建站配置">管理文章数据以及建站配置</a></li>
+    <li><a href="#添加新的文章">添加新的文章</a></li>
+  </ul>
+</nav></div>
+</aside>
+        </div>
+        <div class="btn">
+    <div class="btn-menu" id="btn-menu">
+        <i class="iconfont icon-grid-sharp"></i>
+    </div>
+    <div class="btn-toggle-mode">
+        <i class="iconfont icon-contrast-sharp"></i>
+    </div>
+    <div class="btn-scroll-top">
+        <i class="iconfont icon-chevron-up-circle-sharp"></i>
+    </div>
+</div>
+<aside class="sidebar-mobile" style="display: none;">
+  <div class="sidebar-wrapper">
+    
+    <div class="sidebar-item sidebar-pages">
+        <h3>页面</h3>
+        <ul>
+            
+            <li>
+                <a href="/archives/">归档</a>
+            </li>
+            
+            <li>
+                <a href="/links/">友链</a>
+            </li>
+            
+            <li>
+                <a href="/about/">关于</a>
+            </li>
+            
+            <li>
+                <a href="/search/">搜索</a>
+            </li>
+            
+            <li>
+                <a href="/index.xml">RSS</a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-links">
+        <h3>链接</h3>
+        <ul>
+            
+            <li>
+                <a href="https://git.fat4.cn/maoxuner" target="_blank"><span>Gitea</span></a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-tags">
+        <h3>标签</h3>
+        <div>
+            
+            <span>
+                <a href="/tags/acg/">acg</a>
+            </span>
+            
+            <span>
+                <a href="/tags/android/">android</a>
+            </span>
+            
+            <span>
+                <a href="/tags/apache/">apache</a>
+            </span>
+            
+            <span>
+                <a href="/tags/archlinux/">archlinux</a>
+            </span>
+            
+            <span>
+                <a href="/tags/bpi/">bpi</a>
+            </span>
+            
+            <span>
+                <a href="/tags/c/">c</a>
+            </span>
+            
+            <span>
+                <a href="/tags/chat/">chat</a>
+            </span>
+            
+            <span>
+                <a href="/tags/chromium/">chromium</a>
+            </span>
+            
+            <span>
+                <a href="/tags/cloud/">cloud</a>
+            </span>
+            
+            <span>
+                <a href="/tags/codeigniter/">codeigniter</a>
+            </span>
+            
+            <span>
+                <a href="/tags/composer/">composer</a>
+            </span>
+            
+            <span>
+                <a href="/tags/containerd/">containerd</a>
+            </span>
+            
+            <span>
+                <a href="/tags/css/">css</a>
+            </span>
+            
+            <span>
+                <a href="/tags/deployer/">deployer</a>
+            </span>
+            
+            <span>
+                <a href="/tags/docker/">docker</a>
+            </span>
+            
+            <span>
+                <a href="/tags/drone/">drone</a>
+            </span>
+            
+            <span>
+                <a href="/tags/flash/">flash</a>
+            </span>
+            
+            <span>
+                <a href="/tags/fortran/">fortran</a>
+            </span>
+            
+            <span>
+                <a href="/tags/git/">git</a>
+            </span>
+            
+            <span>
+                <a href="/tags/go/">go</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hexo/">hexo</a>
+            </span>
+            
+            <span>
+                <a href="/tags/html/">html</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hugo/">hugo</a>
+            </span>
+            
+            <span>
+                <a href="/tags/ingress/">ingress</a>
+            </span>
+            
+            <span>
+                <a href="/tags/javascript/">javascript</a>
+            </span>
+            
+            <span>
+                <a href="/tags/jenkins/">jenkins</a>
+            </span>
+            
+            <span>
+                <a href="/tags/jquery/">jquery</a>
+            </span>
+            
+            <span>
+                <a href="/tags/k3s/">k3s</a>
+            </span>
+            
+            <span>
+                <a href="/tags/k8s/">k8s</a>
+            </span>
+            
+            <span>
+                <a href="/tags/kvm/">kvm</a>
+            </span>
+            
+            <span>
+                <a href="/tags/laravel/">laravel</a>
+            </span>
+            
+            <span>
+                <a href="/tags/linux/">linux</a>
+            </span>
+            
+            <span>
+                <a href="/tags/mariadb/">mariadb</a>
+            </span>
+            
+            <span>
+                <a href="/tags/movie/">movie</a>
+            </span>
+            
+            <span>
+                <a href="/tags/music/">music</a>
+            </span>
+            
+            <span>
+                <a href="/tags/mysql/">mysql</a>
+            </span>
+            
+            <span>
+                <a href="/tags/nginx/">nginx</a>
+            </span>
+            
+            <span>
+                <a href="/tags/nodejs/">nodejs</a>
+            </span>
+            
+            <span>
+                <a href="/tags/php/">php</a>
+            </span>
+            
+            <span>
+                <a href="/tags/python/">python</a>
+            </span>
+            
+            <span>
+                <a href="/tags/rpi/">rpi</a>
+            </span>
+            
+            <span>
+                <a href="/tags/shell/">shell</a>
+            </span>
+            
+            <span>
+                <a href="/tags/ssl/">ssl</a>
+            </span>
+            
+            <span>
+                <a href="/tags/traefik/">traefik</a>
+            </span>
+            
+            <span>
+                <a href="/tags/typecho/">typecho</a>
+            </span>
+            
+            <span>
+                <a href="/tags/usb/">usb</a>
+            </span>
+            
+            <span>
+                <a href="/tags/vps/">vps</a>
+            </span>
+            
+            <span>
+                <a href="/tags/windows/">windows</a>
+            </span>
+            
+            <span>
+                <a href="/tags/yii2/">yii2</a>
+            </span>
+            
+        </div>
+    </div>
+    
+    
+    
+    <div class="sidebar-item sidebar-toc">
+        <h3>目录</h3>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#下载安装包">下载安装包</a></li>
+    <li><a href="#配置环境变量">配置环境变量</a></li>
+    <li><a href="#配置国内镜像">配置国内镜像</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#下载安装包-1">下载安装包</a></li>
+    <li><a href="#配置环境变量-1">配置环境变量</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#hexo的建站原理">Hexo的建站原理</a></li>
+    <li><a href="#开启pages服务">开启pages服务</a></li>
+    <li><a href="#创建站点">创建站点</a></li>
+    <li><a href="#自动化部署页面">自动化部署页面</a></li>
+    <li><a href="#管理文章数据以及建站配置">管理文章数据以及建站配置</a></li>
+    <li><a href="#添加新的文章">添加新的文章</a></li>
+  </ul>
+</nav>
+    </div>
+    
+    
+  </div>
+</aside>
+    </main>
+
+    <footer>
+    <div class="container-lg clearfix">
+        <div class="col-12 footer">
+            
+            <span>&copy; 2014-2021
+                <a href="https://www.maoxuner.cn/">maoxuner</a>
+                 | <a href="https://git.fat4.cn/maoxuner/blog">Source code</a> 
+                | 基于 <a href="https://github.com/dsrkafuu/hugo-theme-fuji/"
+                   target="_blank">Fuji-v2</a> &amp; <a href="https://gohugo.io/"
+                                                    target="_blank">Hugo</a> 构建
+            </span>
+        </div>
+    </div>
+</footer>
+
+    
+<script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.0/lazysizes.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-core.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
+
+<script defer src="/assets/js/fuji.min.js"></script>
+
+
+</body>
+
+</html>

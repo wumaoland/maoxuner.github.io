@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>typecho on 二次元の技术宅</title>
+    <link>https://www.maoxuner.cn/tags/typecho/</link>
+    <description>Recent content in typecho on 二次元の技术宅</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Tue, 03 Feb 2015 17:43:20 +0800</lastBuildDate><atom:link href="https://www.maoxuner.cn/tags/typecho/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Typecho使用KindEditor插件上传 找不到上传路径UPLOAD_DIR错误 解决办法</title>
+      <link>https://www.maoxuner.cn/post/2015/02/typecho-kindeditor-upload-dir/</link>
+      <pubDate>Tue, 03 Feb 2015 17:43:20 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2015/02/typecho-kindeditor-upload-dir/</guid>
+      <description>&lt;p&gt;Typecho自带的文字编辑器太简陋了，于是换用了之前一直很喜欢的KindEditor。
+然而，使用KindEditor上传图片或者文件时却出现了找不到上传路径的错误提示&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Fatal error: Undefined class constant &#39;UPLOAD_DIR&#39; in /var/www/defualt/usr/plugins/KindEditor/Upload.php on line 75
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

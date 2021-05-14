@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>containerd on 二次元の技术宅</title>
+    <link>https://www.maoxuner.cn/tags/containerd/</link>
+    <description>Recent content in containerd on 二次元の技术宅</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 19 Feb 2020 21:12:58 +0800</lastBuildDate><atom:link href="https://www.maoxuner.cn/tags/containerd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>K8S入坑指南</title>
+      <link>https://www.maoxuner.cn/post/2020/02/k8s/</link>
+      <pubDate>Wed, 19 Feb 2020 21:12:58 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2020/02/k8s/</guid>
+      <description>Docker是容器，但容器不是Docker。Docker是containerd的上层应用，Docker的流行带动了容器技术的应用。单机服务编排，docker + docker-compose的组合足以支撑</description>
+    </item>
+    
+  </channel>
+</rss>

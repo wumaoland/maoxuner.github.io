@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>go on 二次元の技术宅</title>
+    <link>https://www.maoxuner.cn/tags/go/</link>
+    <description>Recent content in go on 二次元の技术宅</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sun, 16 Feb 2020 23:12:59 +0800</lastBuildDate><atom:link href="https://www.maoxuner.cn/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>将live2d猫咪整合到Hugo主题LoveIt</title>
+      <link>https://www.maoxuner.cn/post/2020/02/hugo-loveit-with-live2d-cats/</link>
+      <pubDate>Sun, 16 Feb 2020 23:12:59 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2020/02/hugo-loveit-with-live2d-cats/</guid>
+      <description>自建博客，一直想在页面上弄个“人格”，比如“伪春菜”。后来，朋友给我分享了领一只动态卡哇伊的小猫咪到你的网站吧 live2d入门这篇文章。觉得挺合适，一白一黑两只猫模型，刚好LoveIt主题也是黑白。更</description>
+    </item>
+    
+    <item>
+      <title>离线使用Go指南（Go语言半小时速成教程）</title>
+      <link>https://www.maoxuner.cn/post/2017/03/go-tour/</link>
+      <pubDate>Thu, 09 Mar 2017 10:04:04 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2017/03/go-tour/</guid>
+      <description>《Go语言半小时速成教程》其实就是Go官方入门文档《A tour of Go》的中文翻译版本。谷歌被墙可以理解，The Go Programming也被墙了就觉得很不可思议了。由于同源策略，好几个《Go语言半小时速成教程</description>
+    </item>
+    
+    <item>
+      <title>Hello, World!</title>
+      <link>https://www.maoxuner.cn/post/2014/06/hello-world/</link>
+      <pubDate>Sat, 28 Jun 2014 01:02:30 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2014/06/hello-world/</guid>
+      <description>Hello, World! N种语言的Hello, World! Shell #!/bin/sh echo &amp;quot;Hello, World!&amp;quot; Fortran program main implicit none print *,&amp;quot;Hello, World!&amp;quot; end program main C #include &amp;lt;stdio.h&amp;gt; int main() { printf(&amp;quot;Hello, World&amp;quot;); return 0; } Python print(&amp;quot;Hello, World!&amp;quot;) JavaScript console.log(&amp;quot;Hello, World!&amp;quot;); PHP echo &#39;Hello, World!&#39;; Go package main import &amp;quot;fmt&amp;quot; func main(){ fmt.Print(&amp;quot;Hello, World!&amp;quot;); } setTimeout(function(){ console.log(&#34;I Love Young!&#34;); alert(&#34;Hello, World!&#34;); }, 5000);</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>flash on 二次元の技术宅</title>
+    <link>https://www.maoxuner.cn/tags/flash/</link>
+    <description>Recent content in flash on 二次元の技术宅</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sun, 30 Apr 2017 12:21:13 +0800</lastBuildDate><atom:link href="https://www.maoxuner.cn/tags/flash/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ubuntu谷歌浏览器使用flash插件</title>
+      <link>https://www.maoxuner.cn/post/2017/04/ubuntu%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BD%BF%E7%94%A8flash%E6%8F%92%E4%BB%B6/</link>
+      <pubDate>Sun, 30 Apr 2017 12:21:13 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2017/04/ubuntu%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BD%BF%E7%94%A8flash%E6%8F%92%E4%BB%B6/</guid>
+      <description>Ubuntu/Debian上默认没有安装flash插件，需要手动安装并调用插件。flash早晚会成为历史的尘埃，建议不要再折腾了 安装并配置flash插件 安装flash插件 参考文件readme.txt中</description>
+    </item>
+    
+  </channel>
+</rss>

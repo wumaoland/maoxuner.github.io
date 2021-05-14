@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bpi on 二次元の技术宅</title>
+    <link>https://www.maoxuner.cn/tags/bpi/</link>
+    <description>Recent content in bpi on 二次元の技术宅</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Fri, 27 Nov 2015 22:11:20 +0800</lastBuildDate><atom:link href="https://www.maoxuner.cn/tags/bpi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>香蕉派bananian的flash插件方案Iceweasel&#43;Freshplayerplugin&#43;PepperFlashPlayer</title>
+      <link>https://www.maoxuner.cn/post/2015/11/flash-on-bpi/</link>
+      <pubDate>Fri, 27 Nov 2015 22:11:20 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2015/11/flash-on-bpi/</guid>
+      <description>&lt;p&gt;香蕉派/BPI刷了bananian系统，也就是debian arm了，我是把它作为服务器用的，所以一直没有在意浏览器以及flash视频播放的问题。当然，我也早就发现了flash插件的问题。就拖沓着，一直没解决，直到我在debian的维基上看到了“Use Pepper Flash with Iceweasel using Freshplayerplugin”这句话，我才有了新的思路。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>香蕉派BPIbananian1508编译小度Wifi mt7601u驱动</title>
+      <link>https://www.maoxuner.cn/post/2015/11/bpi-bananian-xiaoduwifi/</link>
+      <pubDate>Wed, 11 Nov 2015 22:45:20 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2015/11/bpi-bananian-xiaoduwifi/</guid>
+      <description>&lt;p&gt;零零碎碎的时间，折腾了好久，看了不知道多少帖子，教程，终于在香蕉派成功编译并加载了小度Wifi的驱动。其实也就是360Wifi，小米Wifi，腾讯Wifi等的驱动。因为它们基本都是mt7601u的芯片。好了，废话不多说，进入主题。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

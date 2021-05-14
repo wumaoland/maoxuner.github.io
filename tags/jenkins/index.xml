@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jenkins on 二次元の技术宅</title>
+    <link>https://www.maoxuner.cn/tags/jenkins/</link>
+    <description>Recent content in jenkins on 二次元の技术宅</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sat, 15 Feb 2020 18:06:22 +0800</lastBuildDate><atom:link href="https://www.maoxuner.cn/tags/jenkins/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Jenkins相关</title>
+      <link>https://www.maoxuner.cn/post/2020/02/jenkins/</link>
+      <pubDate>Sat, 15 Feb 2020 18:06:22 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2020/02/jenkins/</guid>
+      <description>Jenkins相关，留存 参考文章 Jenkins Theme - jenkins-material-theme Template for Jenkins Jobs for PHP Projects</description>
+    </item>
+    
+  </channel>
+</rss>

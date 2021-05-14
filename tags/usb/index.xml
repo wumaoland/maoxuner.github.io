@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>usb on 二次元の技术宅</title>
+    <link>https://www.maoxuner.cn/tags/usb/</link>
+    <description>Recent content in usb on 二次元の技术宅</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sat, 15 Feb 2020 14:02:35 +0800</lastBuildDate><atom:link href="https://www.maoxuner.cn/tags/usb/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用Gurb2制作Linux与Windows以及Legacy与UEFI双模式启动盘</title>
+      <link>https://www.maoxuner.cn/post/2020/02/grub2-bootable-device/</link>
+      <pubDate>Sat, 15 Feb 2020 14:02:35 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2020/02/grub2-bootable-device/</guid>
+      <description>经常要给Windows或者Linux系统装机，每次都要制作启动盘，显得有点麻烦。Grub4dos似乎只能用于Legacy模式的启动，因此使用万能的Grub2才是最终解。挖坑待填 尚未搞清楚Windows</description>
+    </item>
+    
+    <item>
+      <title>使用grub2制作bios和uefi双启动u盘</title>
+      <link>https://www.maoxuner.cn/post/2018/03/usb-grub2-bios-uefi/</link>
+      <pubDate>Fri, 23 Mar 2018 12:33:33 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2018/03/usb-grub2-bios-uefi/</guid>
+      <description>应对复杂的装机环境，bios/uefi，windows/linux。 假设已有一台装好grub(2.02)的linux系统。U盘的设备路径/dev/sdb。 U盘分区 使用mbr分区表 只有mbr分区表才能同</description>
+    </item>
+    
+    <item>
+      <title>原版win7安装后不识别usb导致键鼠没有反应的问题</title>
+      <link>https://www.maoxuner.cn/post/2017/03/win7-vs-skylake/</link>
+      <pubDate>Tue, 14 Mar 2017 13:36:37 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2017/03/win7-vs-skylake/</guid>
+      <description>昨天给一台新电脑，联想H3060安装win7系统。安装完成后，在语言设置界面usb键盘鼠标都失去反应了，更换其他usb口也不能识别。这直接原因就是没有usb驱动。此时，电脑已经算作是完全失控的状态。此</description>
+    </item>
+    
+    <item>
+      <title>Fat32格式优盘设置小写卷标</title>
+      <link>https://www.maoxuner.cn/post/2015/02/u-label/</link>
+      <pubDate>Tue, 03 Feb 2015 21:47:20 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2015/02/u-label/</guid>
+      <description>&lt;p&gt;很多强迫症患者想要给U盘设置个小写的卷标，可是在windos里面修改后，总是被改成大写的了。本文将教你怎么设置小写或者大小写混合的卷标。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>FbinstTool制作U盘隐藏启动分区 ud隐藏分区 U盘多维护系统 引导ISO镜像</title>
+      <link>https://www.maoxuner.cn/post/2015/02/fbinsttool-ud/</link>
+      <pubDate>Tue, 03 Feb 2015 20:52:20 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2015/02/fbinsttool-ud/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;本文年代久远，可能已经不适用。仅供参考！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;创建UD隐藏引导分区的好处是，可以随意修改U盘课件存储的文件，而不会影响U盘上安装的启动分区。制作UD隐藏分区，我推荐&lt;code&gt;FbinstTool&lt;/code&gt;这个软件，小而精悍。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

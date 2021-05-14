@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jquery on 二次元の技术宅</title>
+    <link>https://www.maoxuner.cn/tags/jquery/</link>
+    <description>Recent content in jquery on 二次元の技术宅</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Fri, 10 Mar 2017 13:32:11 +0800</lastBuildDate><atom:link href="https://www.maoxuner.cn/tags/jquery/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>js获取浏览器窗口的宽高度</title>
+      <link>https://www.maoxuner.cn/post/2017/03/js-get-view-size/</link>
+      <pubDate>Fri, 10 Mar 2017 13:32:11 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2017/03/js-get-view-size/</guid>
+      <description>有时候并不能简单的使用CSS来控制页面元素的大小，结合js来控制元素的大小会更方便一些，因此有时就需要用js获取浏览器窗口的尺寸。 方法 纯js var data = { &amp;quot;网页可见区域宽(body)&amp;quot; :</description>
+    </item>
+    
+  </channel>
+</rss>
