@@ -13,7 +13,7 @@
       <pubDate>Sat, 15 Feb 2020 23:40:15 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/02/yii2-grid-view/</guid>
-      <description>机缘巧合，再次接触到Yii2框架的项目，做了简单的增删查改。涉及到列表项下拉筛选框，自定义表格显示内容。 以下内容仅摘抄了代码最核心的部分，仅供参考 模型 class AdvertRecordSearch extends AdvertRecord { public $start_date; public $end_date; public $platforms = [ &#39;tencent&#39; =&amp;gt; &#39;腾讯&#39;, &#39;alibaba&#39; =&amp;gt; &#39;阿里</description>
+      <description>&lt;p&gt;机缘巧合，再次接触到Yii2框架的项目，做了简单的增删查改。涉及到列表项下拉筛选框，自定义表格显示内容。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -31,7 +31,12 @@
       <pubDate>Thu, 14 Jun 2018 00:13:05 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2018/06/composer-with-bower-asset/</guid>
-      <description>作为一个程序猿，有一半的时间在跟网络、防火墙做斗争，感觉真是可悲。 composer的加速有两个方面： 获取php资源包数据（packagist） 获取bower前端资源数据（github） 安装compos</description>
+      <description>&lt;p&gt;作为一个程序猿，有一半的时间在跟网络、防火墙做斗争，感觉真是可悲。&lt;/p&gt;
+&lt;p&gt;composer的加速有两个方面：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;获取php资源包数据（packagist）&lt;/li&gt;
+&lt;li&gt;获取bower前端资源数据（github）&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -40,7 +45,7 @@
       <pubDate>Wed, 07 Mar 2018 13:40:38 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2018/03/yii2-gii-debug/</guid>
-      <description>使用docker搭建php开发环境时遇到一个坑，明明gii以及debug模块配置正确，但是却不运行的问题。查看Yii2文档 - 使用 Gii 生成代码，找到了思路。 配置信息 Yii2配置文件如config/web.</description>
+      <description>&lt;p&gt;使用docker搭建php开发环境时遇到一个坑，明明&lt;code&gt;gii&lt;/code&gt;以及&lt;code&gt;debug&lt;/code&gt;模块配置正确，但是却不运行的问题。查看&lt;a href=&#34;http://www.yiichina.com/doc/guide/2.0/start-gii&#34; target=&#34;_blank&#34;&gt;Yii2文档 - 使用 Gii 生成代码&lt;/a&gt;，找到了思路。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -49,7 +54,9 @@
       <pubDate>Sun, 04 Feb 2018 13:55:09 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2018/02/php7.2-yii2-object-conflict/</guid>
-      <description>用docker搭建php服务器时，发现yii2核心类Object报错了。此时用的php版本是当前最新版的7.2。 Fatal error: Cannot use &#39;Object&#39; as class name as it is reserved in /var/www/yii/vendor/yiisoft/yii2/base/Object.php on line 77 出错原因 Object是php7.2中的保留类名，不可以</description>
+      <description>&lt;p&gt;用docker搭建php服务器时，发现yii2核心类&lt;code&gt;Object&lt;/code&gt;报错了。此时用的php版本是当前最新版的&lt;code&gt;7.2&lt;/code&gt;。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Fatal error: Cannot use &#39;Object&#39; as class name as it is reserved in /var/www/yii/vendor/yiisoft/yii2/base/Object.php on line 77
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
     <item>
@@ -58,7 +65,7 @@
       <pubDate>Sun, 28 Jan 2018 15:42:58 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2018/01/docker-php-server/</guid>
-      <description>多容器 apache+php+mariadb+redis 主要配置 构建php镜像 基于官方php镜像进行定制，增加所需的php扩展，修改php配置，以及创建虚拟主机。 Dockerfile 文件php/Dockerfile FROM php:apache # php configure COPY php.ini /usr/local/etc/php/php.ini # php extension COPY sources.list /etc/apt/sources.list RUN apt-get update \ &amp;amp;&amp;amp; apt-get install -y --no-install-recommends \ libbz2-dev \</description>
+      <description>&lt;p&gt;多容器 apache+php+mariadb+redis&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -67,7 +74,7 @@
       <pubDate>Thu, 04 May 2017 10:00:44 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2017/05/php-deployer/</guid>
-      <description>利用git webhook请求php脚本，触发deployer自动部署实现的核心流程：PC/Client(git push) =&amp;gt; GitHub/Git Repository(webhook/http request) =&amp;gt; Server/WebHost(php hook/shell_exec) =&amp;gt; Server/WeHost(deploy commands) 设置部署公钥 部署脚本执行的用户www-data,把www-data的</description>
+      <description>&lt;p&gt;利用git webhook请求php脚本，触发deployer自动部署实现的核心流程：&lt;code&gt;PC/Client(git push) =&amp;gt; GitHub/Git Repository(webhook/http request) =&amp;gt; Server/WebHost(php hook/shell_exec) =&amp;gt; Server/WeHost(deploy commands)&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -76,7 +83,7 @@
       <pubDate>Thu, 27 Apr 2017 14:17:52 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2017/04/laravel-learning/</guid>
-      <description>学习laravel遇到的一些坑，备忘。 项目 版本 system debian8 apache 2.4.10 php 5.6.30-0 mariadb 10.0.30 laravel 5.4.19 坑 不能使用.env文件的配置项 已配置好.env中的数据库，然而执行数据库迁移命令时，依然采用默认数据库配置。 在项目根目录执行命令，生成</description>
+      <description>&lt;p&gt;学习laravel遇到的一些坑，备忘。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -85,7 +92,7 @@
       <pubDate>Thu, 06 Apr 2017 21:45:55 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2017/04/lnmpa/</guid>
-      <description>主要针对 Apache2+PHP7.0+MariaDB 安装 sudo apt-get install apache2 mariadb-server php7.0 php7.0-mysql libapache2-mod-php7.0 sudo apt-get install php7.0-curl php7.0-mbstring php7.0-xml php7.0-bz2 php7.0-zip 组件名称 作用 php7.0-curl curl操作 php7.0-mbstring 字符操作？ php7.0-xml dom操作 php7.0-bz2 bzip2解压 php7.0-zip zip解压 常见问题 综合问题 Apache2 忽略路径大小写 解决方法 启用模块speling sudo a2enmod speling 在配置文</description>
+      <description>&lt;p&gt;主要针对 Apache2+PHP7.0+MariaDB&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -94,7 +101,7 @@
       <pubDate>Fri, 31 Mar 2017 20:29:44 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2017/03/php-abstract-interface/</guid>
-      <description>在写一个通用的通知类时，遇到了问题，特此查看一下抽象类跟接口的异同点。 示例 interface a { function run(); } interface b { const HELLO = &amp;quot;b: Hello, World!\n&amp;quot;; static function hello(); } interface c extends a,b { public function info($str); } abstract class d implements c { public $hello = &amp;quot;d: hello, world!\n&amp;quot;; public function run(){ echo &amp;quot;d: run()\n&amp;quot;; self::hello(); } static function hello(){ echo &amp;quot;d: hello()\n&amp;quot;; echo self::HELLO; } abstract function info($str); } abstract class</description>
+      <description>&lt;p&gt;在写一个通用的通知类时，遇到了问题，特此查看一下抽象类跟接口的异同点。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -103,7 +110,7 @@
       <pubDate>Fri, 31 Mar 2017 20:24:32 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2017/03/yii2-mail/</guid>
-      <description>Yii2使用SwiftMailer（作为组件） 把SwiftMailer添加到yii的组件中去（配置文件中的components）。然后就按照SwiftMailer各种方法就能使用了。 组件配置 部分配置内</description>
+      <description>&lt;p&gt;Yii2使用SwiftMailer（作为组件）&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -112,7 +119,7 @@
       <pubDate>Fri, 24 Mar 2017 13:36:35 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2017/03/ci3-composer/</guid>
-      <description>CodeIgniter3中是没有使用命名空间的，但是不代表它就不能使用命名空间。根本上讲，命名空间是php的一项功能，从php5.3.0开始就支持了这一功能。CodeIgniter只是没有实现根据命名</description>
+      <description>&lt;p&gt;CodeIgniter3中是没有使用命名空间的，但是不代表它就不能使用命名空间。根本上讲，命名空间是php的一项功能，从php5.3.0开始就支持了这一功能。CodeIgniter只是没有实现根据命名空间来实现类库的自动加载，但是可以通过第三方类库如&lt;code&gt;composer&lt;/code&gt;来实现其他类库的自动加载。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -133,7 +140,8 @@
       <pubDate>Sat, 28 Jun 2014 01:02:30 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2014/06/hello-world/</guid>
-      <description>Hello, World! N种语言的Hello, World! Shell #!/bin/sh echo &amp;quot;Hello, World!&amp;quot; Fortran program main implicit none print *,&amp;quot;Hello, World!&amp;quot; end program main C #include &amp;lt;stdio.h&amp;gt; int main() { printf(&amp;quot;Hello, World&amp;quot;); return 0; } Python print(&amp;quot;Hello, World!&amp;quot;) JavaScript console.log(&amp;quot;Hello, World!&amp;quot;); PHP echo &#39;Hello, World!&#39;; Go package main import &amp;quot;fmt&amp;quot; func main(){ fmt.Print(&amp;quot;Hello, World!&amp;quot;); } setTimeout(function(){ console.log(&#34;I Love Young!&#34;); alert(&#34;Hello, World!&#34;); }, 5000);</description>
+      <description>&lt;h1 id=&#34;hello-world&#34;&gt;Hello, World!&lt;/h1&gt;
+&lt;p&gt;N种语言的&lt;code&gt;Hello, World!&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

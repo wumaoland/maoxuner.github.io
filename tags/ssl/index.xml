@@ -6,14 +6,25 @@
     <description>Recent content in ssl on 二次元の技术宅</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 15 Feb 2020 15:34:31 +0800</lastBuildDate><atom:link href="https://www.maoxuner.cn/tags/ssl/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 14 May 2021 15:25:17 +0800</lastBuildDate><atom:link href="https://www.maoxuner.cn/tags/ssl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Archlinu添加自签名证书到系统</title>
+      <link>https://www.maoxuner.cn/post/2021/05/archlinux-self-signed-cert/</link>
+      <pubDate>Fri, 14 May 2021 15:25:17 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2021/05/archlinux-self-signed-cert/</guid>
+      <description>&lt;p&gt;Web本地开发时可能要用到自签名证书来进行https访问。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>创建自签名证书</title>
       <link>https://www.maoxuner.cn/post/2020/02/self-signed-certificate/</link>
       <pubDate>Sat, 15 Feb 2020 15:34:31 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/02/self-signed-certificate/</guid>
-      <description>自建内网服务时会用到ssl，就需要自签名（通用）证书了。 一个证书主要有两个文件：秘钥文件（公钥、私钥）、证书文件。私钥签发证书，公钥验证证书。可以给自己签名生成自签名证书，也可以给别人签名，生成通用证</description>
+      <description>&lt;p&gt;自建内网服务时会用到ssl，就需要自签名（通用）证书了。&lt;/p&gt;
+&lt;p&gt;一个证书主要有两个文件：秘钥文件（公钥、私钥）、证书文件。私钥签发证书，公钥验证证书。可以给自己签名生成自签名证书，也可以给别人签名，生成通用证书。&lt;/p&gt;
+&lt;p&gt;专门给别人签名的秘钥一般由证书颁发机构&lt;code&gt;CA&lt;/code&gt;保管，如&lt;code&gt;Let&#39;s Entrypt&lt;/code&gt;。浏览器存有可信证书颁发机构的公钥信息。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -22,7 +33,7 @@
       <pubDate>Fri, 29 Dec 2017 13:12:37 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2017/12/letsencrypt/</guid>
-      <description>Apache服务器配置使用https（ssl）。需求：vps管理权限。 创建虚拟主机 给各个域名创建虚拟主机，80端口。保证http可正常访问。 安装证书自动设置工具certbot 需要配置backports</description>
+      <description>&lt;p&gt;Apache服务器配置使用https（ssl）。需求：vps管理权限。&lt;/p&gt;</description>
     </item>
     
   </channel>

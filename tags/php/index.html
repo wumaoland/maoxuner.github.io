@@ -113,7 +113,7 @@
 
   </div>
   <div class="post-item post-summary markdown-body">
-    机缘巧合，再次接触到Yii2框架的项目，做了简单的增删查改。涉及到列表项下拉筛选框，自定义表格显示内容。 以下内容仅摘抄了代码最核心的部分，仅供参考 模型 class AdvertRecordSearch extends AdvertRecord { public $start_date; public $end_date; public $platforms = [ 'tencent' =&gt; '腾讯', 'alibaba' =&gt; '阿里
+    <p>机缘巧合，再次接触到Yii2框架的项目，做了简单的增删查改。涉及到列表项下拉筛选框，自定义表格显示内容。</p>
   </div>
 </div>
 
@@ -147,7 +147,12 @@
 
   </div>
   <div class="post-item post-summary markdown-body">
-    作为一个程序猿，有一半的时间在跟网络、防火墙做斗争，感觉真是可悲。 composer的加速有两个方面： 获取php资源包数据（packagist） 获取bower前端资源数据（github） 安装compos
+    <p>作为一个程序猿，有一半的时间在跟网络、防火墙做斗争，感觉真是可悲。</p>
+<p>composer的加速有两个方面：</p>
+<ul>
+<li>获取php资源包数据（packagist）</li>
+<li>获取bower前端资源数据（github）</li>
+</ul>
   </div>
 </div>
 
@@ -164,7 +169,7 @@
 
   </div>
   <div class="post-item post-summary markdown-body">
-    使用docker搭建php开发环境时遇到一个坑，明明gii以及debug模块配置正确，但是却不运行的问题。查看Yii2文档 - 使用 Gii 生成代码，找到了思路。 配置信息 Yii2配置文件如config/web.
+    <p>使用docker搭建php开发环境时遇到一个坑，明明<code>gii</code>以及<code>debug</code>模块配置正确，但是却不运行的问题。查看<a href="http://www.yiichina.com/doc/guide/2.0/start-gii" target="_blank">Yii2文档 - 使用 Gii 生成代码</a>，找到了思路。</p>
   </div>
 </div>
 
@@ -181,7 +186,9 @@
 
   </div>
   <div class="post-item post-summary markdown-body">
-    用docker搭建php服务器时，发现yii2核心类Object报错了。此时用的php版本是当前最新版的7.2。 Fatal error: Cannot use 'Object' as class name as it is reserved in /var/www/yii/vendor/yiisoft/yii2/base/Object.php on line 77 出错原因 Object是php7.2中的保留类名，不可以
+    <p>用docker搭建php服务器时，发现yii2核心类<code>Object</code>报错了。此时用的php版本是当前最新版的<code>7.2</code>。</p>
+<pre><code>Fatal error: Cannot use 'Object' as class name as it is reserved in /var/www/yii/vendor/yiisoft/yii2/base/Object.php on line 77
+</code></pre>
   </div>
 </div>
 
@@ -198,7 +205,7 @@
 
   </div>
   <div class="post-item post-summary markdown-body">
-    多容器 apache+php+mariadb+redis 主要配置 构建php镜像 基于官方php镜像进行定制，增加所需的php扩展，修改php配置，以及创建虚拟主机。 Dockerfile 文件php/Dockerfile FROM php:apache # php configure COPY php.ini /usr/local/etc/php/php.ini # php extension COPY sources.list /etc/apt/sources.list RUN apt-get update \ &amp;&amp; apt-get install -y --no-install-recommends \ libbz2-dev \
+    <p>多容器 apache+php+mariadb+redis</p>
   </div>
 </div>
 
@@ -215,7 +222,7 @@
 
   </div>
   <div class="post-item post-summary markdown-body">
-    利用git webhook请求php脚本，触发deployer自动部署实现的核心流程：PC/Client(git push) =&gt; GitHub/Git Repository(webhook/http request) =&gt; Server/WebHost(php hook/shell_exec) =&gt; Server/WeHost(deploy commands) 设置部署公钥 部署脚本执行的用户www-data,把www-data的
+    <p>利用git webhook请求php脚本，触发deployer自动部署实现的核心流程：<code>PC/Client(git push) =&gt; GitHub/Git Repository(webhook/http request) =&gt; Server/WebHost(php hook/shell_exec) =&gt; Server/WeHost(deploy commands)</code></p>
   </div>
 </div>
 
@@ -232,7 +239,7 @@
 
   </div>
   <div class="post-item post-summary markdown-body">
-    学习laravel遇到的一些坑，备忘。 项目 版本 system debian8 apache 2.4.10 php 5.6.30-0 mariadb 10.0.30 laravel 5.4.19 坑 不能使用.env文件的配置项 已配置好.env中的数据库，然而执行数据库迁移命令时，依然采用默认数据库配置。 在项目根目录执行命令，生成
+    <p>学习laravel遇到的一些坑，备忘。</p>
   </div>
 </div>
 
@@ -249,7 +256,7 @@
 
   </div>
   <div class="post-item post-summary markdown-body">
-    主要针对 Apache2+PHP7.0+MariaDB 安装 sudo apt-get install apache2 mariadb-server php7.0 php7.0-mysql libapache2-mod-php7.0 sudo apt-get install php7.0-curl php7.0-mbstring php7.0-xml php7.0-bz2 php7.0-zip 组件名称 作用 php7.0-curl curl操作 php7.0-mbstring 字符操作？ php7.0-xml dom操作 php7.0-bz2 bzip2解压 php7.0-zip zip解压 常见问题 综合问题 Apache2 忽略路径大小写 解决方法 启用模块speling sudo a2enmod speling 在配置文
+    <p>主要针对 Apache2+PHP7.0+MariaDB</p>
   </div>
 </div>
 
@@ -266,7 +273,7 @@
 
   </div>
   <div class="post-item post-summary markdown-body">
-    在写一个通用的通知类时，遇到了问题，特此查看一下抽象类跟接口的异同点。 示例 interface a { function run(); } interface b { const HELLO = &quot;b: Hello, World!\n&quot;; static function hello(); } interface c extends a,b { public function info($str); } abstract class d implements c { public $hello = &quot;d: hello, world!\n&quot;; public function run(){ echo &quot;d: run()\n&quot;; self::hello(); } static function hello(){ echo &quot;d: hello()\n&quot;; echo self::HELLO; } abstract function info($str); } abstract class
+    <p>在写一个通用的通知类时，遇到了问题，特此查看一下抽象类跟接口的异同点。</p>
   </div>
 </div>
 

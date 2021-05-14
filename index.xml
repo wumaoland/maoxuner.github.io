@@ -6,14 +6,53 @@
     <description>Recent content on 二次元の技术宅</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 22 Mar 2020 23:57:59 +0800</lastBuildDate><atom:link href="https://www.maoxuner.cn/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 14 May 2021 15:51:43 +0800</lastBuildDate><atom:link href="https://www.maoxuner.cn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo主题NES</title>
+      <link>https://www.maoxuner.cn/post/2021/05/hugo-theme-nes/</link>
+      <pubDate>Fri, 14 May 2021 15:51:43 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2021/05/hugo-theme-nes/</guid>
+      <description>&lt;p&gt;偶然发现了NES风格的样式库，并打算以此做个主题。目前只设计了主要页面。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Archlinu添加自签名证书到系统</title>
+      <link>https://www.maoxuner.cn/post/2021/05/archlinux-self-signed-cert/</link>
+      <pubDate>Fri, 14 May 2021 15:25:17 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2021/05/archlinux-self-signed-cert/</guid>
+      <description>&lt;p&gt;Web本地开发时可能要用到自签名证书来进行https访问。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Datetime字段类型默认值问题</title>
+      <link>https://www.maoxuner.cn/post/2021/05/datetime-column-default-value/</link>
+      <pubDate>Fri, 14 May 2021 15:13:22 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2021/05/datetime-column-default-value/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Data truncation: Incorrect datetime value: &amp;lsquo;0000-00-00 00:00:00&amp;rsquo; for column.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;简而言之，就是字段值不能是&lt;code&gt;0000-00-00 00:00:00:00&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>以非root用户运行docker服务</title>
+      <link>https://www.maoxuner.cn/post/2021/05/docker-non-root/</link>
+      <pubDate>Fri, 14 May 2021 15:02:33 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2021/05/docker-non-root/</guid>
+      <description>某些场景下可能需要使用以非root用户来运行docker服务，以保证系统的安全性。 参考文章 Run the Docker daemon as a non-root user (Rootless mode)</description>
+    </item>
+    
     <item>
       <title>云锁导致的Docker镜像拉取失败</title>
       <link>https://www.maoxuner.cn/post/2020/03/docker-pull-failure-caused-by-yunsuo/</link>
       <pubDate>Sun, 22 Mar 2020 23:57:59 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/03/docker-pull-failure-caused-by-yunsuo/</guid>
-      <description>上周遇到了MTU导致的Docker镜像拉取失败，这次又遇到了奇怪的情况导致镜像拉取失败。 failed to register layer: Error processing tar file(exit status 1): open /etc/init.d/nginx: permission denied 百度搜了一下，找到了相关的文章，看到了关键字yunsuo，这才想起来公司早期的服务器</description>
+      <description>&lt;p&gt;上周遇到了MTU导致的Docker镜像拉取失败，这次又遇到了奇怪的情况导致镜像拉取失败。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -22,7 +61,10 @@
       <pubDate>Sun, 15 Mar 2020 23:17:50 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/03/host-container-mtu/</guid>
-      <description>将CI/CD服务前移到k8s后，当drone的插件drone-docker构建镜像时，总卡在更新软件包的步骤。是网络连接的问题，为了解决这个问题，耗费了我整个周末。 # apk update fetch http://dl-cdn.alpinelinux.org/alpine/v3.11/main/x86_64/APKINDEX.tar.gz Drone-Runner in K8S 在k8s环境中，dr</description>
+      <description>&lt;p&gt;将CI/CD服务前移到&lt;a href=&#34;https://kubernetes.io/&#34; target=&#34;_blank&#34;&gt;k8s&lt;/a&gt;后，当&lt;a href=&#34;https://drone.io/&#34; target=&#34;_blank&#34;&gt;drone&lt;/a&gt;的插件&lt;a href=&#34;https://github.com/drone-plugins/drone-docker&#34; target=&#34;_blank&#34;&gt;drone-docker&lt;/a&gt;构建镜像时，总卡在更新软件包的步骤。是网络连接的问题，为了解决这个问题，耗费了我整个周末。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# apk update
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.11/main/x86_64/APKINDEX.tar.gz
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
     <item>
@@ -31,7 +73,7 @@
       <pubDate>Sat, 14 Mar 2020 11:21:40 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/03/kubernetes-dashboard-ingress/</guid>
-      <description>Kubernetes Dashboard的后端必须通过https访问，是自签名的ssl证书。使用Ingress连接时，会出现证书验证的问题，因此要配置Ingress忽略ssl验证。 Ingress Nginx Ingress Nginx是k8s官方社区开发的I</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/kubernetes/dashboard&#34; target=&#34;_blank&#34;&gt;Kubernetes Dashboard&lt;/a&gt;的后端必须通过https访问，是自签名的ssl证书。使用Ingress连接时，会出现证书验证的问题，因此要配置Ingress忽略ssl验证。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -40,7 +82,7 @@
       <pubDate>Thu, 12 Mar 2020 20:01:56 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/03/macos-docker-volumes-cached/</guid>
-      <description>去年，我的燃7000出现了一些软硬件故障，便狠下心换了一个二手的15款MBP，从此告别了折腾linux的日子。然而，日常开发时却发现docker的响应速度远不如之前的linux。好在还有优化的空间。 L</description>
+      <description>&lt;p&gt;去年，我的燃7000出现了一些软硬件故障，便狠下心换了一个二手的15款MBP，从此告别了折腾linux的日子。然而，日常开发时却发现docker的响应速度远不如之前的linux。好在还有优化的空间。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -49,7 +91,7 @@
       <pubDate>Thu, 20 Feb 2020 14:03:53 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/02/archlinux-multihead/</guid>
-      <description>在有扩展显示器之前，有个奇思妙想：将桌面内容扩展到安卓平板上。Windows和MacOS似乎有现成的解决方案，而Linux则需要折腾一番。我的思路是：在Linux上创建一个虚拟桌面，然后通过VNC连接</description>
+      <description>&lt;p&gt;在有扩展显示器之前，有个奇思妙想：将桌面内容扩展到安卓平板上。Windows和MacOS似乎有现成的解决方案，而Linux则需要折腾一番。我的思路是：在Linux上创建一个虚拟桌面，然后通过VNC连接到这个桌面上。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -58,7 +100,7 @@
       <pubDate>Thu, 20 Feb 2020 13:29:02 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/02/linux-permission/</guid>
-      <description>常规文件权限：文件权限继承——设置粘滞位权限 ACL：指定owner以外的用户权限 参考文章 How do I set up a folder so that anything created in it inherits permissions? How to make new file permission inherit from the parent directory? How to set umask for a specific folder</description>
+      <description></description>
     </item>
     
     <item>
@@ -67,7 +109,7 @@
       <pubDate>Thu, 20 Feb 2020 13:24:40 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/02/iview/</guid>
-      <description>笔记 日期控件双向绑定数据，没什么好办法，都需要特殊处理 iview日期控件，双向绑定日期格式 (原创)iView datepicker无法获取格式化的时间(默认带T和Z) 参考文章 iview日期控件，双向绑定</description>
+      <description></description>
     </item>
     
     <item>
@@ -76,7 +118,7 @@
       <pubDate>Thu, 20 Feb 2020 12:34:21 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/02/rpi3-initialization/</guid>
-      <description>用上VPS后，发现树莓派真是太鸡肋了，主要是配置太低了。可能更适合组集群的土豪玩法。 无显示器安装（重点就是配置网络、开启ssh服务），参考Setting up a Raspberry Pi headless 在启动分区放入wpa_supplica</description>
+      <description>&lt;p&gt;用上VPS后，发现树莓派真是太鸡肋了，主要是配置太低了。可能更适合组集群的土豪玩法。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -85,7 +127,7 @@
       <pubDate>Wed, 19 Feb 2020 23:26:22 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/02/docker-eth-binding/</guid>
-      <description>主机多网卡的情况下，可能会涉及容器和网卡的绑定。主要分两个方向：入口流量网卡的绑定、出口流浪网卡的绑定。 入口流量绑定 入口流量绑定很简单，容器在绑定主机端口时指定主机的网卡或相应网卡的IP（如果主机公网</description>
+      <description>&lt;p&gt;主机多网卡的情况下，可能会涉及容器和网卡的绑定。主要分两个方向：入口流量网卡的绑定、出口流浪网卡的绑定。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -94,7 +136,7 @@
       <pubDate>Wed, 19 Feb 2020 21:12:58 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/02/k8s/</guid>
-      <description>Docker是容器，但容器不是Docker。Docker是containerd的上层应用，Docker的流行带动了容器技术的应用。单机服务编排，docker + docker-compose的组合足以支撑</description>
+      <description>&lt;p&gt;Docker是容器，但容器不是Docker。Docker是containerd的上层应用，Docker的流行带动了容器技术的应用。单机服务编排，docker + docker-compose的组合足以支撑。对于集群管理，还是K8S更合适。K8S可基于docker引擎，也可直接基于containerd的容器引擎。K3S是K8S的精简版，基于containerd。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -103,7 +145,7 @@
       <pubDate>Sun, 16 Feb 2020 23:12:59 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/02/hugo-loveit-with-live2d-cats/</guid>
-      <description>自建博客，一直想在页面上弄个“人格”，比如“伪春菜”。后来，朋友给我分享了领一只动态卡哇伊的小猫咪到你的网站吧 live2d入门这篇文章。觉得挺合适，一白一黑两只猫模型，刚好LoveIt主题也是黑白。更</description>
+      <description>&lt;p&gt;自建博客，一直想在页面上弄个“人格”，比如“伪春菜”。后来，朋友给我分享了&lt;a href=&#34;https://www.jianshu.com/p/57a4deab12cc&#34; target=&#34;_blank&#34;&gt;领一只动态卡哇伊的小猫咪到你的网站吧 live2d入门&lt;/a&gt;这篇文章。觉得挺合适，一白一黑两只猫模型，刚好LoveIt主题也是黑白。更何况，我还是个铲屎官。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -112,7 +154,7 @@
       <pubDate>Sun, 16 Feb 2020 23:10:07 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/02/2019-404/</guid>
-      <description>最近重新整理了博客，将Hexo搭建的旧站迁移到Hugo搭建的新站了。从14年开始建博客，除去几次迁站删掉了一些，每年都写过几篇文章。唯独2019年，一篇文章都没有。 老站上，我做了一个“心情”的功能。2</description>
+      <description>&lt;p&gt;最近重新整理了博客，将Hexo搭建的旧站迁移到Hugo搭建的新站了。从14年开始建博客，除去几次迁站删掉了一些，每年都写过几篇文章。唯独2019年，一篇文章都没有。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -121,7 +163,7 @@
       <pubDate>Sun, 16 Feb 2020 21:29:07 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/02/kvm/</guid>
-      <description>如果常用软件有很好的解决方案，我宁愿使用linux系统。各种工具很方便，系统完全在自己的掌控之内。KVM入门后就再也看不上其他虚拟机。 使用笔记 嵌套虚拟化，如果使用默认的桥接网络。需要修改DHCP网段（</description>
+      <description>&lt;p&gt;如果常用软件有很好的解决方案，我宁愿使用linux系统。各种工具很方便，系统完全在自己的掌控之内。KVM入门后就再也看不上其他虚拟机。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -130,7 +172,7 @@
       <pubDate>Sun, 16 Feb 2020 19:05:13 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/02/amazon-s3-domain-cname/</guid>
-      <description>S3是亚马逊的对象存储服务，默认的访问路径比较长，且不太好记，如果能使用自定义的域名就好了。与其说是绑定自定义域名，不如说让这个域名能访问到S3的某个存储桶（bucket）。 配置域名和存储桶 为什么不说</description>
+      <description>&lt;p&gt;S3是亚马逊的对象存储服务，默认的访问路径比较长，且不太好记，如果能使用自定义的域名就好了。与其说是绑定自定义域名，不如说让这个域名能访问到S3的某个存储桶（bucket）。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -139,7 +181,7 @@
       <pubDate>Sun, 16 Feb 2020 18:34:10 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/02/disable-ssh-host-key-checking/</guid>
-      <description>对于家里以及公司内网的服务器，可能内网IP是相同的，这就会造成经常性的主机秘钥验证不通过的问题。可以禁用这些主机的秘钥验证。 主机秘钥冲突时的错误提示大概如下 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ @ WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! @ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY! Someone could be</description>
+      <description>&lt;p&gt;对于家里以及公司内网的服务器，可能内网IP是相同的，这就会造成经常性的主机秘钥验证不通过的问题。可以禁用这些主机的秘钥验证。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -148,7 +190,7 @@
       <pubDate>Sun, 16 Feb 2020 16:05:23 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/02/alpinelinux-uclibc-to-gclibc/</guid>
-      <description>AlpineLinux默认使用uclibc版本的busybox，其动态链接库与gclibc有些区别，会导致某些程序没有办法正常运行。可以将busybox版本切换为gclibc。 uclibc与gclib</description>
+      <description>&lt;p&gt;AlpineLinux默认使用uclibc版本的busybox，其动态链接库与gclibc有些区别，会导致某些程序没有办法正常运行。可以将busybox版本切换为gclibc。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -157,7 +199,7 @@
       <pubDate>Sat, 15 Feb 2020 23:40:15 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/02/yii2-grid-view/</guid>
-      <description>机缘巧合，再次接触到Yii2框架的项目，做了简单的增删查改。涉及到列表项下拉筛选框，自定义表格显示内容。 以下内容仅摘抄了代码最核心的部分，仅供参考 模型 class AdvertRecordSearch extends AdvertRecord { public $start_date; public $end_date; public $platforms = [ &#39;tencent&#39; =&amp;gt; &#39;腾讯&#39;, &#39;alibaba&#39; =&amp;gt; &#39;阿里</description>
+      <description>&lt;p&gt;机缘巧合，再次接触到Yii2框架的项目，做了简单的增删查改。涉及到列表项下拉筛选框，自定义表格显示内容。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -175,7 +217,7 @@
       <pubDate>Sat, 15 Feb 2020 16:23:24 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/02/nginx-mass-dynamic-vhost/</guid>
-      <description>开发环境中一个个的配置域名和根目录比较麻烦，自动实现域名到目录的绑定会更加便捷。 Nginx配置参考 以完整域名设置主机目录 server { listen 80; listen [::]:80; set $htmldir /var/lib/nginx/html; set $basedir /var/www/html; set $rootdir $htmldir; if (-d $basedir/$host) { set $rootdir $basedir/$host; } root $rootdir; } 以二级域名设置主机目录 server { listen</description>
+      <description>&lt;p&gt;开发环境中一个个的配置域名和根目录比较麻烦，自动实现域名到目录的绑定会更加便捷。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -184,7 +226,9 @@
       <pubDate>Sat, 15 Feb 2020 15:34:31 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/02/self-signed-certificate/</guid>
-      <description>自建内网服务时会用到ssl，就需要自签名（通用）证书了。 一个证书主要有两个文件：秘钥文件（公钥、私钥）、证书文件。私钥签发证书，公钥验证证书。可以给自己签名生成自签名证书，也可以给别人签名，生成通用证</description>
+      <description>&lt;p&gt;自建内网服务时会用到ssl，就需要自签名（通用）证书了。&lt;/p&gt;
+&lt;p&gt;一个证书主要有两个文件：秘钥文件（公钥、私钥）、证书文件。私钥签发证书，公钥验证证书。可以给自己签名生成自签名证书，也可以给别人签名，生成通用证书。&lt;/p&gt;
+&lt;p&gt;专门给别人签名的秘钥一般由证书颁发机构&lt;code&gt;CA&lt;/code&gt;保管，如&lt;code&gt;Let&#39;s Entrypt&lt;/code&gt;。浏览器存有可信证书颁发机构的公钥信息。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -193,7 +237,7 @@
       <pubDate>Sat, 15 Feb 2020 14:20:35 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/02/docker-faqs-for-green-hand/</guid>
-      <description>网络互访问题、入口脚本问题等 网络 主机互访 宿主机指运行docker服务的主机，容器指宿主机上运行的各个container。 注意：localhost和127.0.0.1永远是发起请求的程序所在的系统（命名</description>
+      <description>&lt;p&gt;网络互访问题、入口脚本问题等&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -202,7 +246,7 @@
       <pubDate>Sat, 15 Feb 2020 14:02:35 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/02/grub2-bootable-device/</guid>
-      <description>经常要给Windows或者Linux系统装机，每次都要制作启动盘，显得有点麻烦。Grub4dos似乎只能用于Legacy模式的启动，因此使用万能的Grub2才是最终解。挖坑待填 尚未搞清楚Windows</description>
+      <description>&lt;p&gt;经常要给Windows或者Linux系统装机，每次都要制作启动盘，显得有点麻烦。Grub4dos似乎只能用于Legacy模式的启动，因此使用万能的Grub2才是最终解。挖坑待填&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -211,7 +255,8 @@
       <pubDate>Sat, 15 Feb 2020 13:35:47 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/02/apache-vhost-domain-subdirectory-bindings/</guid>
-      <description>Apache服务器通过Rewrite规则绑定域名目录 使用虚拟主机时，由于不能自定义VirtualHost，因此只能通过重写规则来绑定域名和目录。前提是服务器允许使用.htaccess并启用了重写规则。</description>
+      <description>&lt;h1 id=&#34;apache服务器通过rewrite规则绑定域名目录&#34;&gt;Apache服务器通过Rewrite规则绑定域名目录&lt;/h1&gt;
+&lt;p&gt;使用虚拟主机时，由于不能自定义VirtualHost，因此只能通过重写规则来绑定域名和目录。前提是服务器允许使用&lt;code&gt;.htaccess&lt;/code&gt;并启用了重写规则。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -238,7 +283,7 @@
       <pubDate>Thu, 13 Feb 2020 11:28:35 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/about/</guid>
-      <description>碎碎念~ 资料卡 关于我 昵称/Nickname 酱油三三/幸福的路痴/maoxuner 标签/Tags 汉子 鸡 摩羯 位置/Location 杭州 邮箱/Email 点击查看 技能/Skills 全栈、DevOps 语言/La</description>
+      <description>&lt;p&gt;碎碎念~&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -247,7 +292,7 @@
       <pubDate>Tue, 19 Jun 2018 11:25:00 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2018/06/gitignore-global/</guid>
-      <description>使用IDE如Intellij Idea时，IDE会在项目目录下创建.idea文件夹。在每个项目.gitignore文件中排除.idea/比较麻烦，设置全局排除会更方便些。 Git全局忽略 在用户主目录下创建</description>
+      <description>&lt;p&gt;使用IDE如Intellij Idea时，IDE会在项目目录下创建&lt;code&gt;.idea&lt;/code&gt;文件夹。在每个项目&lt;code&gt;.gitignore&lt;/code&gt;文件中排除&lt;code&gt;.idea/&lt;/code&gt;比较麻烦，设置全局排除会更方便些。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -256,7 +301,12 @@
       <pubDate>Thu, 14 Jun 2018 00:13:05 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2018/06/composer-with-bower-asset/</guid>
-      <description>作为一个程序猿，有一半的时间在跟网络、防火墙做斗争，感觉真是可悲。 composer的加速有两个方面： 获取php资源包数据（packagist） 获取bower前端资源数据（github） 安装compos</description>
+      <description>&lt;p&gt;作为一个程序猿，有一半的时间在跟网络、防火墙做斗争，感觉真是可悲。&lt;/p&gt;
+&lt;p&gt;composer的加速有两个方面：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;获取php资源包数据（packagist）&lt;/li&gt;
+&lt;li&gt;获取bower前端资源数据（github）&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -265,7 +315,14 @@
       <pubDate>Tue, 12 Jun 2018 10:47:24 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2018/06/%E5%B0%8F%E6%96%B0%E5%B9%B3%E6%9D%BFtb8804f%E8%8E%B7%E5%8F%96root%E4%BB%A5%E5%8F%8A%E5%AE%89%E8%A3%85%E8%B0%B7%E6%AD%8C%E5%B8%82%E5%9C%BA/</guid>
-      <description>如果不root，买安卓设备作甚？ ——— 我说的，嗯 几经折腾，从酷比魔方Freer X9，到昂达X20，直到最终的联想小新平板TB8804F，我终于有了第一个平板。朋友说，达到了我对平板的底线（小新符合我对</description>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;如果不root，买安卓设备作甚？
+——— 我说的，嗯&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;几经折腾，从酷比魔方Freer X9，到昂达X20，直到最终的联想小新平板TB8804F，我终于有了第一个平板。朋友说，达到了我对平板的底线（小新符合我对平板颜值、性能、搞机的最低条件）。&lt;/p&gt;
+&lt;p&gt;酷比魔方Freer X9虽然性价比超级高、手感舒适、USB3.0，但是良品率、散热性堪忧，充电慢，系统老。我买到了坏点屏，在玩王者荣耀时，左上角发热特别严重。买来作为电子书倒是个不错的选择，游戏偶尔玩玩也凑合。
+昂达X20性价比也挺高、全网通、10寸屏。对我而言，通话对于平板而言完全是个鸡肋功能。超大屏带来的是超大的重量和耗电量，不够优雅。玩QQ飞车时，起点加速时会卡顿。游戏体验极差。&lt;/p&gt;
+&lt;p&gt;好了言归正传，开始搞机。&lt;strong&gt;建议看完全文后，根据实际情况操作。&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -274,7 +331,7 @@
       <pubDate>Sun, 27 May 2018 21:43:15 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2018/05/irc/</guid>
-      <description>也许IRC即将被淘汰吧，研究的人少，资料更少。为了定制一个简易的多端聊天工具，我研究了一番IRC，并记录于此。 简介 IRC是开源社区比较流行的纯文本即时聊天方案，支持私聊、群聊（频道）。 优点是，无需注册</description>
+      <description>&lt;p&gt;也许IRC即将被淘汰吧，研究的人少，资料更少。为了定制一个简易的多端聊天工具，我研究了一番IRC，并记录于此。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -283,7 +340,15 @@
       <pubDate>Fri, 23 Mar 2018 14:14:29 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2018/03/archlinux-as-usual/</guid>
-      <description>简单来说，受够了windows，买不起osx，就只能折腾linux。折腾了好几个发行版，这次换了archlinux了。理由很简单：软件版本新、滚动发行、yaourt yay一切。 折腾了一阵子MacOS，</description>
+      <description>&lt;p&gt;简单来说，受够了windows，买不起osx，就只能折腾linux。折腾了好几个发行版，这次换了archlinux了。理由很简单：软件版本新、滚动发行、&lt;del&gt;yaourt&lt;/del&gt; yay一切。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;折腾了一阵子MacOS，发现它的软件管理太麻烦了：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AppStore（系统更新、部分软件包）&lt;/li&gt;
+&lt;li&gt;网络上的软件包&lt;/li&gt;
+&lt;li&gt;HomeBrew（GNU、Casks）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;大部分Casks不能更换软件源，更新速度极慢，加上Mac机器老旧，新上市的AMD yes等原因，便回到了linux阵营。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -292,7 +357,7 @@
       <pubDate>Fri, 23 Mar 2018 12:33:33 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2018/03/usb-grub2-bios-uefi/</guid>
-      <description>应对复杂的装机环境，bios/uefi，windows/linux。 假设已有一台装好grub(2.02)的linux系统。U盘的设备路径/dev/sdb。 U盘分区 使用mbr分区表 只有mbr分区表才能同</description>
+      <description>&lt;p&gt;应对复杂的装机环境，bios/uefi，windows/linux。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -301,7 +366,7 @@
       <pubDate>Wed, 07 Mar 2018 13:40:38 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2018/03/yii2-gii-debug/</guid>
-      <description>使用docker搭建php开发环境时遇到一个坑，明明gii以及debug模块配置正确，但是却不运行的问题。查看Yii2文档 - 使用 Gii 生成代码，找到了思路。 配置信息 Yii2配置文件如config/web.</description>
+      <description>&lt;p&gt;使用docker搭建php开发环境时遇到一个坑，明明&lt;code&gt;gii&lt;/code&gt;以及&lt;code&gt;debug&lt;/code&gt;模块配置正确，但是却不运行的问题。查看&lt;a href=&#34;http://www.yiichina.com/doc/guide/2.0/start-gii&#34; target=&#34;_blank&#34;&gt;Yii2文档 - 使用 Gii 生成代码&lt;/a&gt;，找到了思路。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -310,7 +375,8 @@
       <pubDate>Tue, 06 Mar 2018 09:25:21 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2018/03/try-archlinux/</guid>
-      <description>日常使用deepin一年多，开箱即用，而且中国特色化做得很好。然而，在用的过程中总觉得缺点啥。于是我又开始了新一轮的尝试。 ArchLinux，简洁、海量包、滚动发行。不过，最让我印象深刻的是它全面的w</description>
+      <description>&lt;p&gt;日常使用&lt;a href=&#34;https://www.deepin.org&#34; target=&#34;_blank&#34;&gt;deepin&lt;/a&gt;一年多，开箱即用，而且中国特色化做得很好。然而，在用的过程中总觉得缺点啥。于是我又开始了新一轮的尝试。
+ArchLinux，简洁、海量包、滚动发行。不过，最让我印象深刻的是它全面的wiki，尽管汉化wiki跟不上进度。最新的软件包，使得我更新和安装软件很便利。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -319,7 +385,8 @@
       <pubDate>Sat, 03 Mar 2018 23:51:58 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2018/03/bajrangi-bhaijaan/</guid>
-      <description>《小萝莉的猴神大叔》在美团上被归类为剧情、喜剧。带着这个初印象，看了前几分钟，我怀疑，我是不是走错了影厅。 这其实是个有关宗教、国家、人性的公路片，初次上映于2015年。影片讲述了一个虔诚的印度教大叔送</description>
+      <description>&lt;p&gt;《小萝莉的猴神大叔》在美团上被归类为剧情、喜剧。带着这个初印象，看了前几分钟，我怀疑，我是不是走错了影厅。&lt;/p&gt;
+&lt;p&gt;这其实是个有关宗教、国家、人性的公路片，初次上映于2015年。影片讲述了一个虔诚的印度教大叔送一个陌生的穆斯林哑女从印度回到巴基斯坦寻亲的故事。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -328,7 +395,7 @@
       <pubDate>Fri, 23 Feb 2018 10:53:17 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2018/02/detective-chinatown-2/</guid>
-      <description>初四，应邀，穿越半个县城，跟好友相聚，看电影《唐人街探案2》。电影的评分不低，应该不会让我失望。 情节 好吧，我觉得我是没看的太懂。 简而言之，就是秦风被唐仁忽悠到了一个侦探大赛。侦探大赛关系到一个命案，而</description>
+      <description>&lt;p&gt;初四，应邀，穿越半个县城，跟好友相聚，看电影《唐人街探案2》。电影的评分不低，应该不会让我失望。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -337,7 +404,9 @@
       <pubDate>Sun, 04 Feb 2018 13:55:09 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2018/02/php7.2-yii2-object-conflict/</guid>
-      <description>用docker搭建php服务器时，发现yii2核心类Object报错了。此时用的php版本是当前最新版的7.2。 Fatal error: Cannot use &#39;Object&#39; as class name as it is reserved in /var/www/yii/vendor/yiisoft/yii2/base/Object.php on line 77 出错原因 Object是php7.2中的保留类名，不可以</description>
+      <description>&lt;p&gt;用docker搭建php服务器时，发现yii2核心类&lt;code&gt;Object&lt;/code&gt;报错了。此时用的php版本是当前最新版的&lt;code&gt;7.2&lt;/code&gt;。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Fatal error: Cannot use &#39;Object&#39; as class name as it is reserved in /var/www/yii/vendor/yiisoft/yii2/base/Object.php on line 77
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
     <item>
@@ -346,7 +415,21 @@
       <pubDate>Sat, 03 Feb 2018 21:36:07 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2018/02/use-docker/</guid>
-      <description>__________________ &amp;lt; 不解释了，快上船 &amp;gt; ------------------ \ \ \ ## . ## ## ## == ## ## ## ## === /&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;___/ === ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ / ===- ~~~ \______ o __/ \ \ __/ \____\______/ 安装docker 前人之述备矣，Get Docker CE for Debian sudo apt-get update sudo apt-get install \ apt-transport-https \ ca-certificates \ curl \ gnupg2 \ software-properties-common curl -fsSL https://download.docker.com/linux/$(. /etc/os-release; echo &amp;quot;$ID&amp;quot;)/gpg | sudo apt-key add - sudo apt-key fingerprint 0EBFCD88 sudo add-apt-repository</description>
+      <description>&lt;pre&gt;&lt;code&gt; __________________
+&amp;lt; 不解释了，快上船 &amp;gt;
+ ------------------
+    \
+     \
+      \
+                    ##        .
+              ## ## ##       ==
+           ## ## ## ##      ===
+       /&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;___/ ===
+  ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~
+       \______ o          __/
+        \    \        __/
+          \____\______/
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
     <item>
@@ -355,7 +438,7 @@
       <pubDate>Sun, 28 Jan 2018 15:42:58 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2018/01/docker-php-server/</guid>
-      <description>多容器 apache+php+mariadb+redis 主要配置 构建php镜像 基于官方php镜像进行定制，增加所需的php扩展，修改php配置，以及创建虚拟主机。 Dockerfile 文件php/Dockerfile FROM php:apache # php configure COPY php.ini /usr/local/etc/php/php.ini # php extension COPY sources.list /etc/apt/sources.list RUN apt-get update \ &amp;amp;&amp;amp; apt-get install -y --no-install-recommends \ libbz2-dev \</description>
+      <description>&lt;p&gt;多容器 apache+php+mariadb+redis&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -364,7 +447,7 @@
       <pubDate>Wed, 03 Jan 2018 01:08:17 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2018/01/kvm-vps-swap-file/</guid>
-      <description>适用于kvm架构的vps。openvz不支持。 用了搬瓦工的vps，使用composer创建项目时遇到内存不足的问题。查看kiwi控制台，发现物理内存（512M）还有剩余，swap（128M）用光了。可</description>
+      <description>&lt;p&gt;适用于kvm架构的vps。openvz不支持。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -373,7 +456,7 @@
       <pubDate>Fri, 29 Dec 2017 13:12:37 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2017/12/letsencrypt/</guid>
-      <description>Apache服务器配置使用https（ssl）。需求：vps管理权限。 创建虚拟主机 给各个域名创建虚拟主机，80端口。保证http可正常访问。 安装证书自动设置工具certbot 需要配置backports</description>
+      <description>&lt;p&gt;Apache服务器配置使用https（ssl）。需求：vps管理权限。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -382,7 +465,7 @@
       <pubDate>Sun, 24 Dec 2017 22:29:42 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2017/12/hexo-theme-hexone/</guid>
-      <description>放弃使用Next主题后，一直在尝试自己制作一个主题。尤其是实现项目展示以及心情展示的功能。奋斗了两个月左右，这款主题HexOne终于诞生了！ HexOne 简约的Hexo主题HexOne（仿Trapecho） 安装 依</description>
+      <description>&lt;p&gt;放弃使用&lt;a href=&#34;https://github.com/iissnan/hexo-theme-next&#34; target=&#34;_blank&#34;&gt;Next&lt;/a&gt;主题后，一直在尝试自己制作一个主题。尤其是实现项目展示以及心情展示的功能。奋斗了两个月左右，这款主题&lt;a href=&#34;https://gitee.com/maoxuner/hexo-theme-hexone/&#34; target=&#34;_blank&#34;&gt;HexOne&lt;/a&gt;终于诞生了！&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -391,7 +474,7 @@
       <pubDate>Thu, 04 May 2017 10:00:44 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2017/05/php-deployer/</guid>
-      <description>利用git webhook请求php脚本，触发deployer自动部署实现的核心流程：PC/Client(git push) =&amp;gt; GitHub/Git Repository(webhook/http request) =&amp;gt; Server/WebHost(php hook/shell_exec) =&amp;gt; Server/WeHost(deploy commands) 设置部署公钥 部署脚本执行的用户www-data,把www-data的</description>
+      <description>&lt;p&gt;利用git webhook请求php脚本，触发deployer自动部署实现的核心流程：&lt;code&gt;PC/Client(git push) =&amp;gt; GitHub/Git Repository(webhook/http request) =&amp;gt; Server/WebHost(php hook/shell_exec) =&amp;gt; Server/WeHost(deploy commands)&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -400,7 +483,7 @@
       <pubDate>Sun, 30 Apr 2017 12:21:13 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2017/04/ubuntu%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BD%BF%E7%94%A8flash%E6%8F%92%E4%BB%B6/</guid>
-      <description>Ubuntu/Debian上默认没有安装flash插件，需要手动安装并调用插件。flash早晚会成为历史的尘埃，建议不要再折腾了 安装并配置flash插件 安装flash插件 参考文件readme.txt中</description>
+      <description>&lt;p&gt;Ubuntu/Debian上默认没有安装flash插件，需要手动安装并调用插件。&lt;strong&gt;flash早晚会成为历史的尘埃，建议不要再折腾了&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -409,7 +492,7 @@
       <pubDate>Thu, 27 Apr 2017 14:17:52 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2017/04/laravel-learning/</guid>
-      <description>学习laravel遇到的一些坑，备忘。 项目 版本 system debian8 apache 2.4.10 php 5.6.30-0 mariadb 10.0.30 laravel 5.4.19 坑 不能使用.env文件的配置项 已配置好.env中的数据库，然而执行数据库迁移命令时，依然采用默认数据库配置。 在项目根目录执行命令，生成</description>
+      <description>&lt;p&gt;学习laravel遇到的一些坑，备忘。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -418,7 +501,8 @@
       <pubDate>Wed, 26 Apr 2017 15:00:59 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2017/04/apache-system-environment-variables/</guid>
-      <description>最近在研究git的webhook，想以此实现代码的自动部署。其核心内容就是一个php函数shell_exec()。我找到了一个厉害的php部署工具，叫做Deployer。尽管如此，还是遇到了一个很大的</description>
+      <description>&lt;p&gt;最近在研究git的webhook，想以此实现代码的自动部署。其核心内容就是一个php函数&lt;code&gt;shell_exec()&lt;/code&gt;。我找到了一个厉害的php部署工具，叫做&lt;a href=&#34;https://deployer.org&#34; target=&#34;_blank&#34;&gt;Deployer&lt;/a&gt;。尽管如此，还是遇到了一个很大的坑。&lt;/p&gt;
+&lt;p&gt;首先说明一下，这里所说的环境变量，是linux服务器上执行&lt;code&gt;env&lt;/code&gt;命令得到的环境变量，为了与apache服务器本身的环境变量区分开来，这里将前者称为系统环境变量。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -427,7 +511,10 @@
       <pubDate>Sat, 08 Apr 2017 01:21:11 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2017/04/programer-novel/</guid>
-      <description>知乎上的一篇文字，51CTO整理的。觉得蛮有意思，就转过来了。 终有一天我手中的编译器将成为我灵魂的一部分，这世界在我的眼中将被代码重构，我将看到山川无尽银河无垠都汇成二进制的数字河流，过往英雄都在我脑</description>
+      <description>&lt;p&gt;知乎上的一篇文字，51CTO整理的。觉得蛮有意思，就转过来了。&lt;/p&gt;
+&lt;p&gt;终有一天我手中的编译器将成为我灵魂的一部分，这世界在我的眼中将被代码重构，我将看到山川无尽银河无垠都汇成二进制的数字河流，过往英雄都在我脑海眼前一一浮现，而我听到无数码农跪倒在我的程序面前呼喊。&lt;/p&gt;
+&lt;p&gt;他们叫我代码之神。&lt;/p&gt;
+&lt;p&gt;到那个时候，我想我一定可以找回你。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -436,7 +523,7 @@
       <pubDate>Thu, 06 Apr 2017 21:45:55 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2017/04/lnmpa/</guid>
-      <description>主要针对 Apache2+PHP7.0+MariaDB 安装 sudo apt-get install apache2 mariadb-server php7.0 php7.0-mysql libapache2-mod-php7.0 sudo apt-get install php7.0-curl php7.0-mbstring php7.0-xml php7.0-bz2 php7.0-zip 组件名称 作用 php7.0-curl curl操作 php7.0-mbstring 字符操作？ php7.0-xml dom操作 php7.0-bz2 bzip2解压 php7.0-zip zip解压 常见问题 综合问题 Apache2 忽略路径大小写 解决方法 启用模块speling sudo a2enmod speling 在配置文</description>
+      <description>&lt;p&gt;主要针对 Apache2+PHP7.0+MariaDB&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -445,7 +532,7 @@
       <pubDate>Tue, 04 Apr 2017 23:23:04 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2017/04/funny-comments/</guid>
-      <description>搜集了几个有趣（逗比）的注释，写出这些注释的程序猿一定是大神（二逼）。 神兽护体 ━━━━━━神兽出没━━━━━━ ┏┓ ┏┓ ┏━━┛┻━━━━━┛┻━━┓ ┃ ┃ ┃ ━ ┃ ┃ ┳┛ ┗┳ ┃ ┃ ┃ ┃ ┻ ┃ ┃ ┃ ┗━━┓ ┏━━┛</description>
+      <description>&lt;p&gt;搜集了几个有趣（逗比）的注释，写出这些注释的程序猿一定是大神（二逼）。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -454,7 +541,7 @@
       <pubDate>Fri, 31 Mar 2017 20:29:44 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2017/03/php-abstract-interface/</guid>
-      <description>在写一个通用的通知类时，遇到了问题，特此查看一下抽象类跟接口的异同点。 示例 interface a { function run(); } interface b { const HELLO = &amp;quot;b: Hello, World!\n&amp;quot;; static function hello(); } interface c extends a,b { public function info($str); } abstract class d implements c { public $hello = &amp;quot;d: hello, world!\n&amp;quot;; public function run(){ echo &amp;quot;d: run()\n&amp;quot;; self::hello(); } static function hello(){ echo &amp;quot;d: hello()\n&amp;quot;; echo self::HELLO; } abstract function info($str); } abstract class</description>
+      <description>&lt;p&gt;在写一个通用的通知类时，遇到了问题，特此查看一下抽象类跟接口的异同点。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -463,7 +550,7 @@
       <pubDate>Fri, 31 Mar 2017 20:24:32 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2017/03/yii2-mail/</guid>
-      <description>Yii2使用SwiftMailer（作为组件） 把SwiftMailer添加到yii的组件中去（配置文件中的components）。然后就按照SwiftMailer各种方法就能使用了。 组件配置 部分配置内</description>
+      <description>&lt;p&gt;Yii2使用SwiftMailer（作为组件）&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -472,7 +559,7 @@
       <pubDate>Fri, 24 Mar 2017 13:36:35 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2017/03/ci3-composer/</guid>
-      <description>CodeIgniter3中是没有使用命名空间的，但是不代表它就不能使用命名空间。根本上讲，命名空间是php的一项功能，从php5.3.0开始就支持了这一功能。CodeIgniter只是没有实现根据命名</description>
+      <description>&lt;p&gt;CodeIgniter3中是没有使用命名空间的，但是不代表它就不能使用命名空间。根本上讲，命名空间是php的一项功能，从php5.3.0开始就支持了这一功能。CodeIgniter只是没有实现根据命名空间来实现类库的自动加载，但是可以通过第三方类库如&lt;code&gt;composer&lt;/code&gt;来实现其他类库的自动加载。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -481,7 +568,12 @@
       <pubDate>Tue, 14 Mar 2017 13:36:37 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2017/03/win7-vs-skylake/</guid>
-      <description>昨天给一台新电脑，联想H3060安装win7系统。安装完成后，在语言设置界面usb键盘鼠标都失去反应了，更换其他usb口也不能识别。这直接原因就是没有usb驱动。此时，电脑已经算作是完全失控的状态。此</description>
+      <description>&lt;p&gt;昨天给一台新电脑，联想H3060安装win7系统。安装完成后，在语言设置界面usb键盘鼠标都失去反应了，更换其他usb口也不能识别。这直接原因就是没有usb驱动。此时，电脑已经算作是完全失控的状态。此时，只有三个解决方案：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用&lt;code&gt;PS/2&lt;/code&gt;接口的键盘鼠标&lt;/li&gt;
+&lt;li&gt;重新安装额外添加了usb驱动的系统&lt;/li&gt;
+&lt;li&gt;在&lt;code&gt;BIOS&lt;/code&gt;中开启&lt;code&gt;USB Virtual KBC Support&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -490,7 +582,7 @@
       <pubDate>Fri, 10 Mar 2017 15:35:29 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2017/03/hexo-skip-render/</guid>
-      <description>搜索引擎确认网站所有权时往往会提供一个html文件来进行验证，要是这个文件被渲染了，验证自然就会失败了。或者，有时候会写一些简单的html示例页面，这也是不希望Hexo渲染的。因此有必要针对某个文件或</description>
+      <description>&lt;p&gt;搜索引擎确认网站所有权时往往会提供一个html文件来进行验证，要是这个文件被渲染了，验证自然就会失败了。或者，有时候会写一些简单的html示例页面，这也是不希望Hexo渲染的。因此有必要针对某个文件或者目录进行排除。Hexo的配置文件中提供了配置项&lt;code&gt;skip_render&lt;/code&gt;，但总不清楚到底该怎么用。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -499,7 +591,7 @@
       <pubDate>Fri, 10 Mar 2017 13:32:11 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2017/03/js-get-view-size/</guid>
-      <description>有时候并不能简单的使用CSS来控制页面元素的大小，结合js来控制元素的大小会更方便一些，因此有时就需要用js获取浏览器窗口的尺寸。 方法 纯js var data = { &amp;quot;网页可见区域宽(body)&amp;quot; :</description>
+      <description>&lt;p&gt;有时候并不能简单的使用CSS来控制页面元素的大小，结合js来控制元素的大小会更方便一些，因此有时就需要用js获取浏览器窗口的尺寸。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -508,7 +600,9 @@
       <pubDate>Thu, 09 Mar 2017 10:04:04 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2017/03/go-tour/</guid>
-      <description>《Go语言半小时速成教程》其实就是Go官方入门文档《A tour of Go》的中文翻译版本。谷歌被墙可以理解，The Go Programming也被墙了就觉得很不可思议了。由于同源策略，好几个《Go语言半小时速成教程</description>
+      <description>&lt;p&gt;《&lt;a href=&#34;http://www.vaikan.com/go/a-tour-of-go/&#34; target=&#34;_blank&#34;&gt;Go语言半小时速成教程&lt;/a&gt;》其实就是Go官方入门文档《&lt;a href=&#34;https://tour.golang.org/&#34; target=&#34;_blank&#34;&gt;A tour of Go&lt;/a&gt;》的中文翻译版本。谷歌被墙可以理解，&lt;a href=&#34;https://golang.org&#34; target=&#34;_blank&#34;&gt;The Go Programming&lt;/a&gt;也被墙了就觉得很不可思议了。由于同源策略，好几个《Go语言半小时速成教程》中的代码并不能查看运行结果。折腾了好久，自己在本地搭建了该教程。&lt;/p&gt;
+&lt;p&gt;正准备兴致勃勃的写篇文章分享一下搭建的过程，却意外发现了另一个网站的翻译版本《&lt;a href=&#34;https://tour.go-zh.org/&#34; target=&#34;_blank&#34;&gt;Go指南&lt;/a&gt;》，而且代码运行的结果也能查看了。看到这个站点的域名&lt;code&gt;go-zh.org&lt;/code&gt;，猜测&lt;a href=&#34;https://go-zh.org/&#34; target=&#34;_blank&#34;&gt;Go 编程语言&lt;/a&gt;应该是有人做的中文镜像站吧。那么所有问题都不再是个问题了。&lt;/p&gt;
+&lt;p&gt;不过也没关系，想写的内容继续写着。作为笔记也好。不过得提醒一下，虽说教程的名称为“半小时速成”，然而实际上半小时哪够看完所有教程内容。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -517,7 +611,7 @@
       <pubDate>Wed, 08 Mar 2017 20:53:13 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2017/03/install-hexo/</guid>
-      <description>最近写了好多js，对专门运行js的Node.js产生了兴趣。阿里的虚拟主机快要到期了，就打算把pages服务用起来，简简单单搭建个站点。早就想直接用markdown写写文章，然后用轻巧的工具生成页面了</description>
+      <description>&lt;p&gt;最近写了好多js，对专门运行js的Node.js产生了兴趣。阿里的虚拟主机快要到期了，就打算把pages服务用起来，简简单单搭建个站点。早就想直接用markdown写写文章，然后用轻巧的工具生成页面了。我用过一个叫做&lt;a href=&#34;https://github.com/lizheming/PMBlog&#34; target=&#34;_blank&#34;&gt;PMBlog&lt;/a&gt;的系统，不过这个需要服务器php的支持。后来看到Jekyll，觉得这个工具真的是为懒人而生的。然而Jekyll官方文档都注明，不建议在windows平台安装Jekyll。Jekyll的文档界面不够优美，对Ruby也没有很大的兴趣。Hexo跟Jekyll可以说是完全一样的工具，但它是基于Node.js的。另外，Hexo是宝岛台湾的程序员开发的，原生态支持中文。Node.js、Hexo，一个因为js而产生兴趣，一个因为是同胞的作品而倍感亲切。这自然是个挺好的选择。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -526,7 +620,7 @@
       <pubDate>Wed, 08 Mar 2017 16:43:46 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2017/03/hexo-next-custom-style/</guid>
-      <description>设置字体是CSS样式中的一个小方面，实际上也就是自定义CSS样式了。CSS倒不难写，主要是得搞清楚在哪个文件里写才有效果。 这里讲的是Hexo的主题Next的CSS样式自定义，Next版本为5.1.0。</description>
+      <description>&lt;p&gt;设置字体是CSS样式中的一个小方面，实际上也就是自定义CSS样式了。CSS倒不难写，主要是得搞清楚在哪个文件里写才有效果。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -535,7 +629,9 @@
       <pubDate>Sun, 15 May 2016 23:36:16 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2016/05/stability-analysis/</guid>
-      <description>毕业设计中有大量计算，需要写程序来完成。而我们拥有的只有一个流传了N年的老旧的vb代码。为了完善该程序的功能，采用新的技术以便传播，我便用python重写了一个稳定分析的程序。 由于我学业不精，对稳定这</description>
+      <description>&lt;p&gt;毕业设计中有大量计算，需要写程序来完成。而我们拥有的只有一个流传了N年的老旧的vb代码。为了完善该程序的功能，采用新的技术以便传播，我便用python重写了一个稳定分析的程序。
+由于我学业不精，对稳定这部分的理解不足，程序逻辑上也许会有一些问题。因此严正申明：
+&lt;strong&gt;本程序仅供学习使用，不能用于专业设计。&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -544,7 +640,8 @@
       <pubDate>Sun, 20 Mar 2016 17:46:20 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2016/03/little-boy/</guid>
-      <description>故事发生在二战时期的一个美国沿海小镇，八岁小男孩Pepper（雅各布·萨尔瓦提 Jakob Salvati 饰）天生矮小瘦弱，为此没少受同龄人欺负，还被取绰号为“小男孩”（little boy）。他最好的朋友兼搭档，就是自己高大</description>
+      <description>&lt;p&gt;故事发生在二战时期的一个美国沿海小镇，八岁小男孩Pepper（雅各布·萨尔瓦提 Jakob Salvati 饰）天生矮小瘦弱，为此没少受同龄人欺负，还被取绰号为“小男孩”（little boy）。他最好的朋友兼搭档，就是自己高大魁梧的父亲詹姆斯（迈克尔·拉帕波特 Michael Rapaport 饰）。在父亲的教导陪伴下，Pepper渡过了一段美好的时光。直到父亲应召入伍，投入到第二次世界大战的战场中去。&lt;/p&gt;
+&lt;p&gt;就在Pepper期待父亲回家时，噩耗传来，他的父亲在菲律宾被日军虏为战俘，生死未卜。而此同时，Pepper和他哥哥London（大卫·亨瑞 David Henrie 饰）将战争仇恨发泄在镇上的一个日本人桥本身上，为此兄弟俩都接受了相应的惩罚。神父为了教育Pepper，将一个“古老的清单”交给他，只要他把清单上的任务都完成，他就能拥有可以移动大山的信念和力量，从而就能把他的父亲从二战战场中带回来。这个清单的其中一项，就是和日本人桥本成为朋友……&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -583,7 +680,8 @@
       <pubDate>Mon, 03 Aug 2015 12:14:20 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2015/08/piano-unravel/</guid>
-      <description>钢琴的声音实在是太好听了，这演奏者的指法真的逆天了！ 利用IE缓存来提取视频文件是屡试不爽啊，只要视频不是经过加密的，均能提取成功。 打开IE浏览器，关闭所有标签，仅留下一个空白标签，并打开Interne</description>
+      <description>&lt;p&gt;钢琴的声音实在是太好听了，这演奏者的指法真的逆天了！&lt;/p&gt;
+&lt;p&gt;利用IE缓存来提取视频文件是屡试不爽啊，只要视频不是经过加密的，均能提取成功。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -592,7 +690,32 @@
       <pubDate>Mon, 08 Jun 2015 19:21:20 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2015/06/%E4%BA%BA%E9%97%B4%E5%A4%B1%E6%A0%BC2009%E5%B9%B4%E9%9B%86%E8%8B%B1%E7%A4%BE%E6%8E%A8%E5%87%BA%E5%8A%A8%E7%94%BB/</guid>
-      <description>准确说，《人间失格》（动画）不是一部动漫，而是一部作品集，拥有着几个相对独立的小故事，括号内的是绘制作者。它是太宰治的作品《人间失格》的动画化。 人间失格（小畑健《死亡笔记》） 镰仓殉情 怪物 世间 新世界 盛开</description>
+      <description>&lt;p&gt;准确说，《人间失格》（动画）不是一部动漫，而是一部作品集，拥有着几个相对独立的小故事，括号内的是绘制作者。它是太宰治的作品《人间失格》的动画化。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;人间失格（小畑健《死亡笔记》）
+&lt;ul&gt;
+&lt;li&gt;镰仓殉情&lt;/li&gt;
+&lt;li&gt;怪物&lt;/li&gt;
+&lt;li&gt;世间&lt;/li&gt;
+&lt;li&gt;新世界&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;盛开的樱花林下（久保带人《死神》/坂口安吾）
+&lt;ul&gt;
+&lt;li&gt;盛开的樱花林下&lt;/li&gt;
+&lt;li&gt;盛开的樱花林下【最终回】&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;心（小畑健/夏目漱石）&lt;/li&gt;
+&lt;li&gt;奔跑吧！梅乐斯（许斐刚《网球王子》）
+&lt;ul&gt;
+&lt;li&gt;奔跑吧！梅乐斯&lt;/li&gt;
+&lt;li&gt;奔跑吧！梅乐斯【最终回】&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;蜘蛛之丝（久保带人《死神》/芥川龙之介）&lt;/li&gt;
+&lt;li&gt;地狱变（久保带人《死神》/芥川龙之介）&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -601,7 +724,12 @@
       <pubDate>Mon, 08 Jun 2015 13:28:20 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2015/06/%E5%A4%8F%E6%97%A5%E5%A4%A7%E4%BD%9C%E6%88%98/</guid>
-      <description>「拜託你，假裝當我的未婚夫四天吧！」 小磯健二受到心儀的學姊筱原夏希拜託，與她一起前往長野縣的鄉村小鎮。 企圖努力達成任務的健二，周旋在以夏希的外曾祖母為中心的眾多親戚之中； 這時，他收到一串神秘的數列。擅</description>
+      <description>&lt;p&gt;「拜託你，假裝當我的未婚夫四天吧！」&lt;/p&gt;
+&lt;p&gt;小磯健二受到心儀的學姊筱原夏希拜託，與她一起前往長野縣的鄉村小鎮。&lt;/p&gt;
+&lt;p&gt;企圖努力達成任務的健二，周旋在以夏希的外曾祖母為中心的眾多親戚之中；&lt;/p&gt;
+&lt;p&gt;這時，他收到一串神秘的數列。擅長數學的他，興奮的計算出答案，隔天卻世界大亂！&lt;/p&gt;
+&lt;p&gt;為了拯救世界的危機，健二和夏希以及所有親戚挺身而出！&lt;/p&gt;
+&lt;p&gt;這是一個教人熱血沸騰，卻又親切溫柔的夏日故事。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -610,7 +738,8 @@
       <pubDate>Tue, 26 May 2015 12:08:20 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2015/05/tokyo-godfathers/</guid>
-      <description>圣诞夜，退役自行车选手Gin，性倒错患者花，离家出走的少女美由纪三人在东京的雪夜中无所事事。这是，他们发现垃圾堆中有一位哭泣的弃婴。孩子的襁褓中仅有一个酒吧的名片与照片。婴儿的父母身份成了谜团。 花想收</description>
+      <description>&lt;p&gt;圣诞夜，退役自行车选手Gin，性倒错患者花，离家出走的少女美由纪三人在东京的雪夜中无所事事。这是，他们发现垃圾堆中有一位哭泣的弃婴。孩子的襁褓中仅有一个酒吧的名片与照片。婴儿的父母身份成了谜团。&lt;/p&gt;
+&lt;p&gt;花想收留孩子，并将孩子取名清子。但另外2人表示反对。于是三人开始了寻找清子的父母的旅程。圣诞夜幸福的气氛，伴随的却是怀中清子的哭泣。无家可归的三个人，开始为同样无家可归的清子找寻属于她的家。这一队流浪者，在一夜经历了诸多奇妙的事件。他们能找到清子的父母吗？&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -619,7 +748,8 @@
       <pubDate>Wed, 20 May 2015 00:52:20 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2015/05/%E5%AF%B9%E6%9F%90%E9%A3%9E%E8%A1%8C%E5%91%98%E7%9A%84%E8%BF%BD%E5%BF%86/</guid>
-      <description>故事以一名出身最底层的少年佣兵飞行员与一位身为未来皇妃的少女而展开——从小被当作政治筹码来培养而封闭了心灵的少女法娜在小时候一位名叫查尔斯的少年，少年因为与少女那次邂逅而使得自己没有走上歪路。时时光飞</description>
+      <description>&lt;p&gt;故事以一名出身最底层的少年佣兵飞行员与一位身为未来皇妃的少女而展开——从小被当作政治筹码来培养而封闭了心灵的少女法娜在小时候一位名叫查尔斯的少年，少年因为与少女那次邂逅而使得自己没有走上歪路。时时光飞逝，少女成为了未来皇妃，而少年实现了自己的梦想成为了飞行员。某天，然而在某一天，上司下达了任务让查尔斯去完成，而这个任务就是用水上侦察机搭载法娜从敌人中突破飞过中央海……&lt;/p&gt;
+&lt;p&gt;一万两千公里的旅程、一段无法实现的恋情、一个感人的故事就此开幕……&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -628,7 +758,7 @@
       <pubDate>Mon, 13 Apr 2015 15:17:20 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2015/04/schindler-list/</guid>
-      <description>讲的是二战期间的纳粹德国，商人奥斯卡·辛德勒对战争中无辜受到屠杀的犹太人感到痛心，利用他圆滑的手段，与纳粹官员们周旋，编纂犹太人名单，救助犹太人的故事。商人本以利为重，但是跟千万人的性命相比，金钱可有</description>
+      <description>&lt;p&gt;讲的是二战期间的纳粹德国，商人奥斯卡·辛德勒对战争中无辜受到屠杀的犹太人感到痛心，利用他圆滑的手段，与纳粹官员们周旋，编纂犹太人名单，救助犹太人的故事。商人本以利为重，但是跟千万人的性命相比，金钱可有可无。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -637,7 +767,10 @@
       <pubDate>Thu, 09 Apr 2015 17:29:20 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2015/04/forrest-gump/</guid>
-      <description>阿甘（汤姆·汉克斯 饰）于二战结束后不久出生在美国南方阿拉巴马州一个闭塞的小镇，他先天弱智，智商只有75，然而他的妈妈是一个性格坚强的女性，她常常鼓励阿甘“傻人有傻福”，要他自强不息。 阿甘像普通孩子一样</description>
+      <description>&lt;p&gt;阿甘（汤姆·汉克斯 饰）于二战结束后不久出生在美国南方阿拉巴马州一个闭塞的小镇，他先天弱智，智商只有75，然而他的妈妈是一个性格坚强的女性，她常常鼓励阿甘“傻人有傻福”，要他自强不息。&lt;/p&gt;
+&lt;p&gt;阿甘像普通孩子一样上学，并且认识了一生的朋友和至爱珍妮（罗宾·莱特·潘 饰），在珍妮和妈妈的爱护下，阿甘凭着上帝赐予的“飞毛腿”开始了一生不停的奔跑。&lt;/p&gt;
+&lt;p&gt;阿甘成为橄榄球巨星、越战英雄、乒乓球外交使者、亿万富翁，但是，他始终忘不了珍妮，几次匆匆的相聚和离别，更是加深了阿甘的思念。
+有一天，阿甘收到珍妮的信，他们终于又要见面……&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -646,7 +779,8 @@
       <pubDate>Thu, 02 Apr 2015 18:12:20 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2015/04/pal4/</guid>
-      <description>如果有可能，我倒是希望做个山顶野人。居住的小屋，休憩的树屋，神秘的山洞。花草树木，专猎野猪。 故事的主人公，名叫云天河。在遇到伶俐的盗墓贼韩菱纱之前，他是个彻头彻尾的山顶野人。云天河算是第一次见到女人这</description>
+      <description>&lt;p&gt;如果有可能，我倒是希望做个山顶野人。居住的小屋，休憩的树屋，神秘的山洞。花草树木，专猎野猪。&lt;/p&gt;
+&lt;p&gt;故事的主人公，名叫云天河。在遇到伶俐的盗墓贼韩菱纱之前，他是个彻头彻尾的山顶野人。云天河算是第一次见到女人这种生物。在韩菱纱的带领下，云天河下山了，寻觅往事、求仙问道。漂泊的路上，结识了天仙般美貌的官家千金柳梦璃、拥有剑仙般浩然正气的慕容紫英。随着那掩埋在岁月风沙之下的往事日渐清晰，山野少年尝尽红尘俗世的喜怒哀乐与悲欢离合。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -655,7 +789,9 @@
       <pubDate>Mon, 30 Mar 2015 21:48:20 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2015/03/decade/</guid>
-      <description>喜欢上一首歌，或因为旋律，萦绕不绝，或因为歌词，触动心弦。 情人最后难免沦为朋友。《十年》 在有生的瞬间能遇到你，竟花光所有运气。《明年今日》 神剪辑 突发奇想，将陈奕迅唱的《十年》和《明年今日》，以及中孝介</description>
+      <description>&lt;p&gt;喜欢上一首歌，或因为旋律，萦绕不绝，或因为歌词，触动心弦。&lt;/p&gt;
+&lt;p&gt;情人最后难免沦为朋友。《十年》&lt;/p&gt;
+&lt;p&gt;在有生的瞬间能遇到你，竟花光所有运气。《明年今日》&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -664,7 +800,9 @@
       <pubDate>Wed, 11 Mar 2015 13:11:20 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2015/03/big-hero-6/</guid>
-      <description>如果说有一只眼能让我们理解《超能陆战队》所有走心之处的话，那这只眼就是Baymax与他的发明者Tadashi实际上是同一个人。或者说，那张写有Tadashi名字的绿色芯片，承载的不仅仅是哥哥所编写的治</description>
+      <description>&lt;p&gt;&lt;img class=&#34;img-zoomable&#34; src=&#34;../%e8%b6%85%e8%83%bd%e9%99%86%e6%88%98%e9%98%9f.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;/p&gt;
+&lt;p&gt;如果说有一只眼能让我们理解《超能陆战队》所有走心之处的话，那这只眼就是Baymax与他的发明者Tadashi实际上是同一个人。或者说，那张写有Tadashi名字的绿色芯片，承载的不仅仅是哥哥所编写的治愈程序，而且继承了哥哥那充满治愈色彩的灵魂。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -673,7 +811,9 @@
       <pubDate>Tue, 10 Mar 2015 16:56:20 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2015/03/stand-by-me/</guid>
-      <description>上映第二天，去了电影院。 开播之前，放眼望去不是带小孩子的家庭组合就是情侣or女子组合。我还在心想我一个男的来看到底合适不合适。 可是剧情过半之后，泪腺完全崩溃，直到最后结尾，止都止不住。 这真的是一部完全</description>
+      <description>&lt;p&gt;上映第二天，去了电影院。&lt;/p&gt;
+&lt;p&gt;开播之前，放眼望去不是带小孩子的家庭组合就是情侣or女子组合。我还在心想我一个男的来看到底合适不合适。&lt;/p&gt;
+&lt;p&gt;可是剧情过半之后，泪腺完全崩溃，直到最后结尾，止都止不住。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -682,7 +822,9 @@
       <pubDate>Tue, 10 Mar 2015 13:08:20 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2015/03/paddington/</guid>
-      <description>《帕丁顿熊》是一部很有趣的电影，这种有趣既体现在以一直蠢萌的动物做主角所带给观众的疗愈感，同时也体现在英国人在影片中所呈现的那种一本正经式的幽默，再加上十分轻松过无害的剧情以及时而出现的冷笑话，当然还</description>
+      <description>&lt;p&gt;&lt;img class=&#34;img-zoomable&#34; src=&#34;../Paddington.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;/p&gt;
+&lt;p&gt;《帕丁顿熊》是一部很有趣的电影，这种有趣既体现在以一直蠢萌的动物做主角所带给观众的疗愈感，同时也体现在英国人在影片中所呈现的那种一本正经式的幽默，再加上十分轻松过无害的剧情以及时而出现的冷笑话，当然还有围绕家庭核心的叙述方式，都让这部《帕丁顿熊》成为这个阴冷的3月最能让人感到暖意十足的电影。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -772,7 +914,9 @@
       <pubDate>Mon, 02 Feb 2015 17:10:20 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2015/02/departures/</guid>
-      <description>往往越是这种娓娓道来的片子越能戳中人的泪腺。 时长两个多小时的剧情片。无论是故事本身还是叙事手法，镜头剪辑或是配乐方面，都能够做得如此完美以至每一个画面，每一处伏笔，每一分钟都极富有分量的佳作，实为少见</description>
+      <description>&lt;p&gt;往往越是这种娓娓道来的片子越能戳中人的泪腺。&lt;/p&gt;
+&lt;p&gt;时长两个多小时的剧情片。无论是故事本身还是叙事手法，镜头剪辑或是配乐方面，都能够做得如此完美以至每一个画面，每一处伏笔，每一分钟都极富有分量的佳作，实为少见。&lt;/p&gt;
+&lt;p&gt;是使人在看的过程中对生命不得不生出几分敬畏，对人生不能不悟出几分感慨的。然而在剧终的大提琴曲响起的时候，闭上眼睛，顿感胸中是一种沉甸甸，也许不看上个两三遍是无法精准并完整地整理并描述出这种感受的。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -794,7 +938,7 @@
       <pubDate>Sat, 17 Jan 2015 22:00:31 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2015/01/%E8%BD%BB%E9%9F%B3%E5%B0%91%E5%A5%B3/</guid>
-      <description>故事呢，就是勉强凑足了四个人，组建了一个部门，一个乐队~主人公全是妹纸，吉他手平泽唯、贝司手秋山澪、鼓手田井中律以及键盘手琴吹䌷。 平泽唯，真的就是天然呆了、神经大条。长得也很可爱，讨人喜欢。小唯是个吉</description>
+      <description>&lt;p&gt;故事呢，就是勉强凑足了四个人，组建了一个部门，一个乐队~主人公全是妹纸，吉他手平泽唯、贝司手秋山澪、鼓手田井中律以及键盘手琴吹䌷。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -803,7 +947,9 @@
       <pubDate>Sat, 10 Jan 2015 21:50:25 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2015/01/%E6%9C%AA%E9%97%BB%E8%8A%B1%E5%90%8D/</guid>
-      <description>《未闻花名》全称《我们仍未知道那天所看见的花的名字》。我觉得这是部经典的不能再经典了的动漫吧，应该很多人都看过才对。不得不说，中文翻译的名称未闻花名真的是太赞了，比日文字面的意思我们仍未知道那天所看见</description>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;《未闻花名》全称《我们仍未知道那天所看见的花的名字》。我觉得这是部经典的不能再经典了的动漫吧，应该很多人都看过才对。不得不说，中文翻译的名称&lt;code&gt;未闻花名&lt;/code&gt;真的是太赞了，比日文字面的意思&lt;code&gt;我们仍未知道那天所看见的花的名字&lt;/code&gt;增添了几分意境。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -812,7 +958,9 @@
       <pubDate>Sat, 03 Jan 2015 21:32:17 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2015/01/%E7%99%BD%E5%85%94%E7%B3%96/</guid>
-      <description>《白兔糖》是日本漫画家宇仁田由美创作的漫画作品，有同名根据漫画改编的动画以及真人电影版。讲述了30岁的单身男子河地大吉收养了其祖父的&amp;quot;私生女&amp;quot;——6岁的鹿贺凛，两人在同一屋檐下的生</description>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;《白兔糖》是日本漫画家宇仁田由美创作的漫画作品，有同名根据漫画改编的动画以及真人电影版。讲述了30岁的单身男子河地大吉收养了其祖父的&amp;quot;私生女&amp;quot;——6岁的鹿贺凛，两人在同一屋檐下的生活的故事。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -839,7 +987,8 @@
       <pubDate>Sat, 28 Jun 2014 01:02:30 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2014/06/hello-world/</guid>
-      <description>Hello, World! N种语言的Hello, World! Shell #!/bin/sh echo &amp;quot;Hello, World!&amp;quot; Fortran program main implicit none print *,&amp;quot;Hello, World!&amp;quot; end program main C #include &amp;lt;stdio.h&amp;gt; int main() { printf(&amp;quot;Hello, World&amp;quot;); return 0; } Python print(&amp;quot;Hello, World!&amp;quot;) JavaScript console.log(&amp;quot;Hello, World!&amp;quot;); PHP echo &#39;Hello, World!&#39;; Go package main import &amp;quot;fmt&amp;quot; func main(){ fmt.Print(&amp;quot;Hello, World!&amp;quot;); } setTimeout(function(){ console.log(&#34;I Love Young!&#34;); alert(&#34;Hello, World!&#34;); }, 5000);</description>
+      <description>&lt;h1 id=&#34;hello-world&#34;&gt;Hello, World!&lt;/h1&gt;
+&lt;p&gt;N种语言的&lt;code&gt;Hello, World!&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

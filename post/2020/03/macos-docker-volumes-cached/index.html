@@ -37,8 +37,8 @@
 <meta property="og:title" content="MacOS Docker Volume性能优化" />
 <meta name="twitter:title" content="MacOS Docker Volume性能优化" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.maoxuner.cn/post/2020/03/macos-docker-volumes-cached/" /><meta property="og:description" content="去年，我的燃7000出现了一些软硬件故障，便狠下心换了一个二手的15款MBP，从此告别了折腾linux的日子。然而，日常开发时却发现docker的响应速度远不如之前的linux。好在还有优化的空间。 L" />
-<meta name="twitter:description" content="去年，我的燃7000出现了一些软硬件故障，便狠下心换了一个二手的15款MBP，从此告别了折腾linux的日子。然而，日常开发时却发现docker的响应速度远不如之前的linux。好在还有优化的空间。 L" /><meta property="og:image" content="https://www.maoxuner.cn/img/og.png" />
+<meta property="og:url" content="https://www.maoxuner.cn/post/2020/03/macos-docker-volumes-cached/" /><meta property="og:description" content="去年，我的燃7000出现了一些软硬件故障，便狠下心换了一个二手的15款MBP，从此告别了折腾linux的日子。然而，日常开发时却发现docker的响应速度远不如之前的linux。好在还有优化的空间。" />
+<meta name="twitter:description" content="去年，我的燃7000出现了一些软硬件故障，便狠下心换了一个二手的15款MBP，从此告别了折腾linux的日子。然而，日常开发时却发现docker的响应速度远不如之前的linux。好在还有优化的空间。" /><meta property="og:image" content="https://www.maoxuner.cn/img/og.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://www.maoxuner.cn/img/og.png" /><meta property="article:published_time" content="2020-03-12T20:01:56+08:00" /><meta property="article:modified_time" content="2020-03-12T20:01:56+08:00" />
 
@@ -111,7 +111,6 @@
     
     <div class="post-content markdown-body">
         <p>去年，我的燃7000出现了一些软硬件故障，便狠下心换了一个二手的15款MBP，从此告别了折腾linux的日子。然而，日常开发时却发现docker的响应速度远不如之前的linux。好在还有优化的空间。</p>
-<!-- more -->
 <h1 id="linux和macos上docker的区别">Linux和MacOS上docker的区别</h1>
 <p>因为折腾过不少系统，自然而然知道，docker在linux上是直接跑在系统上的。而在Windows和MacOS上，docker需要通过一层虚拟化来运行，性能损失是必然的。</p>
 <p>于是，我优先将docker的CPU和内存配额尽可能的调大了。然而，性能提升并不明显。</p>
@@ -145,7 +144,6 @@ services:
 <li><a href="https://engageinteractive.co.uk/blog/making-docker-faster-on-mac" target="_blank">Speeding up Docker on MacOS</a></li>
 <li><a href="https://docs.docker.com/docker-for-mac/osxfs-caching/" target="_blank">Performance tuning for volume mounts (shared filesystems)</a></li>
 </ul>
-
     </div>
 </article>
 

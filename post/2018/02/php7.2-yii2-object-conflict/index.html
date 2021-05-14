@@ -37,8 +37,12 @@
 <meta property="og:title" content="PHP7.2中Yii2核心类Object报错" />
 <meta name="twitter:title" content="PHP7.2中Yii2核心类Object报错" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.maoxuner.cn/post/2018/02/php7.2-yii2-object-conflict/" /><meta property="og:description" content="用docker搭建php服务器时，发现yii2核心类Object报错了。此时用的php版本是当前最新版的7.2。 Fatal error: Cannot use &#39;Object&#39; as class name as it is reserved in /var/www/yii/vendor/yiisoft/yii2/base/Object.php on line 77 出错原因 Object是php7.2中的保留类名，不可以" />
-<meta name="twitter:description" content="用docker搭建php服务器时，发现yii2核心类Object报错了。此时用的php版本是当前最新版的7.2。 Fatal error: Cannot use &#39;Object&#39; as class name as it is reserved in /var/www/yii/vendor/yiisoft/yii2/base/Object.php on line 77 出错原因 Object是php7.2中的保留类名，不可以" /><meta property="og:image" content="https://www.maoxuner.cn/img/og.png" />
+<meta property="og:url" content="https://www.maoxuner.cn/post/2018/02/php7.2-yii2-object-conflict/" /><meta property="og:description" content="用docker搭建php服务器时，发现yii2核心类Object报错了。此时用的php版本是当前最新版的7.2。
+Fatal error: Cannot use &#39;Object&#39; as class name as it is reserved in /var/www/yii/vendor/yiisoft/yii2/base/Object.php on line 77
+" />
+<meta name="twitter:description" content="用docker搭建php服务器时，发现yii2核心类Object报错了。此时用的php版本是当前最新版的7.2。
+Fatal error: Cannot use &#39;Object&#39; as class name as it is reserved in /var/www/yii/vendor/yiisoft/yii2/base/Object.php on line 77
+" /><meta property="og:image" content="https://www.maoxuner.cn/img/og.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://www.maoxuner.cn/img/og.png" /><meta property="article:published_time" content="2018-02-04T13:55:09+08:00" /><meta property="article:modified_time" content="2018-02-04T13:55:09+08:00" />
 
@@ -113,7 +117,6 @@
         <p>用docker搭建php服务器时，发现yii2核心类<code>Object</code>报错了。此时用的php版本是当前最新版的<code>7.2</code>。</p>
 <pre><code>Fatal error: Cannot use 'Object' as class name as it is reserved in /var/www/yii/vendor/yiisoft/yii2/base/Object.php on line 77
 </code></pre>
-<!-- more -->
 <h1 id="出错原因">出错原因</h1>
 <p><code>Object</code>是php7.2中的保留类名，不可以再定义名称为<code>Object</code>的类了。</p>
 <blockquote>
@@ -134,7 +137,6 @@
 <li><a href="http://blog.csdn.net/marswill/article/details/77604991" target="_blank">Fatal error: Cannot use &lsquo;Object&rsquo; as class name as it is reserved in xxx/Object.php on line 77</a></li>
 <li><a href="https://github.com/yiisoft/yii2/issues/7936" target="_blank">[PHP7] Consider to deprecate yii\base\Object as object might become soft-reserved</a></li>
 </ul>
-
     </div>
 </article>
 

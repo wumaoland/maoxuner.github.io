@@ -13,7 +13,7 @@
       <pubDate>Wed, 08 Mar 2017 20:53:13 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2017/03/install-hexo/</guid>
-      <description>最近写了好多js，对专门运行js的Node.js产生了兴趣。阿里的虚拟主机快要到期了，就打算把pages服务用起来，简简单单搭建个站点。早就想直接用markdown写写文章，然后用轻巧的工具生成页面了</description>
+      <description>&lt;p&gt;最近写了好多js，对专门运行js的Node.js产生了兴趣。阿里的虚拟主机快要到期了，就打算把pages服务用起来，简简单单搭建个站点。早就想直接用markdown写写文章，然后用轻巧的工具生成页面了。我用过一个叫做&lt;a href=&#34;https://github.com/lizheming/PMBlog&#34; target=&#34;_blank&#34;&gt;PMBlog&lt;/a&gt;的系统，不过这个需要服务器php的支持。后来看到Jekyll，觉得这个工具真的是为懒人而生的。然而Jekyll官方文档都注明，不建议在windows平台安装Jekyll。Jekyll的文档界面不够优美，对Ruby也没有很大的兴趣。Hexo跟Jekyll可以说是完全一样的工具，但它是基于Node.js的。另外，Hexo是宝岛台湾的程序员开发的，原生态支持中文。Node.js、Hexo，一个因为js而产生兴趣，一个因为是同胞的作品而倍感亲切。这自然是个挺好的选择。&lt;/p&gt;</description>
     </item>
     
   </channel>

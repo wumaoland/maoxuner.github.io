@@ -13,7 +13,7 @@
       <pubDate>Thu, 20 Feb 2020 13:24:40 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/02/iview/</guid>
-      <description>笔记 日期控件双向绑定数据，没什么好办法，都需要特殊处理 iview日期控件，双向绑定日期格式 (原创)iView datepicker无法获取格式化的时间(默认带T和Z) 参考文章 iview日期控件，双向绑定</description>
+      <description></description>
     </item>
     
     <item>
@@ -22,7 +22,7 @@
       <pubDate>Sun, 16 Feb 2020 23:12:59 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/02/hugo-loveit-with-live2d-cats/</guid>
-      <description>自建博客，一直想在页面上弄个“人格”，比如“伪春菜”。后来，朋友给我分享了领一只动态卡哇伊的小猫咪到你的网站吧 live2d入门这篇文章。觉得挺合适，一白一黑两只猫模型，刚好LoveIt主题也是黑白。更</description>
+      <description>&lt;p&gt;自建博客，一直想在页面上弄个“人格”，比如“伪春菜”。后来，朋友给我分享了&lt;a href=&#34;https://www.jianshu.com/p/57a4deab12cc&#34; target=&#34;_blank&#34;&gt;领一只动态卡哇伊的小猫咪到你的网站吧 live2d入门&lt;/a&gt;这篇文章。觉得挺合适，一白一黑两只猫模型，刚好LoveIt主题也是黑白。更何况，我还是个铲屎官。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -31,7 +31,7 @@
       <pubDate>Fri, 10 Mar 2017 13:32:11 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2017/03/js-get-view-size/</guid>
-      <description>有时候并不能简单的使用CSS来控制页面元素的大小，结合js来控制元素的大小会更方便一些，因此有时就需要用js获取浏览器窗口的尺寸。 方法 纯js var data = { &amp;quot;网页可见区域宽(body)&amp;quot; :</description>
+      <description>&lt;p&gt;有时候并不能简单的使用CSS来控制页面元素的大小，结合js来控制元素的大小会更方便一些，因此有时就需要用js获取浏览器窗口的尺寸。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -40,7 +40,8 @@
       <pubDate>Sat, 28 Jun 2014 01:02:30 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2014/06/hello-world/</guid>
-      <description>Hello, World! N种语言的Hello, World! Shell #!/bin/sh echo &amp;quot;Hello, World!&amp;quot; Fortran program main implicit none print *,&amp;quot;Hello, World!&amp;quot; end program main C #include &amp;lt;stdio.h&amp;gt; int main() { printf(&amp;quot;Hello, World&amp;quot;); return 0; } Python print(&amp;quot;Hello, World!&amp;quot;) JavaScript console.log(&amp;quot;Hello, World!&amp;quot;); PHP echo &#39;Hello, World!&#39;; Go package main import &amp;quot;fmt&amp;quot; func main(){ fmt.Print(&amp;quot;Hello, World!&amp;quot;); } setTimeout(function(){ console.log(&#34;I Love Young!&#34;); alert(&#34;Hello, World!&#34;); }, 5000);</description>
+      <description>&lt;h1 id=&#34;hello-world&#34;&gt;Hello, World!&lt;/h1&gt;
+&lt;p&gt;N种语言的&lt;code&gt;Hello, World!&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

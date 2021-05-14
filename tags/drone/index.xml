@@ -13,7 +13,10 @@
       <pubDate>Sun, 15 Mar 2020 23:17:50 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/03/host-container-mtu/</guid>
-      <description>将CI/CD服务前移到k8s后，当drone的插件drone-docker构建镜像时，总卡在更新软件包的步骤。是网络连接的问题，为了解决这个问题，耗费了我整个周末。 # apk update fetch http://dl-cdn.alpinelinux.org/alpine/v3.11/main/x86_64/APKINDEX.tar.gz Drone-Runner in K8S 在k8s环境中，dr</description>
+      <description>&lt;p&gt;将CI/CD服务前移到&lt;a href=&#34;https://kubernetes.io/&#34; target=&#34;_blank&#34;&gt;k8s&lt;/a&gt;后，当&lt;a href=&#34;https://drone.io/&#34; target=&#34;_blank&#34;&gt;drone&lt;/a&gt;的插件&lt;a href=&#34;https://github.com/drone-plugins/drone-docker&#34; target=&#34;_blank&#34;&gt;drone-docker&lt;/a&gt;构建镜像时，总卡在更新软件包的步骤。是网络连接的问题，为了解决这个问题，耗费了我整个周末。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# apk update
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.11/main/x86_64/APKINDEX.tar.gz
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
   </channel>

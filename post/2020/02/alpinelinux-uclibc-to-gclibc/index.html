@@ -37,8 +37,8 @@
 <meta property="og:title" content="AlpineLinux使用gclibc" />
 <meta name="twitter:title" content="AlpineLinux使用gclibc" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.maoxuner.cn/post/2020/02/alpinelinux-uclibc-to-gclibc/" /><meta property="og:description" content="AlpineLinux默认使用uclibc版本的busybox，其动态链接库与gclibc有些区别，会导致某些程序没有办法正常运行。可以将busybox版本切换为gclibc。 uclibc与gclib" />
-<meta name="twitter:description" content="AlpineLinux默认使用uclibc版本的busybox，其动态链接库与gclibc有些区别，会导致某些程序没有办法正常运行。可以将busybox版本切换为gclibc。 uclibc与gclib" /><meta property="og:image" content="https://www.maoxuner.cn/img/og.png" />
+<meta property="og:url" content="https://www.maoxuner.cn/post/2020/02/alpinelinux-uclibc-to-gclibc/" /><meta property="og:description" content="AlpineLinux默认使用uclibc版本的busybox，其动态链接库与gclibc有些区别，会导致某些程序没有办法正常运行。可以将busybox版本切换为gclibc。" />
+<meta name="twitter:description" content="AlpineLinux默认使用uclibc版本的busybox，其动态链接库与gclibc有些区别，会导致某些程序没有办法正常运行。可以将busybox版本切换为gclibc。" /><meta property="og:image" content="https://www.maoxuner.cn/img/og.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://www.maoxuner.cn/img/og.png" /><meta property="article:published_time" content="2020-02-16T16:05:23+08:00" /><meta property="article:modified_time" content="2020-02-16T16:05:23+08:00" />
 
@@ -111,7 +111,6 @@
     
     <div class="post-content markdown-body">
         <p>AlpineLinux默认使用uclibc版本的busybox，其动态链接库与gclibc有些区别，会导致某些程序没有办法正常运行。可以将busybox版本切换为gclibc。</p>
-<!-- more -->
 <h1 id="uclibc与gclibc的异同">uclibc与gclibc的异同</h1>
 <p>uclibc与gclibc都是c语言库，总体来说uclibc更加精简。</p>
 <h1 id="切换gclibc版本的buxybox">切换gclibc版本的buxybox</h1>
@@ -132,7 +131,6 @@ sudo chroot ~/chroot/ /bin/sh
 <ul>
 <li><a href="https://wiki.alpinelinux.org/wiki/Running_glibc_programs" target="_blank">Running glibc programs</a></li>
 </ul>
-
     </div>
 </article>
 

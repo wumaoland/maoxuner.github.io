@@ -37,8 +37,8 @@
 <meta property="og:title" content="Nginx域名主机批量配置" />
 <meta name="twitter:title" content="Nginx域名主机批量配置" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.maoxuner.cn/post/2020/02/nginx-mass-dynamic-vhost/" /><meta property="og:description" content="开发环境中一个个的配置域名和根目录比较麻烦，自动实现域名到目录的绑定会更加便捷。 Nginx配置参考 以完整域名设置主机目录 server { listen 80; listen [::]:80; set $htmldir /var/lib/nginx/html; set $basedir /var/www/html; set $rootdir $htmldir; if (-d $basedir/$host) { set $rootdir $basedir/$host; } root $rootdir; } 以二级域名设置主机目录 server { listen" />
-<meta name="twitter:description" content="开发环境中一个个的配置域名和根目录比较麻烦，自动实现域名到目录的绑定会更加便捷。 Nginx配置参考 以完整域名设置主机目录 server { listen 80; listen [::]:80; set $htmldir /var/lib/nginx/html; set $basedir /var/www/html; set $rootdir $htmldir; if (-d $basedir/$host) { set $rootdir $basedir/$host; } root $rootdir; } 以二级域名设置主机目录 server { listen" /><meta property="og:image" content="https://www.maoxuner.cn/img/og.png" />
+<meta property="og:url" content="https://www.maoxuner.cn/post/2020/02/nginx-mass-dynamic-vhost/" /><meta property="og:description" content="开发环境中一个个的配置域名和根目录比较麻烦，自动实现域名到目录的绑定会更加便捷。" />
+<meta name="twitter:description" content="开发环境中一个个的配置域名和根目录比较麻烦，自动实现域名到目录的绑定会更加便捷。" /><meta property="og:image" content="https://www.maoxuner.cn/img/og.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://www.maoxuner.cn/img/og.png" /><meta property="article:published_time" content="2020-02-15T16:23:24+08:00" /><meta property="article:modified_time" content="2020-02-15T16:23:24+08:00" />
 
@@ -111,7 +111,6 @@
     
     <div class="post-content markdown-body">
         <p>开发环境中一个个的配置域名和根目录比较麻烦，自动实现域名到目录的绑定会更加便捷。</p>
-<!-- more -->
 <h1 id="nginx配置参考">Nginx配置参考</h1>
 <ul>
 <li>以完整域名设置主机目录
@@ -153,7 +152,6 @@
 <ul>
 <li><a href="https://diarmuid.ie/blog/setup-mass-dynamic-virtual-hosts-on-nginx" target="_blank">Setup Mass Dynamic Virtual Hosts on Nginx</a></li>
 </ul>
-
     </div>
 </article>
 

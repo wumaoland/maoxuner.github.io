@@ -37,8 +37,8 @@
 <meta property="og:title" content="亚马逊S3存储绑定自定义域名" />
 <meta name="twitter:title" content="亚马逊S3存储绑定自定义域名" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.maoxuner.cn/post/2020/02/amazon-s3-domain-cname/" /><meta property="og:description" content="S3是亚马逊的对象存储服务，默认的访问路径比较长，且不太好记，如果能使用自定义的域名就好了。与其说是绑定自定义域名，不如说让这个域名能访问到S3的某个存储桶（bucket）。 配置域名和存储桶 为什么不说" />
-<meta name="twitter:description" content="S3是亚马逊的对象存储服务，默认的访问路径比较长，且不太好记，如果能使用自定义的域名就好了。与其说是绑定自定义域名，不如说让这个域名能访问到S3的某个存储桶（bucket）。 配置域名和存储桶 为什么不说" /><meta property="og:image" content="https://www.maoxuner.cn/img/og.png" />
+<meta property="og:url" content="https://www.maoxuner.cn/post/2020/02/amazon-s3-domain-cname/" /><meta property="og:description" content="S3是亚马逊的对象存储服务，默认的访问路径比较长，且不太好记，如果能使用自定义的域名就好了。与其说是绑定自定义域名，不如说让这个域名能访问到S3的某个存储桶（bucket）。" />
+<meta name="twitter:description" content="S3是亚马逊的对象存储服务，默认的访问路径比较长，且不太好记，如果能使用自定义的域名就好了。与其说是绑定自定义域名，不如说让这个域名能访问到S3的某个存储桶（bucket）。" /><meta property="og:image" content="https://www.maoxuner.cn/img/og.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://www.maoxuner.cn/img/og.png" /><meta property="article:published_time" content="2020-02-16T19:05:13+08:00" /><meta property="article:modified_time" content="2020-02-16T19:05:13+08:00" />
 
@@ -111,7 +111,6 @@
     
     <div class="post-content markdown-body">
         <p>S3是亚马逊的对象存储服务，默认的访问路径比较长，且不太好记，如果能使用自定义的域名就好了。与其说是绑定自定义域名，不如说让这个域名能访问到S3的某个存储桶（bucket）。</p>
-<!-- more -->
 <h1 id="配置域名和存储桶">配置域名和存储桶</h1>
 <p>为什么不说是绑定自定义域名呢，因为域名与存储桶的绑定是自动的：域名会自动与该域名同名的存储桶进行绑定。</p>
 <p>假设想要用域名<code>s3.domain.com</code>访问S3上的一个存储桶，那么S3上存储桶的名称就必须是<code>s3.domain.com</code>。假设这个存储桶是<code>us-west-1</code>可用区的，那么S3默认提供的资源访问域名就是<code>s3.domain.com.s3-us-west-1.amazonaws.com</code>。给域名<code>s3.domain.com</code>做<code>CNAME</code>解析到<code>s3.domain.com.s3-us-west-1.amazonaws.com</code>即可。</p>
@@ -120,7 +119,6 @@
 <ul>
 <li><a href="https://havecamerawilltravel.com/notes/?misc%2Famazon_s3_bucket_cname" target="_blank">How to Set a CNAME for an Amazon S3 Bucket</a></li>
 </ul>
-
     </div>
 </article>
 

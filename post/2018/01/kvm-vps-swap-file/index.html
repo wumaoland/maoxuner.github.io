@@ -37,8 +37,8 @@
 <meta property="og:title" content="为vps添加swap" />
 <meta name="twitter:title" content="为vps添加swap" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.maoxuner.cn/post/2018/01/kvm-vps-swap-file/" /><meta property="og:description" content="适用于kvm架构的vps。openvz不支持。 用了搬瓦工的vps，使用composer创建项目时遇到内存不足的问题。查看kiwi控制台，发现物理内存（512M）还有剩余，swap（128M）用光了。可" />
-<meta name="twitter:description" content="适用于kvm架构的vps。openvz不支持。 用了搬瓦工的vps，使用composer创建项目时遇到内存不足的问题。查看kiwi控制台，发现物理内存（512M）还有剩余，swap（128M）用光了。可" /><meta property="og:image" content="https://www.maoxuner.cn/img/og.png" />
+<meta property="og:url" content="https://www.maoxuner.cn/post/2018/01/kvm-vps-swap-file/" /><meta property="og:description" content="适用于kvm架构的vps。openvz不支持。" />
+<meta name="twitter:description" content="适用于kvm架构的vps。openvz不支持。" /><meta property="og:image" content="https://www.maoxuner.cn/img/og.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://www.maoxuner.cn/img/og.png" /><meta property="article:published_time" content="2018-01-03T01:08:17+08:00" /><meta property="article:modified_time" content="2018-01-03T01:08:17+08:00" />
 
@@ -111,7 +111,6 @@
     
     <div class="post-content markdown-body">
         <p>适用于kvm架构的vps。openvz不支持。</p>
-<!-- more -->
 <p>用了搬瓦工的vps，使用composer创建项目时遇到内存不足的问题。查看kiwi控制台，发现物理内存（512M）还有剩余，swap（128M）用光了。可以通过增加swap来解决问题。</p>
 <h1 id="创建并开启swap">创建并开启swap</h1>
 <pre><code class="language-bash">sudo dd if=/dev/zero of=/swapfile bs=1M count=512
@@ -140,7 +139,6 @@ sudo swapon /swapfile
 <li><a href="http://blog.csdn.net/liangziyisheng/article/details/8194304" target="_blank">Linux 创建和删除swap file</a></li>
 <li><a href="http://cloudway.jcloud.com/archives/878" target="_blank">Linux SWAP 配置概要说明</a></li>
 </ul>
-
     </div>
 </article>
 

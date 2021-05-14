@@ -37,8 +37,8 @@
 <meta property="og:title" content="云锁导致的Docker镜像拉取失败" />
 <meta name="twitter:title" content="云锁导致的Docker镜像拉取失败" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.maoxuner.cn/post/2020/03/docker-pull-failure-caused-by-yunsuo/" /><meta property="og:description" content="上周遇到了MTU导致的Docker镜像拉取失败，这次又遇到了奇怪的情况导致镜像拉取失败。 failed to register layer: Error processing tar file(exit status 1): open /etc/init.d/nginx: permission denied 百度搜了一下，找到了相关的文章，看到了关键字yunsuo，这才想起来公司早期的服务器" />
-<meta name="twitter:description" content="上周遇到了MTU导致的Docker镜像拉取失败，这次又遇到了奇怪的情况导致镜像拉取失败。 failed to register layer: Error processing tar file(exit status 1): open /etc/init.d/nginx: permission denied 百度搜了一下，找到了相关的文章，看到了关键字yunsuo，这才想起来公司早期的服务器" /><meta property="og:image" content="https://www.maoxuner.cn/img/og.png" />
+<meta property="og:url" content="https://www.maoxuner.cn/post/2020/03/docker-pull-failure-caused-by-yunsuo/" /><meta property="og:description" content="上周遇到了MTU导致的Docker镜像拉取失败，这次又遇到了奇怪的情况导致镜像拉取失败。" />
+<meta name="twitter:description" content="上周遇到了MTU导致的Docker镜像拉取失败，这次又遇到了奇怪的情况导致镜像拉取失败。" /><meta property="og:image" content="https://www.maoxuner.cn/img/og.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://www.maoxuner.cn/img/og.png" /><meta property="article:published_time" content="2020-03-22T23:57:59+08:00" /><meta property="article:modified_time" content="2020-03-22T23:57:59+08:00" />
 
@@ -111,7 +111,6 @@
     
     <div class="post-content markdown-body">
         <p>上周遇到了MTU导致的Docker镜像拉取失败，这次又遇到了奇怪的情况导致镜像拉取失败。</p>
-<!-- more -->
 <pre><code>failed to register layer: Error processing tar file(exit status 1): open /etc/init.d/nginx: permission denied
 </code></pre>
 <p>百度搜了一下，找到了相关的文章，看到了关键字<code>yunsuo</code>，这才想起来公司早期的服务器是安装了这个管理软件的，当时就会引起各种权限问题。果断禁用了，然后一切正常。因为这，我耗费了一整个晚上的时间。累觉不爱，赶紧卸载。</p>
@@ -123,7 +122,6 @@ sudo /sbin/chkconfig yunsuo_guard off
 <ul>
 <li><a href="https://www.cnblogs.com/pcat/p/10643863.html" target="_blank">docker pull报错failed to register layer: Error processing tar file(exit status 1): open permission denied</a></li>
 </ul>
-
     </div>
 </article>
 

@@ -37,8 +37,8 @@
 <meta property="og:title" content="Hexo渲染时排除部分文件或目录" />
 <meta name="twitter:title" content="Hexo渲染时排除部分文件或目录" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.maoxuner.cn/post/2017/03/hexo-skip-render/" /><meta property="og:description" content="搜索引擎确认网站所有权时往往会提供一个html文件来进行验证，要是这个文件被渲染了，验证自然就会失败了。或者，有时候会写一些简单的html示例页面，这也是不希望Hexo渲染的。因此有必要针对某个文件或" />
-<meta name="twitter:description" content="搜索引擎确认网站所有权时往往会提供一个html文件来进行验证，要是这个文件被渲染了，验证自然就会失败了。或者，有时候会写一些简单的html示例页面，这也是不希望Hexo渲染的。因此有必要针对某个文件或" /><meta property="og:image" content="https://www.maoxuner.cn/img/og.png" />
+<meta property="og:url" content="https://www.maoxuner.cn/post/2017/03/hexo-skip-render/" /><meta property="og:description" content="搜索引擎确认网站所有权时往往会提供一个html文件来进行验证，要是这个文件被渲染了，验证自然就会失败了。或者，有时候会写一些简单的html示例页面，这也是不希望Hexo渲染的。因此有必要针对某个文件或者目录进行排除。Hexo的配置文件中提供了配置项skip_render，但总不清楚到底该怎么用。" />
+<meta name="twitter:description" content="搜索引擎确认网站所有权时往往会提供一个html文件来进行验证，要是这个文件被渲染了，验证自然就会失败了。或者，有时候会写一些简单的html示例页面，这也是不希望Hexo渲染的。因此有必要针对某个文件或者目录进行排除。Hexo的配置文件中提供了配置项skip_render，但总不清楚到底该怎么用。" /><meta property="og:image" content="https://www.maoxuner.cn/img/og.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://www.maoxuner.cn/img/og.png" /><meta property="article:published_time" content="2017-03-10T15:35:29+08:00" /><meta property="article:modified_time" content="2017-03-10T15:35:29+08:00" />
 
@@ -111,7 +111,6 @@
     
     <div class="post-content markdown-body">
         <p>搜索引擎确认网站所有权时往往会提供一个html文件来进行验证，要是这个文件被渲染了，验证自然就会失败了。或者，有时候会写一些简单的html示例页面，这也是不希望Hexo渲染的。因此有必要针对某个文件或者目录进行排除。Hexo的配置文件中提供了配置项<code>skip_render</code>，但总不清楚到底该怎么用。</p>
-<!-- more -->
 <h1 id="注意">注意</h1>
 <p>只有<code>source</code>目录下的文件才会发布到<code>public</code>（能够在网络上访问到），因此Hexo只渲染<code>source</code>目录下的文件。<code>skip_render</code>参数设置的路径是相对于<code>source</code>目录的路径。</p>
 <h1 id="设置排除项">设置排除项</h1>
@@ -186,7 +185,6 @@
 <ul>
 <li><a href="http://www.tuicool.com/articles/A36Jby2" target="_blank">Hexo技巧收集 - 不定期更新</a></li>
 </ul>
-
     </div>
 </article>
 

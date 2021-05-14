@@ -37,8 +37,12 @@
 <meta property="og:title" content="离线使用Go指南（Go语言半小时速成教程）" />
 <meta name="twitter:title" content="离线使用Go指南（Go语言半小时速成教程）" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.maoxuner.cn/post/2017/03/go-tour/" /><meta property="og:description" content="《Go语言半小时速成教程》其实就是Go官方入门文档《A tour of Go》的中文翻译版本。谷歌被墙可以理解，The Go Programming也被墙了就觉得很不可思议了。由于同源策略，好几个《Go语言半小时速成教程" />
-<meta name="twitter:description" content="《Go语言半小时速成教程》其实就是Go官方入门文档《A tour of Go》的中文翻译版本。谷歌被墙可以理解，The Go Programming也被墙了就觉得很不可思议了。由于同源策略，好几个《Go语言半小时速成教程" /><meta property="og:image" content="https://www.maoxuner.cn/img/og.png" />
+<meta property="og:url" content="https://www.maoxuner.cn/post/2017/03/go-tour/" /><meta property="og:description" content="《Go语言半小时速成教程》其实就是Go官方入门文档《A tour of Go》的中文翻译版本。谷歌被墙可以理解，The Go Programming也被墙了就觉得很不可思议了。由于同源策略，好几个《Go语言半小时速成教程》中的代码并不能查看运行结果。折腾了好久，自己在本地搭建了该教程。
+正准备兴致勃勃的写篇文章分享一下搭建的过程，却意外发现了另一个网站的翻译版本《Go指南》，而且代码运行的结果也能查看了。看到这个站点的域名go-zh.org，猜测Go 编程语言应该是有人做的中文镜像站吧。那么所有问题都不再是个问题了。
+不过也没关系，想写的内容继续写着。作为笔记也好。不过得提醒一下，虽说教程的名称为“半小时速成”，然而实际上半小时哪够看完所有教程内容。" />
+<meta name="twitter:description" content="《Go语言半小时速成教程》其实就是Go官方入门文档《A tour of Go》的中文翻译版本。谷歌被墙可以理解，The Go Programming也被墙了就觉得很不可思议了。由于同源策略，好几个《Go语言半小时速成教程》中的代码并不能查看运行结果。折腾了好久，自己在本地搭建了该教程。
+正准备兴致勃勃的写篇文章分享一下搭建的过程，却意外发现了另一个网站的翻译版本《Go指南》，而且代码运行的结果也能查看了。看到这个站点的域名go-zh.org，猜测Go 编程语言应该是有人做的中文镜像站吧。那么所有问题都不再是个问题了。
+不过也没关系，想写的内容继续写着。作为笔记也好。不过得提醒一下，虽说教程的名称为“半小时速成”，然而实际上半小时哪够看完所有教程内容。" /><meta property="og:image" content="https://www.maoxuner.cn/img/og.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://www.maoxuner.cn/img/og.png" /><meta property="article:published_time" content="2017-03-09T10:04:04+08:00" /><meta property="article:modified_time" content="2017-03-09T10:04:04+08:00" />
 
@@ -113,7 +117,6 @@
         <p>《<a href="http://www.vaikan.com/go/a-tour-of-go/" target="_blank">Go语言半小时速成教程</a>》其实就是Go官方入门文档《<a href="https://tour.golang.org/" target="_blank">A tour of Go</a>》的中文翻译版本。谷歌被墙可以理解，<a href="https://golang.org" target="_blank">The Go Programming</a>也被墙了就觉得很不可思议了。由于同源策略，好几个《Go语言半小时速成教程》中的代码并不能查看运行结果。折腾了好久，自己在本地搭建了该教程。</p>
 <p>正准备兴致勃勃的写篇文章分享一下搭建的过程，却意外发现了另一个网站的翻译版本《<a href="https://tour.go-zh.org/" target="_blank">Go指南</a>》，而且代码运行的结果也能查看了。看到这个站点的域名<code>go-zh.org</code>，猜测<a href="https://go-zh.org/" target="_blank">Go 编程语言</a>应该是有人做的中文镜像站吧。那么所有问题都不再是个问题了。</p>
 <p>不过也没关系，想写的内容继续写着。作为笔记也好。不过得提醒一下，虽说教程的名称为“半小时速成”，然而实际上半小时哪够看完所有教程内容。</p>
-<!-- more -->
 <h1 id="go环境的搭建">Go环境的搭建</h1>
 <p>Go语言是啥我就不说了，我还挺看好他的，除了那诡异的语法格式规定，比如左侧<code>{</code>不能换行。</p>
 <h2 id="下载go">下载Go</h2>
@@ -165,7 +168,6 @@ git clone https://github.com/golang/tools.git src/golang.org/x/tools
 <li><a href="https://tour.go-zh.org/" target="_blank">Go指南</a></li>
 <li><a href="http://studygolang.com/articles/4768" target="_blank">go-tour-zh离线安装</a></li>
 </ul>
-
     </div>
 </article>
 

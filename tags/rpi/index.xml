@@ -13,7 +13,7 @@
       <pubDate>Thu, 20 Feb 2020 12:34:21 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/02/rpi3-initialization/</guid>
-      <description>用上VPS后，发现树莓派真是太鸡肋了，主要是配置太低了。可能更适合组集群的土豪玩法。 无显示器安装（重点就是配置网络、开启ssh服务），参考Setting up a Raspberry Pi headless 在启动分区放入wpa_supplica</description>
+      <description>&lt;p&gt;用上VPS后，发现树莓派真是太鸡肋了，主要是配置太低了。可能更适合组集群的土豪玩法。&lt;/p&gt;</description>
     </item>
     
     <item>

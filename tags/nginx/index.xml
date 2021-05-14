@@ -13,7 +13,7 @@
       <pubDate>Sat, 14 Mar 2020 11:21:40 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/03/kubernetes-dashboard-ingress/</guid>
-      <description>Kubernetes Dashboard的后端必须通过https访问，是自签名的ssl证书。使用Ingress连接时，会出现证书验证的问题，因此要配置Ingress忽略ssl验证。 Ingress Nginx Ingress Nginx是k8s官方社区开发的I</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/kubernetes/dashboard&#34; target=&#34;_blank&#34;&gt;Kubernetes Dashboard&lt;/a&gt;的后端必须通过https访问，是自签名的ssl证书。使用Ingress连接时，会出现证书验证的问题，因此要配置Ingress忽略ssl验证。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -22,7 +22,7 @@
       <pubDate>Sat, 15 Feb 2020 16:23:24 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/02/nginx-mass-dynamic-vhost/</guid>
-      <description>开发环境中一个个的配置域名和根目录比较麻烦，自动实现域名到目录的绑定会更加便捷。 Nginx配置参考 以完整域名设置主机目录 server { listen 80; listen [::]:80; set $htmldir /var/lib/nginx/html; set $basedir /var/www/html; set $rootdir $htmldir; if (-d $basedir/$host) { set $rootdir $basedir/$host; } root $rootdir; } 以二级域名设置主机目录 server { listen</description>
+      <description>&lt;p&gt;开发环境中一个个的配置域名和根目录比较麻烦，自动实现域名到目录的绑定会更加便捷。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -31,7 +31,7 @@
       <pubDate>Thu, 06 Apr 2017 21:45:55 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2017/04/lnmpa/</guid>
-      <description>主要针对 Apache2+PHP7.0+MariaDB 安装 sudo apt-get install apache2 mariadb-server php7.0 php7.0-mysql libapache2-mod-php7.0 sudo apt-get install php7.0-curl php7.0-mbstring php7.0-xml php7.0-bz2 php7.0-zip 组件名称 作用 php7.0-curl curl操作 php7.0-mbstring 字符操作？ php7.0-xml dom操作 php7.0-bz2 bzip2解压 php7.0-zip zip解压 常见问题 综合问题 Apache2 忽略路径大小写 解决方法 启用模块speling sudo a2enmod speling 在配置文</description>
+      <description>&lt;p&gt;主要针对 Apache2+PHP7.0+MariaDB&lt;/p&gt;</description>
     </item>
     
   </channel>

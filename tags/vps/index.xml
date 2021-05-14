@@ -13,7 +13,7 @@
       <pubDate>Wed, 03 Jan 2018 01:08:17 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2018/01/kvm-vps-swap-file/</guid>
-      <description>适用于kvm架构的vps。openvz不支持。 用了搬瓦工的vps，使用composer创建项目时遇到内存不足的问题。查看kiwi控制台，发现物理内存（512M）还有剩余，swap（128M）用光了。可</description>
+      <description>&lt;p&gt;适用于kvm架构的vps。openvz不支持。&lt;/p&gt;</description>
     </item>
     
   </channel>

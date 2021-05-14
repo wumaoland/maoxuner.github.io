@@ -13,7 +13,7 @@
       <pubDate>Sat, 14 Mar 2020 11:21:40 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/03/kubernetes-dashboard-ingress/</guid>
-      <description>Kubernetes Dashboard的后端必须通过https访问，是自签名的ssl证书。使用Ingress连接时，会出现证书验证的问题，因此要配置Ingress忽略ssl验证。 Ingress Nginx Ingress Nginx是k8s官方社区开发的I</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/kubernetes/dashboard&#34; target=&#34;_blank&#34;&gt;Kubernetes Dashboard&lt;/a&gt;的后端必须通过https访问，是自签名的ssl证书。使用Ingress连接时，会出现证书验证的问题，因此要配置Ingress忽略ssl验证。&lt;/p&gt;</description>
     </item>
     
   </channel>

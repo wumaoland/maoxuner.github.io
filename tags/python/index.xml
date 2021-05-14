@@ -13,7 +13,9 @@
       <pubDate>Sun, 15 May 2016 23:36:16 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2016/05/stability-analysis/</guid>
-      <description>毕业设计中有大量计算，需要写程序来完成。而我们拥有的只有一个流传了N年的老旧的vb代码。为了完善该程序的功能，采用新的技术以便传播，我便用python重写了一个稳定分析的程序。 由于我学业不精，对稳定这</description>
+      <description>&lt;p&gt;毕业设计中有大量计算，需要写程序来完成。而我们拥有的只有一个流传了N年的老旧的vb代码。为了完善该程序的功能，采用新的技术以便传播，我便用python重写了一个稳定分析的程序。
+由于我学业不精，对稳定这部分的理解不足，程序逻辑上也许会有一些问题。因此严正申明：
+&lt;strong&gt;本程序仅供学习使用，不能用于专业设计。&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -22,7 +24,8 @@
       <pubDate>Sat, 28 Jun 2014 01:02:30 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2014/06/hello-world/</guid>
-      <description>Hello, World! N种语言的Hello, World! Shell #!/bin/sh echo &amp;quot;Hello, World!&amp;quot; Fortran program main implicit none print *,&amp;quot;Hello, World!&amp;quot; end program main C #include &amp;lt;stdio.h&amp;gt; int main() { printf(&amp;quot;Hello, World&amp;quot;); return 0; } Python print(&amp;quot;Hello, World!&amp;quot;) JavaScript console.log(&amp;quot;Hello, World!&amp;quot;); PHP echo &#39;Hello, World!&#39;; Go package main import &amp;quot;fmt&amp;quot; func main(){ fmt.Print(&amp;quot;Hello, World!&amp;quot;); } setTimeout(function(){ console.log(&#34;I Love Young!&#34;); alert(&#34;Hello, World!&#34;); }, 5000);</description>
+      <description>&lt;h1 id=&#34;hello-world&#34;&gt;Hello, World!&lt;/h1&gt;
+&lt;p&gt;N种语言的&lt;code&gt;Hello, World!&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

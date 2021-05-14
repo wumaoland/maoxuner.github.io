@@ -13,7 +13,7 @@
       <pubDate>Sat, 15 Feb 2020 14:02:35 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/02/grub2-bootable-device/</guid>
-      <description>经常要给Windows或者Linux系统装机，每次都要制作启动盘，显得有点麻烦。Grub4dos似乎只能用于Legacy模式的启动，因此使用万能的Grub2才是最终解。挖坑待填 尚未搞清楚Windows</description>
+      <description>&lt;p&gt;经常要给Windows或者Linux系统装机，每次都要制作启动盘，显得有点麻烦。Grub4dos似乎只能用于Legacy模式的启动，因此使用万能的Grub2才是最终解。挖坑待填&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -22,7 +22,7 @@
       <pubDate>Fri, 23 Mar 2018 12:33:33 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2018/03/usb-grub2-bios-uefi/</guid>
-      <description>应对复杂的装机环境，bios/uefi，windows/linux。 假设已有一台装好grub(2.02)的linux系统。U盘的设备路径/dev/sdb。 U盘分区 使用mbr分区表 只有mbr分区表才能同</description>
+      <description>&lt;p&gt;应对复杂的装机环境，bios/uefi，windows/linux。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -31,7 +31,12 @@
       <pubDate>Tue, 14 Mar 2017 13:36:37 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2017/03/win7-vs-skylake/</guid>
-      <description>昨天给一台新电脑，联想H3060安装win7系统。安装完成后，在语言设置界面usb键盘鼠标都失去反应了，更换其他usb口也不能识别。这直接原因就是没有usb驱动。此时，电脑已经算作是完全失控的状态。此</description>
+      <description>&lt;p&gt;昨天给一台新电脑，联想H3060安装win7系统。安装完成后，在语言设置界面usb键盘鼠标都失去反应了，更换其他usb口也不能识别。这直接原因就是没有usb驱动。此时，电脑已经算作是完全失控的状态。此时，只有三个解决方案：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用&lt;code&gt;PS/2&lt;/code&gt;接口的键盘鼠标&lt;/li&gt;
+&lt;li&gt;重新安装额外添加了usb驱动的系统&lt;/li&gt;
+&lt;li&gt;在&lt;code&gt;BIOS&lt;/code&gt;中开启&lt;code&gt;USB Virtual KBC Support&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>

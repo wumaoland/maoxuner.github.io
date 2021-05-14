@@ -37,8 +37,14 @@
 <meta property="og:title" content="因MTU导致的容器网络问题" />
 <meta name="twitter:title" content="因MTU导致的容器网络问题" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.maoxuner.cn/post/2020/03/host-container-mtu/" /><meta property="og:description" content="将CI/CD服务前移到k8s后，当drone的插件drone-docker构建镜像时，总卡在更新软件包的步骤。是网络连接的问题，为了解决这个问题，耗费了我整个周末。 # apk update fetch http://dl-cdn.alpinelinux.org/alpine/v3.11/main/x86_64/APKINDEX.tar.gz Drone-Runner in K8S 在k8s环境中，dr" />
-<meta name="twitter:description" content="将CI/CD服务前移到k8s后，当drone的插件drone-docker构建镜像时，总卡在更新软件包的步骤。是网络连接的问题，为了解决这个问题，耗费了我整个周末。 # apk update fetch http://dl-cdn.alpinelinux.org/alpine/v3.11/main/x86_64/APKINDEX.tar.gz Drone-Runner in K8S 在k8s环境中，dr" /><meta property="og:image" content="https://www.maoxuner.cn/img/og.png" />
+<meta property="og:url" content="https://www.maoxuner.cn/post/2020/03/host-container-mtu/" /><meta property="og:description" content="将CI/CD服务前移到k8s后，当drone的插件drone-docker构建镜像时，总卡在更新软件包的步骤。是网络连接的问题，为了解决这个问题，耗费了我整个周末。
+# apk update
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.11/main/x86_64/APKINDEX.tar.gz
+" />
+<meta name="twitter:description" content="将CI/CD服务前移到k8s后，当drone的插件drone-docker构建镜像时，总卡在更新软件包的步骤。是网络连接的问题，为了解决这个问题，耗费了我整个周末。
+# apk update
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.11/main/x86_64/APKINDEX.tar.gz
+" /><meta property="og:image" content="https://www.maoxuner.cn/img/og.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://www.maoxuner.cn/img/og.png" /><meta property="article:published_time" content="2020-03-15T23:17:50+08:00" /><meta property="article:modified_time" content="2020-03-15T23:17:50+08:00" />
 
@@ -114,7 +120,6 @@
 <pre><code class="language-bash"># apk update
 fetch http://dl-cdn.alpinelinux.org/alpine/v3.11/main/x86_64/APKINDEX.tar.gz
 </code></pre>
-<!-- more -->
 <h1 id="drone-runner-in-k8s">Drone-Runner in K8S</h1>
 <p>在k8s环境中，<a href="https://docs.drone.io/runner/kubernetes/overview/" target="_blank">drone-runner</a>通过调用k8s的api，创建相应的<a href="https://kubernetes.io/docs/concepts/workloads/pods/pod/" target="_blank">pod</a>来运行<a href="https://docs.drone.io/pipeline/kubernetes/overview/" target="_blank">pipeline</a>。此时，一个pipeline对应一个pod。Pod中的各个容器对应pipeline中的各个<a href="https://docs.drone.io/pipeline/kubernetes/syntax/steps/" target="_blank">step</a>。</p>
 <h1 id="drone-docker">Drone-Docker</h1>
@@ -191,7 +196,6 @@ steps:
 <li><a href="https://www.v2ex.com/t/380044" target="_blank">京东云的 dhcp 分配的 mtu 是 1450</a></li>
 <li><a href="https://www.jianshu.com/p/3b69a0d52fea" target="_blank">Docker系列之MTU debug</a></li>
 </ul>
-
     </div>
 </article>
 

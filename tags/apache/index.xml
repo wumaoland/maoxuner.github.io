@@ -13,7 +13,8 @@
       <pubDate>Sat, 15 Feb 2020 13:35:47 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/02/apache-vhost-domain-subdirectory-bindings/</guid>
-      <description>Apache服务器通过Rewrite规则绑定域名目录 使用虚拟主机时，由于不能自定义VirtualHost，因此只能通过重写规则来绑定域名和目录。前提是服务器允许使用.htaccess并启用了重写规则。</description>
+      <description>&lt;h1 id=&#34;apache服务器通过rewrite规则绑定域名目录&#34;&gt;Apache服务器通过Rewrite规则绑定域名目录&lt;/h1&gt;
+&lt;p&gt;使用虚拟主机时，由于不能自定义VirtualHost，因此只能通过重写规则来绑定域名和目录。前提是服务器允许使用&lt;code&gt;.htaccess&lt;/code&gt;并启用了重写规则。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -22,7 +23,7 @@
       <pubDate>Fri, 29 Dec 2017 13:12:37 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2017/12/letsencrypt/</guid>
-      <description>Apache服务器配置使用https（ssl）。需求：vps管理权限。 创建虚拟主机 给各个域名创建虚拟主机，80端口。保证http可正常访问。 安装证书自动设置工具certbot 需要配置backports</description>
+      <description>&lt;p&gt;Apache服务器配置使用https（ssl）。需求：vps管理权限。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -31,7 +32,8 @@
       <pubDate>Wed, 26 Apr 2017 15:00:59 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2017/04/apache-system-environment-variables/</guid>
-      <description>最近在研究git的webhook，想以此实现代码的自动部署。其核心内容就是一个php函数shell_exec()。我找到了一个厉害的php部署工具，叫做Deployer。尽管如此，还是遇到了一个很大的</description>
+      <description>&lt;p&gt;最近在研究git的webhook，想以此实现代码的自动部署。其核心内容就是一个php函数&lt;code&gt;shell_exec()&lt;/code&gt;。我找到了一个厉害的php部署工具，叫做&lt;a href=&#34;https://deployer.org&#34; target=&#34;_blank&#34;&gt;Deployer&lt;/a&gt;。尽管如此，还是遇到了一个很大的坑。&lt;/p&gt;
+&lt;p&gt;首先说明一下，这里所说的环境变量，是linux服务器上执行&lt;code&gt;env&lt;/code&gt;命令得到的环境变量，为了与apache服务器本身的环境变量区分开来，这里将前者称为系统环境变量。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -40,7 +42,7 @@
       <pubDate>Thu, 06 Apr 2017 21:45:55 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2017/04/lnmpa/</guid>
-      <description>主要针对 Apache2+PHP7.0+MariaDB 安装 sudo apt-get install apache2 mariadb-server php7.0 php7.0-mysql libapache2-mod-php7.0 sudo apt-get install php7.0-curl php7.0-mbstring php7.0-xml php7.0-bz2 php7.0-zip 组件名称 作用 php7.0-curl curl操作 php7.0-mbstring 字符操作？ php7.0-xml dom操作 php7.0-bz2 bzip2解压 php7.0-zip zip解压 常见问题 综合问题 Apache2 忽略路径大小写 解决方法 启用模块speling sudo a2enmod speling 在配置文</description>
+      <description>&lt;p&gt;主要针对 Apache2+PHP7.0+MariaDB&lt;/p&gt;</description>
     </item>
     
   </channel>

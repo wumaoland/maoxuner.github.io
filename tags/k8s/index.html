@@ -113,7 +113,10 @@
 
   </div>
   <div class="post-item post-summary markdown-body">
-    将CI/CD服务前移到k8s后，当drone的插件drone-docker构建镜像时，总卡在更新软件包的步骤。是网络连接的问题，为了解决这个问题，耗费了我整个周末。 # apk update fetch http://dl-cdn.alpinelinux.org/alpine/v3.11/main/x86_64/APKINDEX.tar.gz Drone-Runner in K8S 在k8s环境中，dr
+    <p>将CI/CD服务前移到<a href="https://kubernetes.io/" target="_blank">k8s</a>后，当<a href="https://drone.io/" target="_blank">drone</a>的插件<a href="https://github.com/drone-plugins/drone-docker" target="_blank">drone-docker</a>构建镜像时，总卡在更新软件包的步骤。是网络连接的问题，为了解决这个问题，耗费了我整个周末。</p>
+<pre><code class="language-bash"># apk update
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.11/main/x86_64/APKINDEX.tar.gz
+</code></pre>
   </div>
 </div>
 
@@ -130,7 +133,7 @@
 
   </div>
   <div class="post-item post-summary markdown-body">
-    Kubernetes Dashboard的后端必须通过https访问，是自签名的ssl证书。使用Ingress连接时，会出现证书验证的问题，因此要配置Ingress忽略ssl验证。 Ingress Nginx Ingress Nginx是k8s官方社区开发的I
+    <p><a href="https://github.com/kubernetes/dashboard" target="_blank">Kubernetes Dashboard</a>的后端必须通过https访问，是自签名的ssl证书。使用Ingress连接时，会出现证书验证的问题，因此要配置Ingress忽略ssl验证。</p>
   </div>
 </div>
 
@@ -147,7 +150,7 @@
 
   </div>
   <div class="post-item post-summary markdown-body">
-    Docker是容器，但容器不是Docker。Docker是containerd的上层应用，Docker的流行带动了容器技术的应用。单机服务编排，docker + docker-compose的组合足以支撑
+    <p>Docker是容器，但容器不是Docker。Docker是containerd的上层应用，Docker的流行带动了容器技术的应用。单机服务编排，docker + docker-compose的组合足以支撑。对于集群管理，还是K8S更合适。K8S可基于docker引擎，也可直接基于containerd的容器引擎。K3S是K8S的精简版，基于containerd。</p>
   </div>
 </div>
 

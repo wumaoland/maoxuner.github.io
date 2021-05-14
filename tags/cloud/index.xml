@@ -13,7 +13,7 @@
       <pubDate>Sun, 16 Feb 2020 19:05:13 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/02/amazon-s3-domain-cname/</guid>
-      <description>S3是亚马逊的对象存储服务，默认的访问路径比较长，且不太好记，如果能使用自定义的域名就好了。与其说是绑定自定义域名，不如说让这个域名能访问到S3的某个存储桶（bucket）。 配置域名和存储桶 为什么不说</description>
+      <description>&lt;p&gt;S3是亚马逊的对象存储服务，默认的访问路径比较长，且不太好记，如果能使用自定义的域名就好了。与其说是绑定自定义域名，不如说让这个域名能访问到S3的某个存储桶（bucket）。&lt;/p&gt;</description>
     </item>
     
   </channel>

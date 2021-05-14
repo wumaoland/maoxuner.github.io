@@ -13,7 +13,10 @@
       <pubDate>Sun, 15 Mar 2020 23:17:50 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/03/host-container-mtu/</guid>
-      <description>将CI/CD服务前移到k8s后，当drone的插件drone-docker构建镜像时，总卡在更新软件包的步骤。是网络连接的问题，为了解决这个问题，耗费了我整个周末。 # apk update fetch http://dl-cdn.alpinelinux.org/alpine/v3.11/main/x86_64/APKINDEX.tar.gz Drone-Runner in K8S 在k8s环境中，dr</description>
+      <description>&lt;p&gt;将CI/CD服务前移到&lt;a href=&#34;https://kubernetes.io/&#34; target=&#34;_blank&#34;&gt;k8s&lt;/a&gt;后，当&lt;a href=&#34;https://drone.io/&#34; target=&#34;_blank&#34;&gt;drone&lt;/a&gt;的插件&lt;a href=&#34;https://github.com/drone-plugins/drone-docker&#34; target=&#34;_blank&#34;&gt;drone-docker&lt;/a&gt;构建镜像时，总卡在更新软件包的步骤。是网络连接的问题，为了解决这个问题，耗费了我整个周末。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# apk update
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.11/main/x86_64/APKINDEX.tar.gz
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
     <item>
@@ -22,7 +25,7 @@
       <pubDate>Thu, 20 Feb 2020 14:03:53 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/02/archlinux-multihead/</guid>
-      <description>在有扩展显示器之前，有个奇思妙想：将桌面内容扩展到安卓平板上。Windows和MacOS似乎有现成的解决方案，而Linux则需要折腾一番。我的思路是：在Linux上创建一个虚拟桌面，然后通过VNC连接</description>
+      <description>&lt;p&gt;在有扩展显示器之前，有个奇思妙想：将桌面内容扩展到安卓平板上。Windows和MacOS似乎有现成的解决方案，而Linux则需要折腾一番。我的思路是：在Linux上创建一个虚拟桌面，然后通过VNC连接到这个桌面上。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -31,7 +34,7 @@
       <pubDate>Thu, 20 Feb 2020 13:29:02 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/02/linux-permission/</guid>
-      <description>常规文件权限：文件权限继承——设置粘滞位权限 ACL：指定owner以外的用户权限 参考文章 How do I set up a folder so that anything created in it inherits permissions? How to make new file permission inherit from the parent directory? How to set umask for a specific folder</description>
+      <description></description>
     </item>
     
     <item>
@@ -40,7 +43,7 @@
       <pubDate>Thu, 20 Feb 2020 12:34:21 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/02/rpi3-initialization/</guid>
-      <description>用上VPS后，发现树莓派真是太鸡肋了，主要是配置太低了。可能更适合组集群的土豪玩法。 无显示器安装（重点就是配置网络、开启ssh服务），参考Setting up a Raspberry Pi headless 在启动分区放入wpa_supplica</description>
+      <description>&lt;p&gt;用上VPS后，发现树莓派真是太鸡肋了，主要是配置太低了。可能更适合组集群的土豪玩法。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -49,7 +52,7 @@
       <pubDate>Sun, 16 Feb 2020 21:29:07 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/02/kvm/</guid>
-      <description>如果常用软件有很好的解决方案，我宁愿使用linux系统。各种工具很方便，系统完全在自己的掌控之内。KVM入门后就再也看不上其他虚拟机。 使用笔记 嵌套虚拟化，如果使用默认的桥接网络。需要修改DHCP网段（</description>
+      <description>&lt;p&gt;如果常用软件有很好的解决方案，我宁愿使用linux系统。各种工具很方便，系统完全在自己的掌控之内。KVM入门后就再也看不上其他虚拟机。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -58,7 +61,7 @@
       <pubDate>Sun, 16 Feb 2020 18:34:10 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/02/disable-ssh-host-key-checking/</guid>
-      <description>对于家里以及公司内网的服务器，可能内网IP是相同的，这就会造成经常性的主机秘钥验证不通过的问题。可以禁用这些主机的秘钥验证。 主机秘钥冲突时的错误提示大概如下 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ @ WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! @ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY! Someone could be</description>
+      <description>&lt;p&gt;对于家里以及公司内网的服务器，可能内网IP是相同的，这就会造成经常性的主机秘钥验证不通过的问题。可以禁用这些主机的秘钥验证。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -67,7 +70,7 @@
       <pubDate>Sun, 16 Feb 2020 16:05:23 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/02/alpinelinux-uclibc-to-gclibc/</guid>
-      <description>AlpineLinux默认使用uclibc版本的busybox，其动态链接库与gclibc有些区别，会导致某些程序没有办法正常运行。可以将busybox版本切换为gclibc。 uclibc与gclib</description>
+      <description>&lt;p&gt;AlpineLinux默认使用uclibc版本的busybox，其动态链接库与gclibc有些区别，会导致某些程序没有办法正常运行。可以将busybox版本切换为gclibc。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -76,7 +79,7 @@
       <pubDate>Sat, 15 Feb 2020 14:02:35 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/02/grub2-bootable-device/</guid>
-      <description>经常要给Windows或者Linux系统装机，每次都要制作启动盘，显得有点麻烦。Grub4dos似乎只能用于Legacy模式的启动，因此使用万能的Grub2才是最终解。挖坑待填 尚未搞清楚Windows</description>
+      <description>&lt;p&gt;经常要给Windows或者Linux系统装机，每次都要制作启动盘，显得有点麻烦。Grub4dos似乎只能用于Legacy模式的启动，因此使用万能的Grub2才是最终解。挖坑待填&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -85,7 +88,15 @@
       <pubDate>Fri, 23 Mar 2018 14:14:29 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2018/03/archlinux-as-usual/</guid>
-      <description>简单来说，受够了windows，买不起osx，就只能折腾linux。折腾了好几个发行版，这次换了archlinux了。理由很简单：软件版本新、滚动发行、yaourt yay一切。 折腾了一阵子MacOS，</description>
+      <description>&lt;p&gt;简单来说，受够了windows，买不起osx，就只能折腾linux。折腾了好几个发行版，这次换了archlinux了。理由很简单：软件版本新、滚动发行、&lt;del&gt;yaourt&lt;/del&gt; yay一切。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;折腾了一阵子MacOS，发现它的软件管理太麻烦了：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AppStore（系统更新、部分软件包）&lt;/li&gt;
+&lt;li&gt;网络上的软件包&lt;/li&gt;
+&lt;li&gt;HomeBrew（GNU、Casks）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;大部分Casks不能更换软件源，更新速度极慢，加上Mac机器老旧，新上市的AMD yes等原因，便回到了linux阵营。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -94,7 +105,7 @@
       <pubDate>Fri, 23 Mar 2018 12:33:33 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2018/03/usb-grub2-bios-uefi/</guid>
-      <description>应对复杂的装机环境，bios/uefi，windows/linux。 假设已有一台装好grub(2.02)的linux系统。U盘的设备路径/dev/sdb。 U盘分区 使用mbr分区表 只有mbr分区表才能同</description>
+      <description>&lt;p&gt;应对复杂的装机环境，bios/uefi，windows/linux。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -103,7 +114,8 @@
       <pubDate>Tue, 06 Mar 2018 09:25:21 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2018/03/try-archlinux/</guid>
-      <description>日常使用deepin一年多，开箱即用，而且中国特色化做得很好。然而，在用的过程中总觉得缺点啥。于是我又开始了新一轮的尝试。 ArchLinux，简洁、海量包、滚动发行。不过，最让我印象深刻的是它全面的w</description>
+      <description>&lt;p&gt;日常使用&lt;a href=&#34;https://www.deepin.org&#34; target=&#34;_blank&#34;&gt;deepin&lt;/a&gt;一年多，开箱即用，而且中国特色化做得很好。然而，在用的过程中总觉得缺点啥。于是我又开始了新一轮的尝试。
+ArchLinux，简洁、海量包、滚动发行。不过，最让我印象深刻的是它全面的wiki，尽管汉化wiki跟不上进度。最新的软件包，使得我更新和安装软件很便利。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -112,7 +124,7 @@
       <pubDate>Wed, 03 Jan 2018 01:08:17 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2018/01/kvm-vps-swap-file/</guid>
-      <description>适用于kvm架构的vps。openvz不支持。 用了搬瓦工的vps，使用composer创建项目时遇到内存不足的问题。查看kiwi控制台，发现物理内存（512M）还有剩余，swap（128M）用光了。可</description>
+      <description>&lt;p&gt;适用于kvm架构的vps。openvz不支持。&lt;/p&gt;</description>
     </item>
     
     <item>

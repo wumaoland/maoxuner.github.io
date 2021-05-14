@@ -37,8 +37,8 @@
 <meta property="og:title" content="K8S入坑指南" />
 <meta name="twitter:title" content="K8S入坑指南" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.maoxuner.cn/post/2020/02/k8s/" /><meta property="og:description" content="Docker是容器，但容器不是Docker。Docker是containerd的上层应用，Docker的流行带动了容器技术的应用。单机服务编排，docker &#43; docker-compose的组合足以支撑" />
-<meta name="twitter:description" content="Docker是容器，但容器不是Docker。Docker是containerd的上层应用，Docker的流行带动了容器技术的应用。单机服务编排，docker &#43; docker-compose的组合足以支撑" /><meta property="og:image" content="https://www.maoxuner.cn/img/og.png" />
+<meta property="og:url" content="https://www.maoxuner.cn/post/2020/02/k8s/" /><meta property="og:description" content="Docker是容器，但容器不是Docker。Docker是containerd的上层应用，Docker的流行带动了容器技术的应用。单机服务编排，docker &#43; docker-compose的组合足以支撑。对于集群管理，还是K8S更合适。K8S可基于docker引擎，也可直接基于containerd的容器引擎。K3S是K8S的精简版，基于containerd。" />
+<meta name="twitter:description" content="Docker是容器，但容器不是Docker。Docker是containerd的上层应用，Docker的流行带动了容器技术的应用。单机服务编排，docker &#43; docker-compose的组合足以支撑。对于集群管理，还是K8S更合适。K8S可基于docker引擎，也可直接基于containerd的容器引擎。K3S是K8S的精简版，基于containerd。" /><meta property="og:image" content="https://www.maoxuner.cn/img/og.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://www.maoxuner.cn/img/og.png" /><meta property="article:published_time" content="2020-02-19T21:12:58+08:00" /><meta property="article:modified_time" content="2020-02-19T21:12:58+08:00" />
 
@@ -111,7 +111,6 @@
     
     <div class="post-content markdown-body">
         <p>Docker是容器，但容器不是Docker。Docker是containerd的上层应用，Docker的流行带动了容器技术的应用。单机服务编排，docker + docker-compose的组合足以支撑。对于集群管理，还是K8S更合适。K8S可基于docker引擎，也可直接基于containerd的容器引擎。K3S是K8S的精简版，基于containerd。</p>
-<!-- more -->
 <h1 id="折腾笔记">折腾笔记</h1>
 <ul>
 <li>K8S的架构很清晰：<br>
@@ -146,7 +145,6 @@ ETCD/SQLite（数据库）+ApiServer（接口）+Controller（控制器）+Kubel
 <li><a href="https://rancher.com/" target="_blank">Rancher</a></li>
 <li><a href="https://docs.traefik.io/https/acme/" target="_blank">traefik - Let&rsquo;s Encrypt</a></li>
 </ul>
-
     </div>
 </article>
 

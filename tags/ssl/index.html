@@ -38,7 +38,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://www.maoxuner.cn/tags/ssl/" /><meta property="og:image" content="https://www.maoxuner.cn/img/og.png" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://www.maoxuner.cn/img/og.png" /><meta property="og:updated_time" content="2020-02-15T15:34:31+08:00" />
+<meta name="twitter:image" content="https://www.maoxuner.cn/img/og.png" /><meta property="og:updated_time" content="2021-05-14T15:25:17+08:00" />
 
 
 <style>
@@ -102,6 +102,23 @@
 
 <div class="post">
   <h2 class="post-item post-title">
+    <a href="https://www.maoxuner.cn/post/2021/05/archlinux-self-signed-cert/">Archlinu添加自签名证书到系统</a>
+  </h2>
+  <div class="post-item post-meta">
+    <span><i class="iconfont icon-today-sharp"></i>&nbsp;2021-05-14</span>
+
+<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;46 字</span>
+
+<span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/archlinux">archlinux</a>&nbsp;<a href="/tags/ssl">ssl</a>&nbsp;</span>
+
+  </div>
+  <div class="post-item post-summary markdown-body">
+    <p>Web本地开发时可能要用到自签名证书来进行https访问。</p>
+  </div>
+</div>
+
+<div class="post">
+  <h2 class="post-item post-title">
     <a href="https://www.maoxuner.cn/post/2020/02/self-signed-certificate/">创建自签名证书</a>
   </h2>
   <div class="post-item post-meta">
@@ -113,7 +130,9 @@
 
   </div>
   <div class="post-item post-summary markdown-body">
-    自建内网服务时会用到ssl，就需要自签名（通用）证书了。 一个证书主要有两个文件：秘钥文件（公钥、私钥）、证书文件。私钥签发证书，公钥验证证书。可以给自己签名生成自签名证书，也可以给别人签名，生成通用证
+    <p>自建内网服务时会用到ssl，就需要自签名（通用）证书了。</p>
+<p>一个证书主要有两个文件：秘钥文件（公钥、私钥）、证书文件。私钥签发证书，公钥验证证书。可以给自己签名生成自签名证书，也可以给别人签名，生成通用证书。</p>
+<p>专门给别人签名的秘钥一般由证书颁发机构<code>CA</code>保管，如<code>Let's Entrypt</code>。浏览器存有可信证书颁发机构的公钥信息。</p>
   </div>
 </div>
 
@@ -130,7 +149,7 @@
 
   </div>
   <div class="post-item post-summary markdown-body">
-    Apache服务器配置使用https（ssl）。需求：vps管理权限。 创建虚拟主机 给各个域名创建虚拟主机，80端口。保证http可正常访问。 安装证书自动设置工具certbot 需要配置backports
+    <p>Apache服务器配置使用https（ssl）。需求：vps管理权限。</p>
   </div>
 </div>
 

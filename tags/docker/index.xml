@@ -6,14 +6,23 @@
     <description>Recent content in docker on 二次元の技术宅</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 22 Mar 2020 23:57:59 +0800</lastBuildDate><atom:link href="https://www.maoxuner.cn/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 14 May 2021 15:02:33 +0800</lastBuildDate><atom:link href="https://www.maoxuner.cn/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>以非root用户运行docker服务</title>
+      <link>https://www.maoxuner.cn/post/2021/05/docker-non-root/</link>
+      <pubDate>Fri, 14 May 2021 15:02:33 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2021/05/docker-non-root/</guid>
+      <description>某些场景下可能需要使用以非root用户来运行docker服务，以保证系统的安全性。 参考文章 Run the Docker daemon as a non-root user (Rootless mode)</description>
+    </item>
+    
     <item>
       <title>云锁导致的Docker镜像拉取失败</title>
       <link>https://www.maoxuner.cn/post/2020/03/docker-pull-failure-caused-by-yunsuo/</link>
       <pubDate>Sun, 22 Mar 2020 23:57:59 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/03/docker-pull-failure-caused-by-yunsuo/</guid>
-      <description>上周遇到了MTU导致的Docker镜像拉取失败，这次又遇到了奇怪的情况导致镜像拉取失败。 failed to register layer: Error processing tar file(exit status 1): open /etc/init.d/nginx: permission denied 百度搜了一下，找到了相关的文章，看到了关键字yunsuo，这才想起来公司早期的服务器</description>
+      <description>&lt;p&gt;上周遇到了MTU导致的Docker镜像拉取失败，这次又遇到了奇怪的情况导致镜像拉取失败。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -22,7 +31,10 @@
       <pubDate>Sun, 15 Mar 2020 23:17:50 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/03/host-container-mtu/</guid>
-      <description>将CI/CD服务前移到k8s后，当drone的插件drone-docker构建镜像时，总卡在更新软件包的步骤。是网络连接的问题，为了解决这个问题，耗费了我整个周末。 # apk update fetch http://dl-cdn.alpinelinux.org/alpine/v3.11/main/x86_64/APKINDEX.tar.gz Drone-Runner in K8S 在k8s环境中，dr</description>
+      <description>&lt;p&gt;将CI/CD服务前移到&lt;a href=&#34;https://kubernetes.io/&#34; target=&#34;_blank&#34;&gt;k8s&lt;/a&gt;后，当&lt;a href=&#34;https://drone.io/&#34; target=&#34;_blank&#34;&gt;drone&lt;/a&gt;的插件&lt;a href=&#34;https://github.com/drone-plugins/drone-docker&#34; target=&#34;_blank&#34;&gt;drone-docker&lt;/a&gt;构建镜像时，总卡在更新软件包的步骤。是网络连接的问题，为了解决这个问题，耗费了我整个周末。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# apk update
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.11/main/x86_64/APKINDEX.tar.gz
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
     <item>
@@ -31,7 +43,7 @@
       <pubDate>Thu, 12 Mar 2020 20:01:56 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/03/macos-docker-volumes-cached/</guid>
-      <description>去年，我的燃7000出现了一些软硬件故障，便狠下心换了一个二手的15款MBP，从此告别了折腾linux的日子。然而，日常开发时却发现docker的响应速度远不如之前的linux。好在还有优化的空间。 L</description>
+      <description>&lt;p&gt;去年，我的燃7000出现了一些软硬件故障，便狠下心换了一个二手的15款MBP，从此告别了折腾linux的日子。然而，日常开发时却发现docker的响应速度远不如之前的linux。好在还有优化的空间。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -40,7 +52,7 @@
       <pubDate>Wed, 19 Feb 2020 23:26:22 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/02/docker-eth-binding/</guid>
-      <description>主机多网卡的情况下，可能会涉及容器和网卡的绑定。主要分两个方向：入口流量网卡的绑定、出口流浪网卡的绑定。 入口流量绑定 入口流量绑定很简单，容器在绑定主机端口时指定主机的网卡或相应网卡的IP（如果主机公网</description>
+      <description>&lt;p&gt;主机多网卡的情况下，可能会涉及容器和网卡的绑定。主要分两个方向：入口流量网卡的绑定、出口流浪网卡的绑定。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -49,7 +61,7 @@
       <pubDate>Wed, 19 Feb 2020 21:12:58 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/02/k8s/</guid>
-      <description>Docker是容器，但容器不是Docker。Docker是containerd的上层应用，Docker的流行带动了容器技术的应用。单机服务编排，docker + docker-compose的组合足以支撑</description>
+      <description>&lt;p&gt;Docker是容器，但容器不是Docker。Docker是containerd的上层应用，Docker的流行带动了容器技术的应用。单机服务编排，docker + docker-compose的组合足以支撑。对于集群管理，还是K8S更合适。K8S可基于docker引擎，也可直接基于containerd的容器引擎。K3S是K8S的精简版，基于containerd。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -58,7 +70,7 @@
       <pubDate>Sat, 15 Feb 2020 14:20:35 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2020/02/docker-faqs-for-green-hand/</guid>
-      <description>网络互访问题、入口脚本问题等 网络 主机互访 宿主机指运行docker服务的主机，容器指宿主机上运行的各个container。 注意：localhost和127.0.0.1永远是发起请求的程序所在的系统（命名</description>
+      <description>&lt;p&gt;网络互访问题、入口脚本问题等&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -67,7 +79,21 @@
       <pubDate>Sat, 03 Feb 2018 21:36:07 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2018/02/use-docker/</guid>
-      <description>__________________ &amp;lt; 不解释了，快上船 &amp;gt; ------------------ \ \ \ ## . ## ## ## == ## ## ## ## === /&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;___/ === ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ / ===- ~~~ \______ o __/ \ \ __/ \____\______/ 安装docker 前人之述备矣，Get Docker CE for Debian sudo apt-get update sudo apt-get install \ apt-transport-https \ ca-certificates \ curl \ gnupg2 \ software-properties-common curl -fsSL https://download.docker.com/linux/$(. /etc/os-release; echo &amp;quot;$ID&amp;quot;)/gpg | sudo apt-key add - sudo apt-key fingerprint 0EBFCD88 sudo add-apt-repository</description>
+      <description>&lt;pre&gt;&lt;code&gt; __________________
+&amp;lt; 不解释了，快上船 &amp;gt;
+ ------------------
+    \
+     \
+      \
+                    ##        .
+              ## ## ##       ==
+           ## ## ## ##      ===
+       /&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;___/ ===
+  ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~
+       \______ o          __/
+        \    \        __/
+          \____\______/
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
     <item>
@@ -76,7 +102,7 @@
       <pubDate>Sun, 28 Jan 2018 15:42:58 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2018/01/docker-php-server/</guid>
-      <description>多容器 apache+php+mariadb+redis 主要配置 构建php镜像 基于官方php镜像进行定制，增加所需的php扩展，修改php配置，以及创建虚拟主机。 Dockerfile 文件php/Dockerfile FROM php:apache # php configure COPY php.ini /usr/local/etc/php/php.ini # php extension COPY sources.list /etc/apt/sources.list RUN apt-get update \ &amp;amp;&amp;amp; apt-get install -y --no-install-recommends \ libbz2-dev \</description>
+      <description>&lt;p&gt;多容器 apache+php+mariadb+redis&lt;/p&gt;</description>
     </item>
     
   </channel>

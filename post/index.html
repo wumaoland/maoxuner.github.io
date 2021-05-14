@@ -38,7 +38,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://www.maoxuner.cn/post/" /><meta property="og:image" content="https://www.maoxuner.cn/img/og.png" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://www.maoxuner.cn/img/og.png" /><meta property="og:updated_time" content="2020-03-22T23:57:59+08:00" />
+<meta name="twitter:image" content="https://www.maoxuner.cn/img/og.png" /><meta property="og:updated_time" content="2021-05-14T15:51:43+08:00" />
 
 
 <style>
@@ -98,6 +98,77 @@
 
 <div class="post">
     <h2 class="post-item post-title">
+        <a href="https://www.maoxuner.cn/post/2021/05/hugo-theme-nes/">Hugo主题NES</a>
+    </h2>
+    <div class="post-item post-meta">
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2021-05-14</span>
+
+<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;89 字</span>
+
+<span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;无标签</span>
+
+    </div>
+    <div class="post-item post-summary markdown-body">
+        <p>偶然发现了NES风格的样式库，并打算以此做个主题。目前只设计了主要页面。</p>
+    </div>
+</div>
+
+<div class="post">
+    <h2 class="post-item post-title">
+        <a href="https://www.maoxuner.cn/post/2021/05/archlinux-self-signed-cert/">Archlinu添加自签名证书到系统</a>
+    </h2>
+    <div class="post-item post-meta">
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2021-05-14</span>
+
+<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;46 字</span>
+
+<span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/archlinux">archlinux</a>&nbsp;<a href="/tags/ssl">ssl</a>&nbsp;</span>
+
+    </div>
+    <div class="post-item post-summary markdown-body">
+        <p>Web本地开发时可能要用到自签名证书来进行https访问。</p>
+    </div>
+</div>
+
+<div class="post">
+    <h2 class="post-item post-title">
+        <a href="https://www.maoxuner.cn/post/2021/05/datetime-column-default-value/">Datetime字段类型默认值问题</a>
+    </h2>
+    <div class="post-item post-meta">
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2021-05-14</span>
+
+<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;165 字</span>
+
+<span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/mysql">mysql</a>&nbsp;</span>
+
+    </div>
+    <div class="post-item post-summary markdown-body">
+        <blockquote>
+<p>Data truncation: Incorrect datetime value: &lsquo;0000-00-00 00:00:00&rsquo; for column.</p>
+</blockquote>
+<p>简而言之，就是字段值不能是<code>0000-00-00 00:00:00:00</code></p>
+    </div>
+</div>
+
+<div class="post">
+    <h2 class="post-item post-title">
+        <a href="https://www.maoxuner.cn/post/2021/05/docker-non-root/">以非root用户运行docker服务</a>
+    </h2>
+    <div class="post-item post-meta">
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2021-05-14</span>
+
+<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;55 字</span>
+
+<span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/docker">docker</a>&nbsp;</span>
+
+    </div>
+    <div class="post-item post-summary markdown-body">
+        某些场景下可能需要使用以非root用户来运行docker服务，以保证系统的安全性。 参考文章 Run the Docker daemon as a non-root user (Rootless mode)
+    </div>
+</div>
+
+<div class="post">
+    <h2 class="post-item post-title">
         <a href="https://www.maoxuner.cn/post/2020/03/docker-pull-failure-caused-by-yunsuo/">云锁导致的Docker镜像拉取失败</a>
     </h2>
     <div class="post-item post-meta">
@@ -109,7 +180,7 @@
 
     </div>
     <div class="post-item post-summary markdown-body">
-        上周遇到了MTU导致的Docker镜像拉取失败，这次又遇到了奇怪的情况导致镜像拉取失败。 failed to register layer: Error processing tar file(exit status 1): open /etc/init.d/nginx: permission denied 百度搜了一下，找到了相关的文章，看到了关键字yunsuo，这才想起来公司早期的服务器
+        <p>上周遇到了MTU导致的Docker镜像拉取失败，这次又遇到了奇怪的情况导致镜像拉取失败。</p>
     </div>
 </div>
 
@@ -126,7 +197,10 @@
 
     </div>
     <div class="post-item post-summary markdown-body">
-        将CI/CD服务前移到k8s后，当drone的插件drone-docker构建镜像时，总卡在更新软件包的步骤。是网络连接的问题，为了解决这个问题，耗费了我整个周末。 # apk update fetch http://dl-cdn.alpinelinux.org/alpine/v3.11/main/x86_64/APKINDEX.tar.gz Drone-Runner in K8S 在k8s环境中，dr
+        <p>将CI/CD服务前移到<a href="https://kubernetes.io/" target="_blank">k8s</a>后，当<a href="https://drone.io/" target="_blank">drone</a>的插件<a href="https://github.com/drone-plugins/drone-docker" target="_blank">drone-docker</a>构建镜像时，总卡在更新软件包的步骤。是网络连接的问题，为了解决这个问题，耗费了我整个周末。</p>
+<pre><code class="language-bash"># apk update
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.11/main/x86_64/APKINDEX.tar.gz
+</code></pre>
     </div>
 </div>
 
@@ -143,7 +217,7 @@
 
     </div>
     <div class="post-item post-summary markdown-body">
-        Kubernetes Dashboard的后端必须通过https访问，是自签名的ssl证书。使用Ingress连接时，会出现证书验证的问题，因此要配置Ingress忽略ssl验证。 Ingress Nginx Ingress Nginx是k8s官方社区开发的I
+        <p><a href="https://github.com/kubernetes/dashboard" target="_blank">Kubernetes Dashboard</a>的后端必须通过https访问，是自签名的ssl证书。使用Ingress连接时，会出现证书验证的问题，因此要配置Ingress忽略ssl验证。</p>
     </div>
 </div>
 
@@ -160,7 +234,7 @@
 
     </div>
     <div class="post-item post-summary markdown-body">
-        去年，我的燃7000出现了一些软硬件故障，便狠下心换了一个二手的15款MBP，从此告别了折腾linux的日子。然而，日常开发时却发现docker的响应速度远不如之前的linux。好在还有优化的空间。 L
+        <p>去年，我的燃7000出现了一些软硬件故障，便狠下心换了一个二手的15款MBP，从此告别了折腾linux的日子。然而，日常开发时却发现docker的响应速度远不如之前的linux。好在还有优化的空间。</p>
     </div>
 </div>
 
@@ -177,7 +251,7 @@
 
     </div>
     <div class="post-item post-summary markdown-body">
-        在有扩展显示器之前，有个奇思妙想：将桌面内容扩展到安卓平板上。Windows和MacOS似乎有现成的解决方案，而Linux则需要折腾一番。我的思路是：在Linux上创建一个虚拟桌面，然后通过VNC连接
+        <p>在有扩展显示器之前，有个奇思妙想：将桌面内容扩展到安卓平板上。Windows和MacOS似乎有现成的解决方案，而Linux则需要折腾一番。我的思路是：在Linux上创建一个虚拟桌面，然后通过VNC连接到这个桌面上。</p>
     </div>
 </div>
 
@@ -194,75 +268,7 @@
 
     </div>
     <div class="post-item post-summary markdown-body">
-        常规文件权限：文件权限继承——设置粘滞位权限 ACL：指定owner以外的用户权限 参考文章 How do I set up a folder so that anything created in it inherits permissions? How to make new file permission inherit from the parent directory? How to set umask for a specific folder
-    </div>
-</div>
-
-<div class="post">
-    <h2 class="post-item post-title">
-        <a href="https://www.maoxuner.cn/post/2020/02/iview/">iView使用总结</a>
-    </h2>
-    <div class="post-item post-meta">
-        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2020-02-20</span>
-
-<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;141 字</span>
-
-<span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/javascript">javascript</a>&nbsp;</span>
-
-    </div>
-    <div class="post-item post-summary markdown-body">
-        笔记 日期控件双向绑定数据，没什么好办法，都需要特殊处理 iview日期控件，双向绑定日期格式 (原创)iView datepicker无法获取格式化的时间(默认带T和Z) 参考文章 iview日期控件，双向绑定
-    </div>
-</div>
-
-<div class="post">
-    <h2 class="post-item post-title">
-        <a href="https://www.maoxuner.cn/post/2020/02/rpi3-initialization/">树莓派3B&#43;无显示器安装系统</a>
-    </h2>
-    <div class="post-item post-meta">
-        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2020-02-20</span>
-
-<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;192 字</span>
-
-<span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/rpi">rpi</a>&nbsp;<a href="/tags/linux">linux</a>&nbsp;</span>
-
-    </div>
-    <div class="post-item post-summary markdown-body">
-        用上VPS后，发现树莓派真是太鸡肋了，主要是配置太低了。可能更适合组集群的土豪玩法。 无显示器安装（重点就是配置网络、开启ssh服务），参考Setting up a Raspberry Pi headless 在启动分区放入wpa_supplica
-    </div>
-</div>
-
-<div class="post">
-    <h2 class="post-item post-title">
-        <a href="https://www.maoxuner.cn/post/2020/02/docker-eth-binding/">Docker绑定网卡</a>
-    </h2>
-    <div class="post-item post-meta">
-        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2020-02-19</span>
-
-<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;280 字</span>
-
-<span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/docker">docker</a>&nbsp;</span>
-
-    </div>
-    <div class="post-item post-summary markdown-body">
-        主机多网卡的情况下，可能会涉及容器和网卡的绑定。主要分两个方向：入口流量网卡的绑定、出口流浪网卡的绑定。 入口流量绑定 入口流量绑定很简单，容器在绑定主机端口时指定主机的网卡或相应网卡的IP（如果主机公网
-    </div>
-</div>
-
-<div class="post">
-    <h2 class="post-item post-title">
-        <a href="https://www.maoxuner.cn/post/2020/02/k8s/">K8S入坑指南</a>
-    </h2>
-    <div class="post-item post-meta">
-        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2020-02-19</span>
-
-<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;951 字</span>
-
-<span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/k8s">k8s</a>&nbsp;<a href="/tags/k3s">k3s</a>&nbsp;<a href="/tags/docker">docker</a>&nbsp;<a href="/tags/containerd">containerd</a>&nbsp;</span>
-
-    </div>
-    <div class="post-item post-summary markdown-body">
-        Docker是容器，但容器不是Docker。Docker是containerd的上层应用，Docker的流行带动了容器技术的应用。单机服务编排，docker + docker-compose的组合足以支撑
+        
     </div>
 </div>
 <div class="pagination"><div class="pag-item pag-current">
@@ -278,7 +284,7 @@
   </div><div class="pag-next">
     <a href="/post/page/2/"><i class="iconfont icon-chevron-forward-circle-sharp"></i></a>
   </div><div class="pag-last">
-    <a href="/post/page/9/"><i class="iconfont icon-caret-forward-circle-sharp"></i></a>
+    <a href="/post/page/10/"><i class="iconfont icon-caret-forward-circle-sharp"></i></a>
   </div></div>
             </div>
             <aside class="col-12 col-md-3 float-left sidebar">

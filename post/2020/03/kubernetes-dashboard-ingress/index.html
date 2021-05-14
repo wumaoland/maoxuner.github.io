@@ -37,8 +37,8 @@
 <meta property="og:title" content="K8S Dashboard的Ingress配置" />
 <meta name="twitter:title" content="K8S Dashboard的Ingress配置" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.maoxuner.cn/post/2020/03/kubernetes-dashboard-ingress/" /><meta property="og:description" content="Kubernetes Dashboard的后端必须通过https访问，是自签名的ssl证书。使用Ingress连接时，会出现证书验证的问题，因此要配置Ingress忽略ssl验证。 Ingress Nginx Ingress Nginx是k8s官方社区开发的I" />
-<meta name="twitter:description" content="Kubernetes Dashboard的后端必须通过https访问，是自签名的ssl证书。使用Ingress连接时，会出现证书验证的问题，因此要配置Ingress忽略ssl验证。 Ingress Nginx Ingress Nginx是k8s官方社区开发的I" /><meta property="og:image" content="https://www.maoxuner.cn/img/og.png" />
+<meta property="og:url" content="https://www.maoxuner.cn/post/2020/03/kubernetes-dashboard-ingress/" /><meta property="og:description" content="Kubernetes Dashboard的后端必须通过https访问，是自签名的ssl证书。使用Ingress连接时，会出现证书验证的问题，因此要配置Ingress忽略ssl验证。" />
+<meta name="twitter:description" content="Kubernetes Dashboard的后端必须通过https访问，是自签名的ssl证书。使用Ingress连接时，会出现证书验证的问题，因此要配置Ingress忽略ssl验证。" /><meta property="og:image" content="https://www.maoxuner.cn/img/og.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://www.maoxuner.cn/img/og.png" /><meta property="article:published_time" content="2020-03-14T11:21:40+08:00" /><meta property="article:modified_time" content="2020-03-14T11:21:40+08:00" />
 
@@ -111,7 +111,6 @@
     
     <div class="post-content markdown-body">
         <p><a href="https://github.com/kubernetes/dashboard" target="_blank">Kubernetes Dashboard</a>的后端必须通过https访问，是自签名的ssl证书。使用Ingress连接时，会出现证书验证的问题，因此要配置Ingress忽略ssl验证。</p>
-<!-- more -->
 <h1 id="ingress-nginx">Ingress Nginx</h1>
 <p><a href="https://kubernetes.github.io/ingress-nginx/" target="_blank">Ingress Nginx</a>是k8s官方社区开发的Ingress控制器，是基于Nginx的。熟悉Nginx的话，配置起来会比较简单。</p>
 <pre><code class="language-yaml">apiVersion: networking.k8s.io/v1beta1
@@ -186,7 +185,6 @@ spec:
 <li><a href="https://docs.traefik.io/v1.7/configuration/commons/#main-section" target="_blank">Traefik - Configuration Common#Main Section</a></li>
 <li><a href="https://docs.traefik.io/v1.7/configuration/backends/kubernetes/#tls-communication-between-traefik-and-backend-pods" target="_blank">TLS communication between Traefik and backend pods</a></li>
 </ul>
-
     </div>
 </article>
 

@@ -113,7 +113,10 @@
 
   </div>
   <div class="post-item post-summary markdown-body">
-    将CI/CD服务前移到k8s后，当drone的插件drone-docker构建镜像时，总卡在更新软件包的步骤。是网络连接的问题，为了解决这个问题，耗费了我整个周末。 # apk update fetch http://dl-cdn.alpinelinux.org/alpine/v3.11/main/x86_64/APKINDEX.tar.gz Drone-Runner in K8S 在k8s环境中，dr
+    <p>将CI/CD服务前移到<a href="https://kubernetes.io/" target="_blank">k8s</a>后，当<a href="https://drone.io/" target="_blank">drone</a>的插件<a href="https://github.com/drone-plugins/drone-docker" target="_blank">drone-docker</a>构建镜像时，总卡在更新软件包的步骤。是网络连接的问题，为了解决这个问题，耗费了我整个周末。</p>
+<pre><code class="language-bash"># apk update
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.11/main/x86_64/APKINDEX.tar.gz
+</code></pre>
   </div>
 </div>
 
@@ -130,7 +133,7 @@
 
   </div>
   <div class="post-item post-summary markdown-body">
-    在有扩展显示器之前，有个奇思妙想：将桌面内容扩展到安卓平板上。Windows和MacOS似乎有现成的解决方案，而Linux则需要折腾一番。我的思路是：在Linux上创建一个虚拟桌面，然后通过VNC连接
+    <p>在有扩展显示器之前，有个奇思妙想：将桌面内容扩展到安卓平板上。Windows和MacOS似乎有现成的解决方案，而Linux则需要折腾一番。我的思路是：在Linux上创建一个虚拟桌面，然后通过VNC连接到这个桌面上。</p>
   </div>
 </div>
 
@@ -147,7 +150,7 @@
 
   </div>
   <div class="post-item post-summary markdown-body">
-    常规文件权限：文件权限继承——设置粘滞位权限 ACL：指定owner以外的用户权限 参考文章 How do I set up a folder so that anything created in it inherits permissions? How to make new file permission inherit from the parent directory? How to set umask for a specific folder
+    
   </div>
 </div>
 
@@ -164,7 +167,7 @@
 
   </div>
   <div class="post-item post-summary markdown-body">
-    用上VPS后，发现树莓派真是太鸡肋了，主要是配置太低了。可能更适合组集群的土豪玩法。 无显示器安装（重点就是配置网络、开启ssh服务），参考Setting up a Raspberry Pi headless 在启动分区放入wpa_supplica
+    <p>用上VPS后，发现树莓派真是太鸡肋了，主要是配置太低了。可能更适合组集群的土豪玩法。</p>
   </div>
 </div>
 
@@ -181,7 +184,7 @@
 
   </div>
   <div class="post-item post-summary markdown-body">
-    如果常用软件有很好的解决方案，我宁愿使用linux系统。各种工具很方便，系统完全在自己的掌控之内。KVM入门后就再也看不上其他虚拟机。 使用笔记 嵌套虚拟化，如果使用默认的桥接网络。需要修改DHCP网段（
+    <p>如果常用软件有很好的解决方案，我宁愿使用linux系统。各种工具很方便，系统完全在自己的掌控之内。KVM入门后就再也看不上其他虚拟机。</p>
   </div>
 </div>
 
@@ -198,7 +201,7 @@
 
   </div>
   <div class="post-item post-summary markdown-body">
-    对于家里以及公司内网的服务器，可能内网IP是相同的，这就会造成经常性的主机秘钥验证不通过的问题。可以禁用这些主机的秘钥验证。 主机秘钥冲突时的错误提示大概如下 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ @ WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! @ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY! Someone could be
+    <p>对于家里以及公司内网的服务器，可能内网IP是相同的，这就会造成经常性的主机秘钥验证不通过的问题。可以禁用这些主机的秘钥验证。</p>
   </div>
 </div>
 
@@ -215,7 +218,7 @@
 
   </div>
   <div class="post-item post-summary markdown-body">
-    AlpineLinux默认使用uclibc版本的busybox，其动态链接库与gclibc有些区别，会导致某些程序没有办法正常运行。可以将busybox版本切换为gclibc。 uclibc与gclib
+    <p>AlpineLinux默认使用uclibc版本的busybox，其动态链接库与gclibc有些区别，会导致某些程序没有办法正常运行。可以将busybox版本切换为gclibc。</p>
   </div>
 </div>
 
@@ -232,7 +235,7 @@
 
   </div>
   <div class="post-item post-summary markdown-body">
-    经常要给Windows或者Linux系统装机，每次都要制作启动盘，显得有点麻烦。Grub4dos似乎只能用于Legacy模式的启动，因此使用万能的Grub2才是最终解。挖坑待填 尚未搞清楚Windows
+    <p>经常要给Windows或者Linux系统装机，每次都要制作启动盘，显得有点麻烦。Grub4dos似乎只能用于Legacy模式的启动，因此使用万能的Grub2才是最终解。挖坑待填</p>
   </div>
 </div>
 
@@ -249,7 +252,15 @@
 
   </div>
   <div class="post-item post-summary markdown-body">
-    简单来说，受够了windows，买不起osx，就只能折腾linux。折腾了好几个发行版，这次换了archlinux了。理由很简单：软件版本新、滚动发行、yaourt yay一切。 折腾了一阵子MacOS，
+    <p>简单来说，受够了windows，买不起osx，就只能折腾linux。折腾了好几个发行版，这次换了archlinux了。理由很简单：软件版本新、滚动发行、<del>yaourt</del> yay一切。</p>
+<hr>
+<p>折腾了一阵子MacOS，发现它的软件管理太麻烦了：</p>
+<ul>
+<li>AppStore（系统更新、部分软件包）</li>
+<li>网络上的软件包</li>
+<li>HomeBrew（GNU、Casks）</li>
+</ul>
+<p>大部分Casks不能更换软件源，更新速度极慢，加上Mac机器老旧，新上市的AMD yes等原因，便回到了linux阵营。</p>
   </div>
 </div>
 
@@ -266,7 +277,7 @@
 
   </div>
   <div class="post-item post-summary markdown-body">
-    应对复杂的装机环境，bios/uefi，windows/linux。 假设已有一台装好grub(2.02)的linux系统。U盘的设备路径/dev/sdb。 U盘分区 使用mbr分区表 只有mbr分区表才能同
+    <p>应对复杂的装机环境，bios/uefi，windows/linux。</p>
   </div>
 </div>
 

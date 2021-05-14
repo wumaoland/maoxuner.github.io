@@ -37,8 +37,18 @@
 <meta property="og:title" content="原版win7安装后不识别usb导致键鼠没有反应的问题" />
 <meta name="twitter:title" content="原版win7安装后不识别usb导致键鼠没有反应的问题" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.maoxuner.cn/post/2017/03/win7-vs-skylake/" /><meta property="og:description" content="昨天给一台新电脑，联想H3060安装win7系统。安装完成后，在语言设置界面usb键盘鼠标都失去反应了，更换其他usb口也不能识别。这直接原因就是没有usb驱动。此时，电脑已经算作是完全失控的状态。此" />
-<meta name="twitter:description" content="昨天给一台新电脑，联想H3060安装win7系统。安装完成后，在语言设置界面usb键盘鼠标都失去反应了，更换其他usb口也不能识别。这直接原因就是没有usb驱动。此时，电脑已经算作是完全失控的状态。此" /><meta property="og:image" content="https://www.maoxuner.cn/img/og.png" />
+<meta property="og:url" content="https://www.maoxuner.cn/post/2017/03/win7-vs-skylake/" /><meta property="og:description" content="昨天给一台新电脑，联想H3060安装win7系统。安装完成后，在语言设置界面usb键盘鼠标都失去反应了，更换其他usb口也不能识别。这直接原因就是没有usb驱动。此时，电脑已经算作是完全失控的状态。此时，只有三个解决方案：
+
+使用PS/2接口的键盘鼠标
+重新安装额外添加了usb驱动的系统
+在BIOS中开启USB Virtual KBC Support
+" />
+<meta name="twitter:description" content="昨天给一台新电脑，联想H3060安装win7系统。安装完成后，在语言设置界面usb键盘鼠标都失去反应了，更换其他usb口也不能识别。这直接原因就是没有usb驱动。此时，电脑已经算作是完全失控的状态。此时，只有三个解决方案：
+
+使用PS/2接口的键盘鼠标
+重新安装额外添加了usb驱动的系统
+在BIOS中开启USB Virtual KBC Support
+" /><meta property="og:image" content="https://www.maoxuner.cn/img/og.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://www.maoxuner.cn/img/og.png" /><meta property="article:published_time" content="2017-03-14T13:36:37+08:00" /><meta property="article:modified_time" content="2017-03-14T13:36:37+08:00" />
 
@@ -116,7 +126,6 @@
 <li>重新安装额外添加了usb驱动的系统</li>
 <li>在<code>BIOS</code>中开启<code>USB Virtual KBC Support</code></li>
 </ul>
-<!-- more -->
 <h1 id="根本原因">根本原因</h1>
 <p>经过一番研究，总算找到了根本原因。装机的这台电脑，CPU为<code>i5-6400</code>，是<code>Skylake</code>架构，2015年9月推出。英特尔Skylake这代芯片组（100系列）把<code>EHCI</code>主控替换成了<code>XHCI</code>主控。win8和win10自带XHCI主控的驱动，而较老的win7（最后一个中文系统镜像2011年释出）就没有这个驱动了。</p>
 <h1 id="解决方案">解决方案</h1>
@@ -141,7 +150,6 @@
 <li><a href="http://ideapad.it168.com/thread-5672495-1-1.html" target="_blank">Y700安装纯净版系统后不认USB设备的解决方法</a></li>
 <li><a href="http://www.dn580.cn/caozuoxitong/145.html" target="_blank">安装win7鼠标键盘不能用 失灵原因解析和解决方法</a></li>
 </ul>
-
     </div>
 </article>
 

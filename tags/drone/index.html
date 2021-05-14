@@ -113,7 +113,10 @@
 
   </div>
   <div class="post-item post-summary markdown-body">
-    将CI/CD服务前移到k8s后，当drone的插件drone-docker构建镜像时，总卡在更新软件包的步骤。是网络连接的问题，为了解决这个问题，耗费了我整个周末。 # apk update fetch http://dl-cdn.alpinelinux.org/alpine/v3.11/main/x86_64/APKINDEX.tar.gz Drone-Runner in K8S 在k8s环境中，dr
+    <p>将CI/CD服务前移到<a href="https://kubernetes.io/" target="_blank">k8s</a>后，当<a href="https://drone.io/" target="_blank">drone</a>的插件<a href="https://github.com/drone-plugins/drone-docker" target="_blank">drone-docker</a>构建镜像时，总卡在更新软件包的步骤。是网络连接的问题，为了解决这个问题，耗费了我整个周末。</p>
+<pre><code class="language-bash"># apk update
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.11/main/x86_64/APKINDEX.tar.gz
+</code></pre>
   </div>
 </div>
 

@@ -113,7 +113,7 @@
 
   </div>
   <div class="post-item post-summary markdown-body">
-    Kubernetes Dashboard的后端必须通过https访问，是自签名的ssl证书。使用Ingress连接时，会出现证书验证的问题，因此要配置Ingress忽略ssl验证。 Ingress Nginx Ingress Nginx是k8s官方社区开发的I
+    <p><a href="https://github.com/kubernetes/dashboard" target="_blank">Kubernetes Dashboard</a>的后端必须通过https访问，是自签名的ssl证书。使用Ingress连接时，会出现证书验证的问题，因此要配置Ingress忽略ssl验证。</p>
   </div>
 </div>
 
@@ -130,7 +130,7 @@
 
   </div>
   <div class="post-item post-summary markdown-body">
-    开发环境中一个个的配置域名和根目录比较麻烦，自动实现域名到目录的绑定会更加便捷。 Nginx配置参考 以完整域名设置主机目录 server { listen 80; listen [::]:80; set $htmldir /var/lib/nginx/html; set $basedir /var/www/html; set $rootdir $htmldir; if (-d $basedir/$host) { set $rootdir $basedir/$host; } root $rootdir; } 以二级域名设置主机目录 server { listen
+    <p>开发环境中一个个的配置域名和根目录比较麻烦，自动实现域名到目录的绑定会更加便捷。</p>
   </div>
 </div>
 
@@ -147,7 +147,7 @@
 
   </div>
   <div class="post-item post-summary markdown-body">
-    主要针对 Apache2+PHP7.0+MariaDB 安装 sudo apt-get install apache2 mariadb-server php7.0 php7.0-mysql libapache2-mod-php7.0 sudo apt-get install php7.0-curl php7.0-mbstring php7.0-xml php7.0-bz2 php7.0-zip 组件名称 作用 php7.0-curl curl操作 php7.0-mbstring 字符操作？ php7.0-xml dom操作 php7.0-bz2 bzip2解压 php7.0-zip zip解压 常见问题 综合问题 Apache2 忽略路径大小写 解决方法 启用模块speling sudo a2enmod speling 在配置文
+    <p>主要针对 Apache2+PHP7.0+MariaDB</p>
   </div>
 </div>
 

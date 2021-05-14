@@ -13,7 +13,7 @@
       <pubDate>Tue, 19 Jun 2018 11:25:00 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2018/06/gitignore-global/</guid>
-      <description>使用IDE如Intellij Idea时，IDE会在项目目录下创建.idea文件夹。在每个项目.gitignore文件中排除.idea/比较麻烦，设置全局排除会更方便些。 Git全局忽略 在用户主目录下创建</description>
+      <description>&lt;p&gt;使用IDE如Intellij Idea时，IDE会在项目目录下创建&lt;code&gt;.idea&lt;/code&gt;文件夹。在每个项目&lt;code&gt;.gitignore&lt;/code&gt;文件中排除&lt;code&gt;.idea/&lt;/code&gt;比较麻烦，设置全局排除会更方便些。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -22,7 +22,7 @@
       <pubDate>Thu, 04 May 2017 10:00:44 +0800</pubDate>
       
       <guid>https://www.maoxuner.cn/post/2017/05/php-deployer/</guid>
-      <description>利用git webhook请求php脚本，触发deployer自动部署实现的核心流程：PC/Client(git push) =&amp;gt; GitHub/Git Repository(webhook/http request) =&amp;gt; Server/WebHost(php hook/shell_exec) =&amp;gt; Server/WeHost(deploy commands) 设置部署公钥 部署脚本执行的用户www-data,把www-data的</description>
+      <description>&lt;p&gt;利用git webhook请求php脚本，触发deployer自动部署实现的核心流程：&lt;code&gt;PC/Client(git push) =&amp;gt; GitHub/Git Repository(webhook/http request) =&amp;gt; Server/WebHost(php hook/shell_exec) =&amp;gt; Server/WeHost(deploy commands)&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
