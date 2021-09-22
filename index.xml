@@ -6,7 +6,19 @@
     <description>Recent content on 二次元の技术宅</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 14 May 2021 15:51:43 +0800</lastBuildDate><atom:link href="https://www.maoxuner.cn/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 23 Sep 2021 00:30:58 +0800</lastBuildDate><atom:link href="https://www.maoxuner.cn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>解决Archlinux上Navicat因glib2不兼容报错问题</title>
+      <link>https://www.maoxuner.cn/post/2021/09/navicat-with-glib2-70/</link>
+      <pubDate>Thu, 23 Sep 2021 00:30:58 +0800</pubDate>
+      
+      <guid>https://www.maoxuner.cn/post/2021/09/navicat-with-glib2-70/</guid>
+      <description>&lt;p&gt;习惯性地更新了Archlinux所有软件包，发现Navicat无法运行了。命令行运行报错如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;symbol lookup error: /usr/lib/libgio-2.0.so.0: undefined symbol: g_module_open_full
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;网上查到&lt;code&gt;libgio-2.0.so.0&lt;/code&gt;是&lt;code&gt;glib2&lt;/code&gt;包的文件，显然是版本不兼容了。考虑到AppImage本质上就是把各依赖库打包起来做成了便携应用，便考虑把老版本的&lt;code&gt;glib2&lt;/code&gt;打包进应用镜像，结果完美解决。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Hugo主题NES</title>
       <link>https://www.maoxuner.cn/post/2021/05/hugo-theme-nes/</link>
@@ -17,7 +29,7 @@
     </item>
     
     <item>
-      <title>Archlinu添加自签名证书到系统</title>
+      <title>Archlinux添加自签名证书到系统</title>
       <link>https://www.maoxuner.cn/post/2021/05/archlinux-self-signed-cert/</link>
       <pubDate>Fri, 14 May 2021 15:25:17 +0800</pubDate>
       

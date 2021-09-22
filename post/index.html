@@ -9,7 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
-<meta name="generator" content="Hugo 0.83.1" />
+<meta name="generator" content="Hugo 0.88.1" />
 
 
 <link rel="apple-touch-icon" sizes="180x180" href="https://www.maoxuner.cn/apple-touch-icon.png" />
@@ -38,7 +38,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://www.maoxuner.cn/post/" /><meta property="og:image" content="https://www.maoxuner.cn/img/og.png" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://www.maoxuner.cn/img/og.png" /><meta property="og:updated_time" content="2021-05-14T15:51:43+08:00" />
+<meta name="twitter:image" content="https://www.maoxuner.cn/img/og.png" /><meta property="og:updated_time" content="2021-09-23T00:30:58+08:00" />
 
 
 <style>
@@ -98,6 +98,26 @@
 
 <div class="post">
     <h2 class="post-item post-title">
+        <a href="https://www.maoxuner.cn/post/2021/09/navicat-with-glib2-70/">解决Archlinux上Navicat因glib2不兼容报错问题</a>
+    </h2>
+    <div class="post-item post-meta">
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2021-09-23</span>
+
+<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;287 字</span>
+
+<span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/archlinux">archlinux</a>&nbsp;</span>
+
+    </div>
+    <div class="post-item post-summary markdown-body">
+        <p>习惯性地更新了Archlinux所有软件包，发现Navicat无法运行了。命令行运行报错如下：</p>
+<pre><code>symbol lookup error: /usr/lib/libgio-2.0.so.0: undefined symbol: g_module_open_full
+</code></pre>
+<p>网上查到<code>libgio-2.0.so.0</code>是<code>glib2</code>包的文件，显然是版本不兼容了。考虑到AppImage本质上就是把各依赖库打包起来做成了便携应用，便考虑把老版本的<code>glib2</code>打包进应用镜像，结果完美解决。</p>
+    </div>
+</div>
+
+<div class="post">
+    <h2 class="post-item post-title">
         <a href="https://www.maoxuner.cn/post/2021/05/hugo-theme-nes/">Hugo主题NES</a>
     </h2>
     <div class="post-item post-meta">
@@ -115,7 +135,7 @@
 
 <div class="post">
     <h2 class="post-item post-title">
-        <a href="https://www.maoxuner.cn/post/2021/05/archlinux-self-signed-cert/">Archlinu添加自签名证书到系统</a>
+        <a href="https://www.maoxuner.cn/post/2021/05/archlinux-self-signed-cert/">Archlinux添加自签名证书到系统</a>
     </h2>
     <div class="post-item post-meta">
         <span><i class="iconfont icon-today-sharp"></i>&nbsp;2021-05-14</span>
@@ -252,23 +272,6 @@ fetch http://dl-cdn.alpinelinux.org/alpine/v3.11/main/x86_64/APKINDEX.tar.gz
     </div>
     <div class="post-item post-summary markdown-body">
         <p>在有扩展显示器之前，有个奇思妙想：将桌面内容扩展到安卓平板上。Windows和MacOS似乎有现成的解决方案，而Linux则需要折腾一番。我的思路是：在Linux上创建一个虚拟桌面，然后通过VNC连接到这个桌面上。</p>
-    </div>
-</div>
-
-<div class="post">
-    <h2 class="post-item post-title">
-        <a href="https://www.maoxuner.cn/post/2020/02/linux-permission/">Linux文件权限笔记</a>
-    </h2>
-    <div class="post-item post-meta">
-        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2020-02-20</span>
-
-<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;78 字</span>
-
-<span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/linux">linux</a>&nbsp;</span>
-
-    </div>
-    <div class="post-item post-summary markdown-body">
-        
     </div>
 </div>
 <div class="pagination"><div class="pag-item pag-current">

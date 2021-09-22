@@ -2,17 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.maoxuner.cn/post/2021/05/hugo-theme-nes/</loc>
-    <lastmod>2021-05-14T15:51:43+08:00</lastmod>
+    <loc>https://www.maoxuner.cn/tags/archlinux/</loc>
+    <lastmod>2021-09-23T00:30:58+08:00</lastmod>
   </url><url>
     <loc>https://www.maoxuner.cn/post/</loc>
-    <lastmod>2021-05-14T15:51:43+08:00</lastmod>
+    <lastmod>2021-09-23T00:30:58+08:00</lastmod>
   </url><url>
     <loc>https://www.maoxuner.cn/</loc>
-    <lastmod>2021-05-14T15:51:43+08:00</lastmod>
+    <lastmod>2021-09-23T00:30:58+08:00</lastmod>
   </url><url>
-    <loc>https://www.maoxuner.cn/tags/archlinux/</loc>
-    <lastmod>2021-05-14T15:25:17+08:00</lastmod>
+    <loc>https://www.maoxuner.cn/post/2021/09/navicat-with-glib2-70/</loc>
+    <lastmod>2021-09-23T00:30:58+08:00</lastmod>
+  </url><url>
+    <loc>https://www.maoxuner.cn/post/2021/05/hugo-theme-nes/</loc>
+    <lastmod>2021-05-14T15:51:43+08:00</lastmod>
   </url><url>
     <loc>https://www.maoxuner.cn/post/2021/05/archlinux-self-signed-cert/</loc>
     <lastmod>2021-05-14T15:25:17+08:00</lastmod>

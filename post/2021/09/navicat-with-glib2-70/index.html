@@ -22,7 +22,7 @@
 
 
 
-<title>消失的2019年 - 二次元の技术宅</title>
+<title>解决Archlinux上Navicat因glib2不兼容报错问题 - 二次元の技术宅</title>
 
 
 <meta name="author" content="maoxuner" />
@@ -31,16 +31,22 @@
 <meta name="description" content="二次元爱好者的技术博客。专于php、linux" />
 
 
-<meta name="keywords" content="hexo, hugo" />
+<meta name="keywords" content="archlinux" />
 
 
-<meta property="og:title" content="消失的2019年" />
-<meta name="twitter:title" content="消失的2019年" />
+<meta property="og:title" content="解决Archlinux上Navicat因glib2不兼容报错问题" />
+<meta name="twitter:title" content="解决Archlinux上Navicat因glib2不兼容报错问题" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.maoxuner.cn/post/2020/02/2019-404/" /><meta property="og:description" content="最近重新整理了博客，将Hexo搭建的旧站迁移到Hugo搭建的新站了。从14年开始建博客，除去几次迁站删掉了一些，每年都写过几篇文章。唯独2019年，一篇文章都没有。" />
-<meta name="twitter:description" content="最近重新整理了博客，将Hexo搭建的旧站迁移到Hugo搭建的新站了。从14年开始建博客，除去几次迁站删掉了一些，每年都写过几篇文章。唯独2019年，一篇文章都没有。" /><meta property="og:image" content="https://www.maoxuner.cn/img/og.png" />
+<meta property="og:url" content="https://www.maoxuner.cn/post/2021/09/navicat-with-glib2-70/" /><meta property="og:description" content="习惯性地更新了Archlinux所有软件包，发现Navicat无法运行了。命令行运行报错如下：
+symbol lookup error: /usr/lib/libgio-2.0.so.0: undefined symbol: g_module_open_full
+
+网上查到libgio-2.0.so.0是glib2包的文件，显然是版本不兼容了。考虑到AppImage本质上就是把各依赖库打包起来做成了便携应用，便考虑把老版本的glib2打包进应用镜像，结果完美解决。" />
+<meta name="twitter:description" content="习惯性地更新了Archlinux所有软件包，发现Navicat无法运行了。命令行运行报错如下：
+symbol lookup error: /usr/lib/libgio-2.0.so.0: undefined symbol: g_module_open_full
+
+网上查到libgio-2.0.so.0是glib2包的文件，显然是版本不兼容了。考虑到AppImage本质上就是把各依赖库打包起来做成了便携应用，便考虑把老版本的glib2打包进应用镜像，结果完美解决。" /><meta property="og:image" content="https://www.maoxuner.cn/img/og.png" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://www.maoxuner.cn/img/og.png" /><meta property="article:published_time" content="2020-02-16T23:10:07+08:00" /><meta property="article:modified_time" content="2020-02-16T23:10:07+08:00" />
+<meta name="twitter:image" content="https://www.maoxuner.cn/img/og.png" /><meta property="article:published_time" content="2021-09-23T00:30:58+08:00" /><meta property="article:modified_time" content="2021-09-23T00:30:58+08:00" />
 
 
 <style>
@@ -98,26 +104,55 @@
 <article>
     
     <h2 class="post-item post-title">
-        <a href="https://www.maoxuner.cn/post/2020/02/2019-404/">消失的2019年</a>
+        <a href="https://www.maoxuner.cn/post/2021/09/navicat-with-glib2-70/">解决Archlinux上Navicat因glib2不兼容报错问题</a>
     </h2>
     <div class="post-item post-meta">
-        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2020-02-16</span>
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2021-09-23</span>
 
-<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;1157 字</span>
+<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;287 字</span>
 
-<span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/hexo">hexo</a>&nbsp;<a href="/tags/hugo">hugo</a>&nbsp;</span>
+<span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/archlinux">archlinux</a>&nbsp;</span>
 
     </div>
     
     <div class="post-content markdown-body">
-        <p>最近重新整理了博客，将Hexo搭建的旧站迁移到Hugo搭建的新站了。从14年开始建博客，除去几次迁站删掉了一些，每年都写过几篇文章。唯独2019年，一篇文章都没有。</p>
-<p>老站上，我做了一个“心情”的功能。2018年，我发布的最后一条动态是，我找到新工作了。从这以后，就停止了博客的更新。仅偶尔更新一下友情链接，修复文章中的笔误。</p>
-<p>工作繁忙是我停更的原因之一。换工作之前，由于种种原因，休息了两个多月。我焦急地到处面试，找工作，生怕没人要。终于，面试了一家公司，我以为我遇到了伯乐。算是伯乐吧，人很好，但是公司很坑。从此，程序员的噩梦开始了。几乎每天都要毫无计划的加班，而待遇非常一般，技术几乎没有长进。很小的团队：算上我，少的时候仅2人，多的时候也才4人。整天面对不确定的需求，不确定的方案，不确定的技术支持，不确定的下班时间，上下班通勤要很久，甚至一天有12个小时不属于自己。我处在崩溃的边缘，回到家只剩发呆看室友打游戏的精力了。</p>
-<p>曾经我想着每天早晨准点到，每天中午准点开工，每天矜矜业业地工作，期望着每天晚上能准点下班。然而，准点下班是做不到的。如果一个公司老是无理由的加班，那员工自然也会心安理得地摸鱼，我也不例外。那我为什么没有离开呢，因为我欠一份人情。为了偿还这份人情，即使摸鱼，也会在保证工作的前提下进行。其实，也谈不上摸鱼，只是在解决公司技术的疑难杂症时多看了一些相关技术。于是，我的收藏夹满满的都是链接，等待着哪天可以整理一下。</p>
-<p>Hugo的发现让我跃跃欲试。之前对NodeJS很感兴趣，Hexo又是台湾同胞开发的，更显得亲近。于是，我用Hexo重新搭建了静态博客（在之前是动态博客）。那段时间，我对前端技术非常熟悉，甚至<a href="/post/2017/12/hexo-theme-hexone/">定制了自己的Hexo主题</a>，加入了各种各样的功能。然而，NodeJS的模块很麻烦，必须保证安装了这些模块才能正常生成页面，我对此深感嫌弃。另一方面，七牛云不再提供域名给未备案用户使用了。这就导致文章里的所有资源无法加载，整个博客几乎无法查看。我必须整理每篇文章，替换掉每个资源的链接，这非常耗费精力。直到一天，我发现了Hugo这个工具。是Go语言写的啊！我这样感叹。像C语言一样，我对Go语言有着天生的好感。于是，总想着将站点再重构一遍。这是个浩大的工程，我却没有时间。</p>
-<p>肺炎，2020年的阴霾，整个国家因此变得呆滞。我待在家里，漫长又无所事事，于是下定决心迁移博客。整个迁移工作在两三天内完成，包括收藏夹的整理，这就出现了文章高产的2020年2月15日。其实，在这篇文章之前的2020年文章都是2019的故事。2019年并没有消失，只是我太忙太累了。我不确定程序员是否注定如此，但我希望至少要累得有所价值。欠的人情，我仁至义尽了。世界那么大，我想去看看。</p>
-<p>我回来了。</p>
-<p>酱油三三<br>2020年2月18日</p>
+        <p>习惯性地更新了Archlinux所有软件包，发现Navicat无法运行了。命令行运行报错如下：</p>
+<pre><code>symbol lookup error: /usr/lib/libgio-2.0.so.0: undefined symbol: g_module_open_full
+</code></pre>
+<p>网上查到<code>libgio-2.0.so.0</code>是<code>glib2</code>包的文件，显然是版本不兼容了。考虑到AppImage本质上就是把各依赖库打包起来做成了便携应用，便考虑把老版本的<code>glib2</code>打包进应用镜像，结果完美解决。</p>
+<h2 id="把glib2-2684打包到应用镜像里">把glib2 2.68.4打包到应用镜像里</h2>
+<p>这是我在Archlinux论坛的回复，懒得翻译了，内容如下。</p>
+<p>Solution: Patch glib2 version 2.68.4 into appimage</p>
+<p>Steps:</p>
+<ol>
+<li>Extract appimage file. All files will be in a directory called <code>squashfs-root</code></li>
+</ol>
+<pre><code>your-path/navicat15-premium-en.AppImage --appimage-extract
+</code></pre>
+<ol start="2">
+<li>Find your <code>glib2-2.68.4-1-x86_64.pkg.tar.zst</code> package file.
+If you are lucky enough, there will be one in path <code>/var/cache/pacman/pkg/glib2-2.68.4-1-x86_64.pkg.tar.zst</code>. Or download it from package repository. Or anywhere.</li>
+</ol>
+<pre><code>https://archive.archlinux.org/packages/g/glib2/glib2-2.68.4-1-x86_64.pkg.tar.zst
+</code></pre>
+<ol start="3">
+<li>Extract <code>glib2-2.68.4-1-x86_64.pkg.tar.zst</code> to <code>squashfs-root</code></li>
+</ol>
+<pre><code>tar xvf glib2-2.68.4-1-x86_64.pkg.tar.zst -C squashfs-root
+</code></pre>
+<ol start="4">
+<li>Repack squashfs-root into appimage file</li>
+</ol>
+<pre><code>appimagetool squashfs-root navicat15-premium-en-patched.AppImage
+</code></pre>
+<ol start="5">
+<li>no more steps, just run it</li>
+</ol>
+<h2 id="参考文章">参考文章</h2>
+<ul>
+<li><a href="https://bbs.archlinux.org/viewtopic.php?pid=1994258#p1994258" target="_blank">navicat report error after update system</a></li>
+<li><a href="https://archive.archlinux.org/packages/g/glib2/glib2-2.68.4-1-x86_64.pkg.tar.zst" target="_blank">glib2-2.68.4-1-x86_64.pkg.tar.zst</a></li>
+</ul>
     </div>
 </article>
 
@@ -139,8 +174,8 @@
         function loadComment() {
             var commentArea = document.querySelector('.post-comment');
             var disqus_config = function () {
-                this.page.url = 'https:\/\/www.maoxuner.cn\/post\/2020\/02\/2019-404\/';
-                this.page.identifier = '消失的2019年';
+                this.page.url = 'https:\/\/www.maoxuner.cn\/post\/2021\/09\/navicat-with-glib2-70\/';
+                this.page.identifier = '解决Archlinux上Navicat因glib2不兼容报错问题';
             };
             var s = document.createElement('script');
             s.src = 'https://' + 'maoxuner' + '.disqus.com/embed.js';
@@ -397,7 +432,12 @@
         </div>
     </div>
     <div class="sidebar-item sidebar-toc">
-        <h3>目录</h3><nav id="TableOfContents"></nav></div>
+        <h3>目录</h3><nav id="TableOfContents">
+  <ul>
+    <li><a href="#把glib2-2684打包到应用镜像里">把glib2 2.68.4打包到应用镜像里</a></li>
+    <li><a href="#参考文章">参考文章</a></li>
+  </ul>
+</nav></div>
 </aside>
         </div>
         <div class="btn">
@@ -659,7 +699,12 @@
     
     <div class="sidebar-item sidebar-toc">
         <h3>目录</h3>
-        <nav id="TableOfContents"></nav>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#把glib2-2684打包到应用镜像里">把glib2 2.68.4打包到应用镜像里</a></li>
+    <li><a href="#参考文章">参考文章</a></li>
+  </ul>
+</nav>
     </div>
     
     
