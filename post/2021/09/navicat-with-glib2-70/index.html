@@ -109,7 +109,7 @@ symbol lookup error: /usr/lib/libgio-2.0.so.0: undefined symbol: g_module_open_f
     <div class="post-item post-meta">
         <span><i class="iconfont icon-today-sharp"></i>&nbsp;2021-09-23</span>
 
-<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;287 字</span>
+<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;377 字</span>
 
 <span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/archlinux">archlinux</a>&nbsp;<a href="/tags/appimage">appimage</a>&nbsp;</span>
 
@@ -125,33 +125,52 @@ symbol lookup error: /usr/lib/libgio-2.0.so.0: undefined symbol: g_module_open_f
 <p>Solution: Patch glib2 version 2.68.4 into appimage</p>
 <p>Steps:</p>
 <ol>
-<li>Extract appimage file. All files will be in a directory called <code>squashfs-root</code></li>
-</ol>
-<pre><code>your-path/navicat15-premium-en.AppImage --appimage-extract
+<li>
+<p>Extract appimage file. All files will be in a directory called <code>squashfs-root</code></p>
+<pre><code class="language-bash">your-path/navicat15-premium-en.AppImage --appimage-extract
 </code></pre>
-<ol start="2">
-<li>Find your <code>glib2-2.68.4-1-x86_64.pkg.tar.zst</code> package file.
-If you are lucky enough, there will be one in path <code>/var/cache/pacman/pkg/glib2-2.68.4-1-x86_64.pkg.tar.zst</code>. Or download it from package repository. Or anywhere.</li>
-</ol>
-<pre><code>https://archive.archlinux.org/packages/g/glib2/glib2-2.68.4-1-x86_64.pkg.tar.zst
+<p><strong>Tips:</strong> When extracting ends in error as follow, you can try to mount appimage file then copy app source to directory squashfs-root.</p>
+<blockquote>
+<p>./navicat15-premium-en.AppImage &ndash;appimage-extract
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 471, resource id: 12928710, major code: 40 (TranslateCoords), minor code: 0
+/tmp/.mount_whnQrp/AppRun: symbol lookup error: /usr/lib/libgio-2.0.so.0: undefined symbol: g_module_open_full</p>
+</blockquote>
+<pre><code class="language-bash"># create app source mount point
+mkdir src
+# mount appimage file(read only)
+sudo mount -o loop your-path/navicat15-premium-en.AppImage src
+# copy all source file(writable)
+cp -r src squashfs-root
+# umount appimage file
+sudo umount src
+rmdir src
 </code></pre>
-<ol start="3">
-<li>Extract <code>glib2-2.68.4-1-x86_64.pkg.tar.zst</code> to <code>squashfs-root</code></li>
-</ol>
-<pre><code>tar xvf glib2-2.68.4-1-x86_64.pkg.tar.zst -C squashfs-root
+</li>
+<li>
+<p>Find your <code>glib2-2.68.4-1-x86_64.pkg.tar.zst</code> package file.
+If you are lucky enough, there will be one in path <code>/var/cache/pacman/pkg/glib2-2.68.4-1-x86_64.pkg.tar.zst</code>. Or download it from package repository. Or anywhere.</p>
+<pre><code class="language-bash">https://archive.archlinux.org/packages/g/glib2/glib2-2.68.4-1-x86_64.pkg.tar.zst
 </code></pre>
-<ol start="4">
-<li>Repack squashfs-root into appimage file</li>
-</ol>
-<pre><code>appimagetool squashfs-root navicat15-premium-en-patched.AppImage
+</li>
+<li>
+<p>Extract <code>glib2-2.68.4-1-x86_64.pkg.tar.zst</code> to <code>squashfs-root</code></p>
+<pre><code class="language-bash">tar xvf glib2-2.68.4-1-x86_64.pkg.tar.zst -C squashfs-root
 </code></pre>
-<ol start="5">
-<li>no more steps, just run it</li>
+</li>
+<li>
+<p>Repack squashfs-root into appimage file</p>
+<pre><code class="language-bash">appimagetool squashfs-root navicat15-premium-en-patched.AppImage
+</code></pre>
+</li>
+<li>
+<p>no more steps, just run it</p>
+</li>
 </ol>
 <h2 id="参考文章">参考文章</h2>
 <ul>
 <li><a href="https://bbs.archlinux.org/viewtopic.php?pid=1994258#p1994258" target="_blank">navicat report error after update system</a></li>
 <li><a href="https://archive.archlinux.org/packages/g/glib2/glib2-2.68.4-1-x86_64.pkg.tar.zst" target="_blank">glib2-2.68.4-1-x86_64.pkg.tar.zst</a></li>
+<li><a href="https://github.com/HeQuanX/navicat-keygen-tools#3-how-to-use" target="_blank">HeQuanX/navicat-keygen-tools#how to use</a></li>
 </ul>
     </div>
 </article>
