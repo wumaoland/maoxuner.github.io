@@ -9,7 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
-<meta name="generator" content="Hugo 0.88.1" />
+<meta name="generator" content="Hugo 0.92.2" />
 
 
 <link rel="apple-touch-icon" sizes="180x180" href="https://www.maoxuner.cn/apple-touch-icon.png" />
@@ -161,7 +161,7 @@ HomeBrew（GNU、Casks）
 <li>启动过程中会遇到问题，停在rootfs界面。
 <pre><code>Waiting 30 second for device /dev/disk/by_label/ARCH_201803 Error
 </code></pre>
-<p>手动挂载iso文件所在的分区，假设挂载到<code>/usb</code>，并加载对应的iso文件，然后退出rootfs</p>
+手动挂载iso文件所在的分区，假设挂载到<code>/usb</code>，并加载对应的iso文件，然后退出rootfs
 <pre><code class="language-bash">losetup /dev/loop0 /usb/archlinux-2018.03.01-x86_64.iso
 </code></pre>
 </li>
@@ -511,15 +511,13 @@ systemctl enable sddm-plymouth
 <li><code>adb shell</code>提示一下错误信息
 <pre><code>error: insufficient permissions for device
 </code></pre>
-<p>archlinux安装<code>android-udev</code>包即可。其他发行版参考<a href="https://developer.android.com/studio/run/device" target="_blank">在硬件设备上运行应用</a></p>
-</li>
+archlinux安装<code>android-udev</code>包即可。其他发行版参考<a href="https://developer.android.com/studio/run/device" target="_blank">在硬件设备上运行应用</a></li>
 <li>安装<code>archlinuxcn-keyring</code>秘钥验证失败（出现类似以下错误信息）
 <pre><code>==&gt; Locally signing trusted keys in keyring...
   -&gt; Locally signing key 02E02B85AF209AA00F784A1DD48313B447CD9E46...
 ==&gt; ERROR: 02E02B85AF209AA00F784A1DD48313B447CD9E46 could not be locally signed.
 </code></pre>
-<p>参考文章<a href="https://www.archlinuxcn.org/gnupg-2-1-and-the-pacman-keyring/" target="_blank">GnuPG-2.1 与 pacman 密钥环</a></p>
-</li>
+参考文章<a href="https://www.archlinuxcn.org/gnupg-2-1-and-the-pacman-keyring/" target="_blank">GnuPG-2.1 与 pacman 密钥环</a></li>
 <li>文件管理器连接samba<br>
 注意安装<code>gvfs-smb</code></li>
 </ol>
@@ -1140,7 +1138,7 @@ systemctl enable sddm-plymouth
     <div class="container-lg clearfix">
         <div class="col-12 footer">
             
-            <span>&copy; 2014-2021
+            <span>&copy; 2014-2022
                 <a href="https://www.maoxuner.cn/">maoxuner</a>
                  | <a href="https://git.fat4.cn/maoxuner/blog">Source code</a> 
                 | 基于 <a href="https://github.com/dsrkafuu/hugo-theme-fuji/"

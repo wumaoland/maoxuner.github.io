@@ -9,7 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
-<meta name="generator" content="Hugo 0.88.1" />
+<meta name="generator" content="Hugo 0.92.2" />
 
 
 <link rel="apple-touch-icon" sizes="180x180" href="https://www.maoxuner.cn/apple-touch-icon.png" />
@@ -147,18 +147,17 @@
   - 'baidu.html'
   - 'google.html'
 </code></pre>
-<p>或者</p>
+或者
 <pre><code class="language-yaml">skip_render: '*.html'
 </code></pre>
-<p>后者会排除<code>source</code>目录下所有后缀为<code>html</code>的文件，但是不会排除子目录如<code>demo</code>及其子目录中的html文件。</p>
-</li>
+后者会排除<code>source</code>目录下所有后缀为<code>html</code>的文件，但是不会排除子目录如<code>demo</code>及其子目录中的html文件。</li>
 <li>排除<code>baidu.html</code>和<code>google.html</code>以及<code>3.html</code>
 <pre><code class="language-yaml">skip_render:
   - 'baidu.html'
   - 'google.html'
   - 'demo/other/3.html'
 </code></pre>
-<p>或者</p>
+或者
 <pre><code class="language-yaml">skip_render:
   - '*.html'
   - 'demo/other/3.html'
@@ -167,8 +166,7 @@
 <li>排除<code>source/demo/other</code>目录中的所有html文件
 <pre><code class="language-yaml">skip_render: 'demo/other/*.html'
 </code></pre>
-<p>这不会排除<code>5.md</code>文件</p>
-</li>
+这不会排除<code>5.md</code>文件</li>
 <li>排除<code>source/demo/other</code>目录中的所有文件
 <pre><code class="language-yaml">skip_render: 'demo/other/**'
 </code></pre>
@@ -178,8 +176,7 @@
   - '*.html'
   - 'demo/**'
 </code></pre>
-<p><em>排除所有特定后缀的文件，暂且不知道如何设置。</em></p>
-</li>
+<em>排除所有特定后缀的文件，暂且不知道如何设置。</em></li>
 </ul>
 <h1 id="参考文章">参考文章</h1>
 <ul>
@@ -756,7 +753,7 @@
     <div class="container-lg clearfix">
         <div class="col-12 footer">
             
-            <span>&copy; 2014-2021
+            <span>&copy; 2014-2022
                 <a href="https://www.maoxuner.cn/">maoxuner</a>
                  | <a href="https://git.fat4.cn/maoxuner/blog">Source code</a> 
                 | 基于 <a href="https://github.com/dsrkafuu/hugo-theme-fuji/"

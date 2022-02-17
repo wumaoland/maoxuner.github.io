@@ -9,7 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
-<meta name="generator" content="Hugo 0.88.1" />
+<meta name="generator" content="Hugo 0.92.2" />
 
 
 <link rel="apple-touch-icon" sizes="180x180" href="https://www.maoxuner.cn/apple-touch-icon.png" />
@@ -122,7 +122,7 @@
 <li>在<code>/etc/network/if-down.d/</code>目录创建检测网络重启网络的脚本<code>net_restart.sh</code>
 <pre><code>sudo nano /etc/network/if-down.d/net_restart.sh
 </code></pre>
-<p>然后在该文件中写入以下代码</p>
+然后在该文件中写入以下代码
 <pre><code class="language-shell">#!/bin/bash
 #value define
 urls=(&quot;www.baidu.com&quot; &quot;www.2345.com/?kuwait&quot;)
@@ -153,15 +153,15 @@ if [ $connected -eq 0 ];then
     /sbin/ifup eth0
 fi
 </code></pre>
-<p>然后ctrl+o保存，ctrl+x退出
-给<code>net_restart.sh</code>添加可执行权限</p>
+然后ctrl+o保存，ctrl+x退出
+给<code>net_restart.sh</code>添加可执行权限
 <pre><code>sudo chmod +x /etc/network/if-down.d/net_restart.sh
 </code></pre>
 </li>
 <li>同理在<code>/etc/network/if-down.d/</code>目录创建检测网络重启系统的脚本<code>net_reboot.sh</code>
 <pre><code>sudo nano /etc/network/if-down.d/net_restart.sh
 </code></pre>
-<p>然后在该文件中写入以下代码</p>
+然后在该文件中写入以下代码
 <pre><code>#!/bin/bash
 #value define
 urls=(&quot;www.baidu.com&quot; &quot;www.2345.com/?kuwait&quot;)
@@ -191,8 +191,8 @@ if [ $connected -eq 0 ];then
     reboot
 fi
 </code></pre>
-<p>然后ctrl+o保存，ctrl+x退出
-再同样给<code>net_reboot.sh</code>添加可执行权限</p>
+然后ctrl+o保存，ctrl+x退出
+再同样给<code>net_reboot.sh</code>添加可执行权限
 <pre><code>sudo chmod +x /etc/network/if-down.d/net_reboot.sh
 </code></pre>
 </li>
@@ -208,18 +208,16 @@ sudo /etc/network/if-down.d/net_reboot.sh
 <li>最后添加定时任务
 <pre><code>sudo crontab -e
 </code></pre>
-<p>在文末添加以下代码</p>
+在文末添加以下代码
 <pre><code>*/20 * * * * /etc/network/if-down.d/net_restart.sh
 0 17 */1 * * /etc/network/if-down.d/net_reboot.sh
 </code></pre>
-<p>该定时任务的意思是，每隔20分钟，执行net_restart.sh脚本，每天17:00执行net_reboot.sh脚本</p>
-</li>
+该定时任务的意思是，每隔20分钟，执行net_restart.sh脚本，每天17:00执行net_reboot.sh脚本</li>
 <li>最后，重启定时任务程序，让定时任务生效
 <pre><code>sudo /etc/init.d/cron restart
 </code></pre>
-<p>仔细对比上面两个脚本的代码，会发现代码的主体部分都是一样的，只是最终激发的动作不同而已：一个是重启网络，一个是重启系统。我觉得该方案稍微有点繁琐了，不能及时解决问题，并且还一定要连上外网才行。不过，不管黑猫白猫，抓到老鼠就是好猫，这个方案能用就行了。
-至此，方案一的内容就结束了。下面你就可以人为断开网络试试咯。</p>
-</li>
+仔细对比上面两个脚本的代码，会发现代码的主体部分都是一样的，只是最终激发的动作不同而已：一个是重启网络，一个是重启系统。我觉得该方案稍微有点繁琐了，不能及时解决问题，并且还一定要连上外网才行。不过，不管黑猫白猫，抓到老鼠就是好猫，这个方案能用就行了。
+至此，方案一的内容就结束了。下面你就可以人为断开网络试试咯。</li>
 </ol>
 <h1 id="方案二hugozhu">方案二（hugozhu）</h1>
 <p>好东西是要用来压轴的，这个方案是我前不久找到的，代码简洁，易用，我非常喜欢。一般而言，该方案是针对树莓派连接路由器的情况。其实，我觉得这个方法更通用。只要能指导路由器所连网络上游的服务器的ip即可。假设路由器的ip是192.168.1.1</p>
@@ -266,8 +264,8 @@ if [[ $(ping_count) &lt; 1 ]]; then
     fi
 fi
 </code></pre>
-<p>然后ctrl+o保存，ctrl+x退出
-同样，给<code>checknetwork.sh</code>添加可执行权限</p>
+然后ctrl+o保存，ctrl+x退出
+同样，给<code>checknetwork.sh</code>添加可执行权限
 <pre><code>sudo chmod +x /etc/network/if-down.d/checknetwork.sh
 </code></pre>
 </li>
@@ -282,15 +280,14 @@ fi
 <li>接下来创建定时任务
 <pre><code>sudo crontab -e
 </code></pre>
-<p>在文末添加以下内容</p>
+在文末添加以下内容
 <pre><code>*/20 * * * * /etc/network/if-down.d/checknetwork.sh &gt;&gt; /home/pi/checknetwork.log 2&gt;&amp;1
 </code></pre>
 </li>
 <li>最后，重启定时任务程序，让定时任务生效
 <pre><code>sudo /etc/init.d/cron restart
 </code></pre>
-<p>至此，方案二讲述结束。可以愉快的玩耍了。</p>
-</li>
+至此，方案二讲述结束。可以愉快的玩耍了。</li>
 </ol>
 <h1 id="参考文章">参考文章</h1>
 <ul>
@@ -858,7 +855,7 @@ fi
     <div class="container-lg clearfix">
         <div class="col-12 footer">
             
-            <span>&copy; 2014-2021
+            <span>&copy; 2014-2022
                 <a href="https://www.maoxuner.cn/">maoxuner</a>
                  | <a href="https://git.fat4.cn/maoxuner/blog">Source code</a> 
                 | 基于 <a href="https://github.com/dsrkafuu/hugo-theme-fuji/"

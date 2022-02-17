@@ -9,7 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
-<meta name="generator" content="Hugo 0.88.1" />
+<meta name="generator" content="Hugo 0.92.2" />
 
 
 <link rel="apple-touch-icon" sizes="180x180" href="https://www.maoxuner.cn/apple-touch-icon.png" />
@@ -126,7 +126,7 @@
 <li>查看信息
 <pre><code class="language-bash">sudo fdisk -lu /dev/loop0
 </code></pre>
-<p>输出内容</p>
+输出内容
 <pre><code>Disk /dev/loop0: 1.9 GiB, 2032664576 bytes, 3970048 sectors
 Units: sectors of 1 * 512 = 512 bytes
 Sector size (logical/physical): 512 bytes / 512 bytes
@@ -138,7 +138,7 @@ Device       Boot Start     End Sectors  Size Id Type
 /dev/loop0p1       2048   43007   40960   20M 83 Linux
 /dev/loop0p2      43008 3970047 3927040  1.9G 83 Linux
 </code></pre>
-<p>可以看到，这个镜像有两个分区（loop0p1和loop0p2）。从第2048扇区开始（Start列），每扇区512字节(Units = sectors of 1 * 512 = 512 bytes)，我们算出offset，下面mout命令会用到。</p>
+可以看到，这个镜像有两个分区（loop0p1和loop0p2）。从第2048扇区开始（Start列），每扇区512字节(Units = sectors of 1 * 512 = 512 bytes)，我们算出offset，下面mout命令会用到。
 <pre><code>2048*512=1048576
 43008*512=22020096
 </code></pre>
@@ -151,7 +151,7 @@ sudo losetup -o 22020096 /dev/loop3 bananian-1501.img
 sudo mount -o loop /dev/loop3 root
 ls boot root
 </code></pre>
-<p>输出结果</p>
+输出结果
 <pre><code>boot:
 fex script.bin uEnv.txt uEnv.txt.video-acc-off uEnv.txt.video-acc-on uImage
 root:
@@ -165,7 +165,7 @@ bin boot dev etc home lib lost+found media mnt opt proc root run sbin selinux sr
 <li>查看信息
 <pre><code class="language-bash">sudo fdisk -lu bananian-1501.img
 </code></pre>
-<p>输出结果</p>
+输出结果
 <pre><code>Disk bananian-1501.img: 2032 MB, 2032664576 bytes
 255 heads, 63 sectors/track, 247 cylinders, total 3970048 sectors
 Units = sectors of 1 * 512 = 512 bytes
@@ -177,7 +177,7 @@ Disk identifier: 0x6c70c806
 bananian-1501.img1            2048       43007       20480   83  Linux
 bananian-1501.img2           43008     3970047     1963520   83  Linux
 </code></pre>
-<p>同样的方法计算出offset</p>
+同样的方法计算出offset
 <pre><code>2048*512=1048576
 43008*512=22020096
 </code></pre>
@@ -188,13 +188,13 @@ sudo mount -o offset=1048576 bananian-1501.img boot
 sudo mount -o offset=22020096 bananian-1501.img root
 ls boot root
 </code></pre>
-<p>输出结果</p>
+输出结果
 <pre><code>boot:
 fex script.bin uEnv.txt uEnv.txt.video-acc-off uEnv.txt.video-acc-on uImage
 root:
 bin boot dev etc home lib lost+found media mnt opt proc root run sbin selinux srv swapfile1 sys tmp usr var
 </code></pre>
-<p>手动计算offset略微有点麻烦，可以利用<code>expr</code>命令。将挂载命令中offset后面的数值替换成expr命令的运算值即可，注意用反引号<code>`</code>。例如上面两条挂载命令可以改成以下命令。</p>
+手动计算offset略微有点麻烦，可以利用<code>expr</code>命令。将挂载命令中offset后面的数值替换成expr命令的运算值即可，注意用反引号<code>`</code>。例如上面两条挂载命令可以改成以下命令。
 <pre><code class="language-bash">sudo mount -o offset=`expr 512 \* 2048` bananian-1501.img boot
 sudo mount -o offset=`expr 512 \* 43008` bananian-1501.img root
 </code></pre>
@@ -765,7 +765,7 @@ sudo mount -o offset=`expr 512 \* 43008` bananian-1501.img root
     <div class="container-lg clearfix">
         <div class="col-12 footer">
             
-            <span>&copy; 2014-2021
+            <span>&copy; 2014-2022
                 <a href="https://www.maoxuner.cn/">maoxuner</a>
                  | <a href="https://git.fat4.cn/maoxuner/blog">Source code</a> 
                 | 基于 <a href="https://github.com/dsrkafuu/hugo-theme-fuji/"

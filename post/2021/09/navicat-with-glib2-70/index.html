@@ -9,7 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
-<meta name="generator" content="Hugo 0.88.1" />
+<meta name="generator" content="Hugo 0.92.2" />
 
 
 <link rel="apple-touch-icon" sizes="180x180" href="https://www.maoxuner.cn/apple-touch-icon.png" />
@@ -109,7 +109,7 @@ symbol lookup error: /usr/lib/libgio-2.0.so.0: undefined symbol: g_module_open_f
     <div class="post-item post-meta">
         <span><i class="iconfont icon-today-sharp"></i>&nbsp;2021-09-23</span>
 
-<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;705 字</span>
+<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;817 字</span>
 
 <span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/archlinux">archlinux</a>&nbsp;<a href="/tags/appimage">appimage</a>&nbsp;</span>
 
@@ -175,6 +175,10 @@ If you are lucky enough, there will be one in path <code>/var/cache/pacman/pkg/g
 <pre><code class="language-bash">https://archive.archlinux.org/packages/l/libffi/libffi-3.3-4-x86_64.pkg.tar.zst
 </code></pre>
 <p><em>奇怪的是，原应用镜像里自带了<code>libffi6</code>，不知道为何不能使用。</em></p>
+<h2 id="glibc不兼容问题">glibc不兼容问题</h2>
+<p>提示找不到共享库<code>libcrypt.so.1</code>文件。这是<code>glibc</code>里的文件，<code>2.35-2</code>版本移除了该文件。可以参考以上步骤，将<code>glibc-2.35-1-x86_64.pkg.tar.zst</code>打包到应用镜像里。</p>
+<pre><code class="language-bash">https://archive.archlinux.org/packages/g/glibc/glibc-2.35-1-x86_64.pkg.tar.zst
+</code></pre>
 <h2 id="参考文章">参考文章</h2>
 <ul>
 <li><a href="https://bbs.archlinux.org/viewtopic.php?pid=1994258#p1994258" target="_blank">navicat report error after update system</a></li>
@@ -470,6 +474,7 @@ If you are lucky enough, there will be one in path <code>/var/cache/pacman/pkg/g
   <ul>
     <li><a href="#把glib2-2684打包到应用镜像里">把glib2 2.68.4打包到应用镜像里</a></li>
     <li><a href="#把libffi-33打包到应用镜像里">把libffi 3.3打包到应用镜像里</a></li>
+    <li><a href="#glibc不兼容问题">glibc不兼容问题</a></li>
     <li><a href="#参考文章">参考文章</a></li>
   </ul>
 </nav></div>
@@ -742,6 +747,7 @@ If you are lucky enough, there will be one in path <code>/var/cache/pacman/pkg/g
   <ul>
     <li><a href="#把glib2-2684打包到应用镜像里">把glib2 2.68.4打包到应用镜像里</a></li>
     <li><a href="#把libffi-33打包到应用镜像里">把libffi 3.3打包到应用镜像里</a></li>
+    <li><a href="#glibc不兼容问题">glibc不兼容问题</a></li>
     <li><a href="#参考文章">参考文章</a></li>
   </ul>
 </nav>
@@ -756,7 +762,7 @@ If you are lucky enough, there will be one in path <code>/var/cache/pacman/pkg/g
     <div class="container-lg clearfix">
         <div class="col-12 footer">
             
-            <span>&copy; 2014-2021
+            <span>&copy; 2014-2022
                 <a href="https://www.maoxuner.cn/">maoxuner</a>
                  | <a href="https://git.fat4.cn/maoxuner/blog">Source code</a> 
                 | 基于 <a href="https://github.com/dsrkafuu/hugo-theme-fuji/"

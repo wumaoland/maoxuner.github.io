@@ -9,7 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
-<meta name="generator" content="Hugo 0.88.1" />
+<meta name="generator" content="Hugo 0.92.2" />
 
 
 <link rel="apple-touch-icon" sizes="180x180" href="https://www.maoxuner.cn/apple-touch-icon.png" />
@@ -124,7 +124,7 @@ make等编译环境自然需要准备好。我之前安装了<a href="http://lnm
 <pre><code>nono@pibox ~ % uname -a
 Linux pibox 3.4.108-bananian #2 SMP PREEMPT Thu Aug 13 06:08:25 UTC 2015 armv7l GNU/Linux
 </code></pre>
-<p>然后用<code>apt-get</code>命令安装对应版本的内核头文件</p>
+然后用<code>apt-get</code>命令安装对应版本的内核头文件
 <pre><code>sudo apt-get install linux-headers-3.4.108-bananian
 </code></pre>
 </li>
@@ -142,7 +142,7 @@ Linux pibox 3.4.108-bananian #2 SMP PREEMPT Thu Aug 13 06:08:25 UTC 2015 armv7l 
     {USB_DEVICE(0x2717,0x4106)}, /* Xiaomi Wifi */
 #endif /* MT7601U */
 </code></pre>
-<p>把上面这段代码修改成下面这段，实际上就是添加上360Wifi、小度Wifi、小米Wifi等的设备ID</p>
+把上面这段代码修改成下面这段，实际上就是添加上360Wifi、小度Wifi、小米Wifi等的设备ID
 <pre><code>#ifdef MT7601U
     {USB_DEVICE(0x148f,0x6370)}, /* Ralink 6370 */
     {USB_DEVICE(0x148f,0x7601)}, /* MT 6370 */
@@ -154,8 +154,8 @@ Linux pibox 3.4.108-bananian #2 SMP PREEMPT Thu Aug 13 06:08:25 UTC 2015 armv7l 
     {USB_DEVICE(0x2955,0x1003)}, /* NuoMi Wifi */
 #endif /* MT7601U */
 </code></pre>
-<p>如果不确定你的设备ID在不在这上面，可以把你的usb无线网卡连上你的香蕉派，然后终端执行<code>lsusb</code>命令，根据显示的结果大概推测一下就能找到你的设备ID。如果不确定哪个是usb无线网卡的话，可以先拔掉usb无线网卡，执行<code>lsusb</code>命令，再插上usb无线网卡，然后执行<code>lsusb</code>命令。对比两次执行的结果，多出的那一行应该就是了。
-比如下面<code>Bus 001 Device 003: ID 2955:1001</code>这一行，后面没有描述的，就是小度Wifi。万恶的百度啊，改了设备ID就算了，连描述信息也删了。</p>
+如果不确定你的设备ID在不在这上面，可以把你的usb无线网卡连上你的香蕉派，然后终端执行<code>lsusb</code>命令，根据显示的结果大概推测一下就能找到你的设备ID。如果不确定哪个是usb无线网卡的话，可以先拔掉usb无线网卡，执行<code>lsusb</code>命令，再插上usb无线网卡，然后执行<code>lsusb</code>命令。对比两次执行的结果，多出的那一行应该就是了。
+比如下面<code>Bus 001 Device 003: ID 2955:1001</code>这一行，后面没有描述的，就是小度Wifi。万恶的百度啊，改了设备ID就算了，连描述信息也删了。
 <pre><code>nono@pibox ~ % lsusb
 Bus 004 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
 Bus 002 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
@@ -174,8 +174,7 @@ Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 <pre><code>sudo depmod
 sudo modprobe mt7601Usta
 </code></pre>
-<p>我也不清楚驱动模块的生效要不要重启系统，然而事实上重启了也不能解决问题。请接着往下看。</p>
-</li>
+我也不清楚驱动模块的生效要不要重启系统，然而事实上重启了也不能解决问题。请接着往下看。</li>
 </ol>
 <h1 id="debug">Debug</h1>
 <p>重启系统前，我执行了一下<code>sudo ifconfig -a</code>，查看所有网络设备，然后并没有发现多出的设备。于是，我重启了系统，再次执行该命令，然并卵。</p>
@@ -326,7 +325,7 @@ fi
 执行以下命令可以使ra0设备生效
 <pre><code>sudo ip link set ra0 up
 </code></pre>
-<p>再执行以下命令，可以扫描无线网络。如果有结果的话，一般来说就正常了。</p>
+再执行以下命令，可以扫描无线网络。如果有结果的话，一般来说就正常了。
 <pre><code>nono@pibox ~ % sudo iwlist ra0 scan
 ra0       Scan completed :
           Cell 01 - Address: 96:74:2A:AC:23:F3
@@ -354,8 +353,8 @@ ra0       Scan completed :
                     Encryption key:off
                     Bit Rates:65 Mb/s
 </code></pre>
-<p>不知道是不是个bug。第一次扫描时只能扫描到公开网络，第二次扫描时才能显示全部的网络。
-按照格式要求配置<code>/etc/wpa_supplicant/wpa_supplicant.conf</code>，然后执行以下命令测试连接无线网</p>
+不知道是不是个bug。第一次扫描时只能扫描到公开网络，第二次扫描时才能显示全部的网络。
+按照格式要求配置<code>/etc/wpa_supplicant/wpa_supplicant.conf</code>，然后执行以下命令测试连接无线网
 <pre><code>sudo wpa_supplicant -d -Dwext -ira0 -c/etc/wpa_supplicant/wpa_supplicant.conf
 </code></pre>
 </li>
@@ -948,7 +947,7 @@ ra0       Scan completed :
     <div class="container-lg clearfix">
         <div class="col-12 footer">
             
-            <span>&copy; 2014-2021
+            <span>&copy; 2014-2022
                 <a href="https://www.maoxuner.cn/">maoxuner</a>
                  | <a href="https://git.fat4.cn/maoxuner/blog">Source code</a> 
                 | 基于 <a href="https://github.com/dsrkafuu/hugo-theme-fuji/"

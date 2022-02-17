@@ -9,7 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
-<meta name="generator" content="Hugo 0.88.1" />
+<meta name="generator" content="Hugo 0.92.2" />
 
 
 <link rel="apple-touch-icon" sizes="180x180" href="https://www.maoxuner.cn/apple-touch-icon.png" />
@@ -148,14 +148,13 @@ mkfs.ext4 /dev/sdX2
 mount /dev/sdX1 boot
 mount /dev/sdX2 root
 </code></pre>
-<p>分区操作可以使用图形分区软件如gparted，我用的发行版中就自带了，更加直观。删除sd上的所有分区，新建一个100M空间的主分区，分区文件系统Fat32，再把剩余的空间创建一个分区，分区文件系统为Ext4，然后格式化保存即可。</p>
-</li>
+分区操作可以使用图形分区软件如gparted，我用的发行版中就自带了，更加直观。删除sd上的所有分区，新建一个100M空间的主分区，分区文件系统Fat32，再把剩余的空间创建一个分区，分区文件系统为Ext4，然后格式化保存即可。</li>
 <li>下载系统文件，并解压
 <pre><code class="language-bash">wget http://archlinuxarm.org/os/ArchLinuxARM-rpi-latest.tar.gz
 tar -xf ArchLinuxARM-rpi-latest.tar.gz -C root
 sync
 </code></pre>
-<p>官方镜像站下载速度慢的话，可以把下载地址替换为中科大的镜像，即把上述wget一行替换成以下内容</p>
+官方镜像站下载速度慢的话，可以把下载地址替换为中科大的镜像，即把上述wget一行替换成以下内容
 <pre><code class="language-bash">wget http://mirrors.ustc.edu.cn/archlinuxarm/os/ArchLinuxARM-rpi-latest.tar.gz
 </code></pre>
 </li>
@@ -166,11 +165,10 @@ sync
 <li>有linux环境，顺便修改一下软件源吧
 <pre><code class="language-bash">nano root/etc/pacman.d/mirrorlist
 </code></pre>
-<p>在最顶行添加以下内容</p>
+在最顶行添加以下内容
 <pre><code class="language-bash">Server = http://mirrors.ustc.edu.cn/archlinuxarm/armv6h/$repo
 </code></pre>
-<p>然后 ctrl+x ，y，回车</p>
-</li>
+然后 ctrl+x ，y，回车</li>
 <li>卸载两个分区
 <pre><code class="language-bash">umount boot root
 </code></pre>
@@ -743,7 +741,7 @@ ssh登陆用户名：<code>root</code>，密码：<code>root</code>。</li>
     <div class="container-lg clearfix">
         <div class="col-12 footer">
             
-            <span>&copy; 2014-2021
+            <span>&copy; 2014-2022
                 <a href="https://www.maoxuner.cn/">maoxuner</a>
                  | <a href="https://git.fat4.cn/maoxuner/blog">Source code</a> 
                 | 基于 <a href="https://github.com/dsrkafuu/hugo-theme-fuji/"
